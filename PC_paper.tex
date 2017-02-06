@@ -1,0 +1,110 @@
+\documentclass[fleqn,usenatbib]{mnras}
+
+% MNRAS is set in Times font. If you don't have this installed (most LaTeX
+% installations will be fine) or prefer the old Computer Modern fonts, comment
+% out the following line
+\usepackage{newtxtext,newtxmath}
+%\usepackage{times}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+% \usepackage{mathptmx}
+% \usepackage{txfonts}
+
+% Use vector fonts, so it zooms properly in on-screen viewing software
+% Don't change these lines unless you know what you are doing
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+%\usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+\usepackage{mathrsfs}	% Extra extra math symbols
+\usepackage{natbib}
+\usepackage[colorlinks,urlcolor=magenta,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{multirow}
+\usepackage{etoolbox}
+\usepackage{subfig}
+\usepackage{microtype}
+\usepackage{listings}
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+\input{commands.tex}
+
+\newcommand{\editorial}[1]{\textcolor{red}{#1}}
+\newcommand{\multic}[2]{\multicolumn{#1}{c}{#2}}
+\newcommand{\rottext}[2]{\multirow{#1}{*}{\rotatebox[origin=c]{90}{#2}}}
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+\title[Planck Cluster Paper]{Planck Cluster Paper}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[S. Boada et al.]
+{\parbox{\textwidth}{Steven~Boada,$^{1}$\thanks{E-mail: boada@physics.rutgers.edu}
+JPH,$^{1}$
+}\vspace{0.4cm}\
+\\
+\parbox{\textwidth}{$^{1}$Physics and Astronomy Department, Rutgers University, Piscataway, NJ 08854-8019, USA}}
+
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2017}
+
+% Don't change these lines
+\begin{document} 
+\label{firstpage} 
+\pagerange{
+\pageref{firstpage}-- 
+\pageref{lastpage}} 
+\maketitle 
+
+\begin{abstract}
+	\noindent Abstract
+\end{abstract}
+
+\section{Introduction} 
+Throughout this paper, we adopt the following cosmological model from the Buzzard simulations: $\Omega_\Lambda = 0.714$, $\Omega_M = 0.286$, and $H_0= 70$ \kms \mpc, assume a Chabrier initial mass function (IMF; \citealt{Chabrier2003}), and use AB magnitudes \citep{Oke1974}.
+
+\section{Design}\label{sec:design} 
+lorem 
+\subsection{Observations}\label{sec: observations} 
+lorem
+
+\section{Data Reduction}\label{sec:data reduction} 
+lorem
+
+\section{Analysis}\label{sec:analysis} 
+lorem
+
+\section{Estimating Cluster Masses}
+lorem
+
+\section{Results and Discussion}\label{sec:results}
+
+lorem
+
+\section{Summary}\label{sec:summary}
+
+lorem
+
+\section*{Acknowledgements} This research made use of \textsc{APLpy}, an open-source plotting package for Python hosted at \url{http://aplpy.github.com}; the \textsc{IPython} package \citep{Perez2007}; \textsc{matplotlib}, a Python library for publication quality graphics \citep{Hunter2007}. \textsc{iraf} is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy under cooperative agreement with the National Science Foundation \citep{Tody1993}. \textsc{PyRAF} is a product of the Space Telescope Science Institute, which is operated by AURA for NASA. Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions.
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+% The best way to enter references is to use BibTeX:
+\bibliographystyle{apj} 
+\bibliography{master} 
+
+% if your bibtex file is called example.bib
+%%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+
+
+% Don't change these lines
+\bsp 
+
+% typesetting comment
+\label{lastpage} 
+\end{document} 
