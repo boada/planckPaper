@@ -43,7 +43,7 @@
 % If you need two or more lines of authors, add an extra line using \newauthor
 \author[S. Boada et al.]
 {\parbox{\textwidth}{Steven~Boada,$^{1}$\thanks{E-mail: boada@physics.rutgers.edu}
-JPH,$^{1}$
+JPH,$^{1}$, Felipe
 }\vspace{0.4cm}\
 \\
 \parbox{\textwidth}{$^{1}$Physics and Astronomy Department, Rutgers University, Piscataway, NJ 08854-8019, USA}}
@@ -55,33 +55,120 @@ JPH,$^{1}$
 \pubyear{2017}
 
 % Don't change these lines
-\begin{document} 
-\label{firstpage} 
+\begin{document}
+\label{firstpage}
 \pagerange{
-\pageref{firstpage}-- 
-\pageref{lastpage}} 
-\maketitle 
+\pageref{firstpage}--
+\pageref{lastpage}}
+\maketitle
 
 \begin{abstract}
-	\noindent Abstract
+	\noindent We propose to continue our program of optical imaging to unveil all of the most massive clusters in
+	the observable Universe. We start from the all-sky Planck Sunyaev-Zel’dovich (SZ) catalogs, which
+	contain several hundred high significance (signal-to-noise ratio, SNR $> 5$) unconfirmed cluster
+	candidates. Since SZ selection favors high mass clusters and the Planck confirmation process favored
+	low redshift systems, the highest significance unconfirmed candidates are, therefore, likely massive
+	clusters ($M_{500} > 5 ×\times 10^{14}$ \Msol) at relatively high redshift ($z > 0.5$). Our proposed observations,
+	using MOSAIC-3 on Mayall, are designed to confirm the presence of a brightest cluster galaxy (to
+	$z \sim 1$) and red sequence of accompanying cluster members (to $z \sim 0.7$). Preliminary results from
+	our observations over the past two years have validated our approach by the detection of optical
+	clusters in a number of Planck candidates, including the discovery of rich systems at $z = 0.553$ and
+	$z = 0.830$ that rival the most massive clusters known. The proposed observations represent the first
+	step required to provide a complete all-sky census throughout the observable Universe of the most
+	massive, high redshift clusters. Their expected high redshift and high mass make the unconfirmed
+	Planck clusters, arguably, the most important available sample for probing deviations from $\Lambda$CDM
+	and defining the high-mass end of the cluster mass function.
 \end{abstract}
 
-\section{Introduction} 
+\section{Introduction}
 Throughout this paper, we adopt the following cosmological model from the Buzzard simulations: $\Omega_\Lambda = 0.714$, $\Omega_M = 0.286$, and $H_0= 70$ \kms \mpc, assume a Chabrier initial mass function (IMF; \citealt{Chabrier2003}), and use AB magnitudes \citep{Oke1974}.
 
-\section{Design}\label{sec:design} 
-lorem 
-\subsection{Observations}\label{sec: observations} 
+\section{Design}\label{sec:design}
+lorem
+\subsection{Observations}\label{sec: observations}
+
+The proposed observing strategy consists of targeted $riz$ observations of individual candidates with
+exposure times of 350 s, 1100 s and 1100 s (assuming dark conditions) to provide $5\sigma$ detections
+limits of $r = 24.5$, $i = 24.5$, $z = 24.2$ ensuring the unambiguous detection of the faint galaxies
+(i.e., 0.4L$_∗\star$ ) in the red cluster sequence up to $z \sim 1.0$ (see Fig. 3) and of BCGs to higher redshifts.
+The choice of filters in our program is driven by the need to segregate early-type galaxies in the
+cluster through their colors (or photometric redshifts) by sampling blue-ward and red-ward of the
+4000\AA\ break
+
+For these observations we will follow the successful setup we used before. We obtained an hour
+on each target in the Ks band using 1 minute exposures (5 coadded 12 s exposures) taken at
+60 different dither positions distributed quasi-randomly over a square 100'' × 100'' region. This
+produced reduced images with uniform exposure and sky level. The large FOV of the dithered NIR
+images (approximately 28' × 28' ) comfortably matches the MOSAIC observations proposed for Run
+1.
+Based on our experience over the last two years, an hour of integration on NEWFIRM will allow us
+to reach a magnitude limit of Ks $\sim 22.0$ (AB, $3\sigma$). This magnitude limit corresponds to $\sim M_{\star} + 2$
+in the cluster luminosity function at $z = 1.0$ as measured by De Propris et al. (1999), and assuming
+K AB = K Vega $+ 1.86$. This surface brightness limit corresponds to $\sim M_{\star} + 1.0$ at $z = 1.5$, sufficient
+for detecting sub L$_{\star}$ at this limit. This allows for confident detection of the BCG and associated red
+cluster sequence.
+
+The narrow-band observations were made with the Mosaic cameras mounted at the
+prime foci of the KPNO and CTIO 4-m telescopes. The instruments and basic reduction
+procedures are given in detail in Paper I. Here we note that each camera consists of a 2x4
+array of 2048x4096 SITe CCDs. The field of view is 36’x36’, and the plate-scale of the
+final reduced images is 0.27” pixel−1
+The target galaxies were imaged using the Mosaic camera on
+the KPNO Mayall 4 m telescope. The Mosaic camera consists of
+eight 2048×4096 CCDs separated by a small gap (∼50 pixels).
+On the Mayall telescope, the imager has a 36' × 36' field of
+view with 0.26'' pixels.
+
+the near-IR with the National Optical Astronomy
+Observatory (NOAO) Extremely Wide-Field Infrared Imager
+(NEWFIRM)
+
+The
+NEWFIRM camera, designed to quickly map large areas of the
+sky, contains four InSb 2048 × 2048 pixel arrays arranged in a
+2 × 2 pattern with a 28' field of view and an approximately
+1' gap between the CCDs. The detector has a pixel scale of
+0.4'' pixel−1. \citep{Probst2004}
+
+\section{Data Reduction and Calibration}\label{sec:data reduction}
+Standard processing of dark frame subtraction, flat fielding,
+sky-subtraction, and bad pixel masking was performed by
+the NEWFIRM Science Pipeline (Dickinson \& Valdes 2009;
+Swaters et al. 2009) to produce five stacked composite images
+for each near-IR band. The final stacked images retain the
+detector pixel scale of 0.4'' pixel−1. Variable seeing conditions
+caused the final observed point source FWHM in the stacked
+images to range from approximately 0.9–1.5''. The H-band
+observations were taken during the best seeing conditions and
+have the smallest FWHM, and the Ks images have the largest
+FWHM. Even in the most crowded portions of the region
+observed, however, the difference in effective resolution at the
+different NEWFIRM bands has a minimal effect on later source matching.
+
+\subsection{Mosaicking}
+Mosaics are created with \textsc{swarp} \citep{Bertin2002}.
+
+\subsection{Astrometric Calibration}
+Images are calibrated with \textsc{scamp} \citep{Bertin2006} and \textsc{photometrypipeline} (PP; \citealt{Mommert2017}).
+
+\subsection{Photometric Calibration}
+\textit{Sloan Digital Sky Survey} (SDSS; \citealt{York2000}).
+We use the SDSS Data Release 12 \citep{Alam2015}
+We use The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS) Data Release 1 \citep{Chambers2016, Flewelling2016}.
+
+\section{Analysis}\label{sec:analysis}
 lorem
 
-\section{Data Reduction}\label{sec:data reduction} 
-lorem
+\subsection{Source Extraction}
+We used \textsc{SExtractor} \citep{Bertin1996}.
 
-\section{Analysis}\label{sec:analysis} 
-lorem
+\subsection{Photometric Redshifts}
+We determine photometric redshifts from the four-band optical images using BPZ \citep{Benitez2000} following the same
+procedure as in Menanteau et al. (2008).
 
-\section{Estimating Cluster Masses}
-lorem
+\subsection{Cluster Finding}
+We create RGB images using \textsc{stiff} \citep{Bertin2011}.
+We use \textsc{MaxBCG} \citep{Koester2007b}.
 
 \section{Results and Discussion}\label{sec:results}
 
@@ -95,16 +182,16 @@ lorem
 
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
 % The best way to enter references is to use BibTeX:
-\bibliographystyle{apj} 
-\bibliography{master} 
+\bibliographystyle{apj}
+\bibliography{master}
 
 % if your bibtex file is called example.bib
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
 
 
 % Don't change these lines
-\bsp 
+\bsp
 
 % typesetting comment
-\label{lastpage} 
-\end{document} 
+\label{lastpage}
+\end{document}
