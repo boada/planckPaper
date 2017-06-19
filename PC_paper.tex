@@ -1,33 +1,33 @@
-\documentclass[fleqn,usenatbib]{mnras}
-
-% MNRAS is set in Times font. If you don't have this installed (most LaTeX
-% installations will be fine) or prefer the old Computer Modern fonts, comment
-% out the following line
-\usepackage{newtxtext,newtxmath}
-%\usepackage{times}
-% Depending on your LaTeX fonts installation, you might get better results with one of these:
-% \usepackage{mathptmx}
-% \usepackage{txfonts}
-
-% Use vector fonts, so it zooms properly in on-screen viewing software
-% Don't change these lines unless you know what you are doing
-\usepackage[T1]{fontenc}
-\usepackage{ae,aecompl}
+\documentclass[apj, revtex4]{emulateapj}
 
 %%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
 %\usepackage[colorlinks,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+%\usepackage{color}
+%\usepackage{graphicx}
+%\usepackage{amsmath}	% Advanced maths commands
+%\usepackage{amssymb}	% Extra maths symbols
+%\usepackage{mathrsfs}	% Extra extra math symbols
+%\usepackage{natbib}
+%\usepackage[colorlinks,urlcolor=magenta,citecolor=blue,linkcolor=blue]{hyperref}
+%\usepackage{multirow}
+%\usepackage{etoolbox}
+%\usepackage{subfig}
+%\usepackage{microtype}
+%\usepackage{listings}
+
+\usepackage{epsf}
 \usepackage{color}
+\usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{amsmath}	% Advanced maths commands
-\usepackage{amssymb}	% Extra maths symbols
-\usepackage{mathrsfs}	% Extra extra math symbols
-\usepackage{natbib}
 \usepackage[colorlinks,urlcolor=magenta,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{threeparttable}
 \usepackage{multirow}
+\usepackage{natbib}
 \usepackage{etoolbox}
-\usepackage{subfig}
-\usepackage{microtype}
-\usepackage{listings}
+
+
+\bibliographystyle{apj}
+\citestyle{aa}
 
 %%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
 \input{commands.tex}
@@ -36,31 +36,44 @@
 \newcommand{\multic}[2]{\multicolumn{#1}{c}{#2}}
 \newcommand{\rottext}[2]{\multirow{#1}{*}{\rotatebox[origin=c]{90}{#2}}}
 
+\makeatletter
+% Patch case where name and year are separated by aysep
+\patchcmd{\NAT@citex}
+{\@citea\NAT@hyper@{%
+		\NAT@nmfmt{\NAT@nm}%
+		\hyper@natlinkbreak{\NAT@aysep\NAT@spacechar}{\@citeb\@extra@b@citeb}%
+		\NAT@date}}
+{\@citea\NAT@nmfmt{\NAT@nm}%
+	\NAT@aysep\NAT@spacechar\NAT@hyper@{\NAT@date}}{}{}
+
+% Patch case where name and year are separated by opening bracket
+\patchcmd{\NAT@citex}
+{\@citea\NAT@hyper@{%
+		\NAT@nmfmt{\NAT@nm}%
+		\hyper@natlinkbreak{\NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi}%
+		{\@citeb\@extra@b@citeb}%
+		\NAT@date}}
+{\@citea\NAT@nmfmt{\NAT@nm}%
+	\NAT@spacechar\NAT@@open\if*#1*\else#1\NAT@spacechar\fi\NAT@hyper@{\NAT@date}}
+
 %%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
-\title[Planck Cluster Paper]{Planck Cluster Paper}
+ %-----------------------------------------------------------------------------------------
 
-% The list of authors, and the short list which is used in the headers.
-% If you need two or more lines of authors, add an extra line using \newauthor
-\author[S. Boada et al.]
-{\parbox{\textwidth}{Steven~Boada,$^{1}$\thanks{E-mail: boada@physics.rutgers.edu}
-JPH,$^{1}$, Felipe
-}\vspace{0.4cm}\
-\\
-\parbox{\textwidth}{$^{1}$Physics and Astronomy Department, Rutgers University, Piscataway, NJ 08854-8019, USA}}
+\shorttitle{}
+\shortauthors{BOADA ET AL.}
 
-% These dates will be filled out by the publisher
-\date{Accepted XXX. Received YYY; in original form ZZZ}
+\slugcomment{\it Draft Version \today}
+%\slugcomment{\it Submitted for publication in the Astrophysical Journal}
+%\slugcomment{Accepted for Publication in the Astrophysical Journal}
 
-% Enter the current year, for the copyright statements etc.
-\pubyear{2017}
-
-% Don't change these lines
 \begin{document}
-\label{firstpage}
-\pagerange{
-\pageref{firstpage}--
-\pageref{lastpage}}
-\maketitle
+	
+\title{Planck Cluster Paper}
+	
+\author{\sc Steven Boada\altaffilmark{1}, JPH, Felipe} 
+	
+\altaffiltext{1}{Rutgers;boada@physics.tamu.edu}
+
 
 \begin{abstract}
 	\noindent We propose to continue our program of optical imaging to unveil all of the most massive clusters in
@@ -133,8 +146,7 @@ sky, contains four InSb 2048 × 2048 pixel arrays arranged in a
 \section{Data Reduction and Calibration}\label{sec:data reduction}
 Standard processing of dark frame subtraction, flat fielding,
 sky-subtraction, and bad pixel masking was performed by
-the NEWFIRM Science Pipeline (Dickinson \& Valdes 2009;
-Swaters et al. 2009) to produce five stacked composite images
+the NEWFIRM Science Pipeline \citep{Swaters2009} to produce five stacked composite images
 for each near-IR band. The final stacked images retain the
 detector pixel scale of 0.4'' pixel−1. Variable seeing conditions
 caused the final observed point source FWHM in the stacked
@@ -188,10 +200,4 @@ lorem
 % if your bibtex file is called example.bib
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
 
-
-% Don't change these lines
-\bsp
-
-% typesetting comment
-\label{lastpage}
 \end{document}
