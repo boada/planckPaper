@@ -99,85 +99,75 @@ Throughout this paper, we adopt the following cosmological model from the Buzzar
 \section{Design}\label{sec:design}
 lorem
 \subsection{Observations}\label{sec: observations}
+All observations were conducted at the Kitt Peak National Observatory (KPNO) Mayall/4m telescope. The optical observations were made with the Mosaic camera mounted at the prime focus. Two detector packages were used for the observations. The earlier Mosaic1.1 instrument consisted of eight $2048\times4096$ SITe CCDs, arranged $2\times4$, separated by a $∼\sim50$ pixels gap with a pixel scale of $0\farcs26$ pixel$^{-1}$. Mosaic1.1 was replaced with Mosaic3, in \editorial{year?},  and consists of four new 4k$\times$4k, 15 micron pixel, 500-micron thick LBNL deep-depletion CCDs. Because the only change from Mosaic1.1 to Mosaic3 are the CCDs and controllers the both versions have a $36' \times 36'$ field-of-view.
 
-The proposed observing strategy consists of targeted $riz$ observations of individual candidates with
-exposure times of 350 s, 1100 s and 1100 s (assuming dark conditions) to provide $5\sigma$ detections
-limits of $r = 24.5$, $i = 24.5$, $z = 24.2$ ensuring the unambiguous detection of the faint galaxies
-(i.e., 0.4L$_∗\star$ ) in the red cluster sequence up to $z \sim 1.0$ (see Fig. 3) and of BCGs to higher redshifts.
-The choice of filters in our program is driven by the need to segregate early-type galaxies in the
-cluster through their colors (or photometric redshifts) by sampling blue-ward and red-ward of the
-4000\AA\ break
+The near-IR observations utilized the National Optical Astronomy Observatory (NOAO) Extremely Wide-Field Infrared Imager (NEWFIRM; \citealt{Probst2004}). The instrument consists of four InSb $2048 \times 2048$ pixel arrays arranged in $2\times2$ with approximately $1'$ gaps between each of the CCDs. The detector has a plate scale of $0\farcs4$ pixel$^{-1}$ and a $28'\times28'$ field-of-view.
 
-For these observations we will follow the successful setup we used before. We obtained an hour
-on each target in the Ks band using 1 minute exposures (5 coadded 12 s exposures) taken at
-60 different dither positions distributed quasi-randomly over a square 100'' × 100'' region. This
-produced reduced images with uniform exposure and sky level. The large FOV of the dithered NIR
-images (approximately 28' × 28' ) comfortably matches the MOSAIC observations proposed for Run
-1.
-Based on our experience over the last two years, an hour of integration on NEWFIRM will allow us
-to reach a magnitude limit of Ks $\sim 22.0$ (AB, $3\sigma$). This magnitude limit corresponds to $\sim M_{\star} + 2$
-in the cluster luminosity function at $z = 1.0$ as measured by De Propris et al. (1999), and assuming
-K AB = K Vega $+ 1.86$. This surface brightness limit corresponds to $\sim M_{\star} + 1.0$ at $z = 1.5$, sufficient
-for detecting sub L$_{\star}$ at this limit. This allows for confident detection of the BCG and associated red
-cluster sequence.
+\editorial{need to talk about the dithering}
 
-The narrow-band observations were made with the Mosaic cameras mounted at the
-prime foci of the KPNO and CTIO 4-m telescopes. The instruments and basic reduction
-procedures are given in detail in Paper I. Here we note that each camera consists of a 2x4
-array of 2048x4096 SITe CCDs. The field of view is 36’x36’, and the plate-scale of the
-final reduced images is 0.27” pixel−1
-The target galaxies were imaged using the Mosaic camera on
-the KPNO Mayall 4 m telescope. The Mosaic camera consists of
-eight 2048×4096 CCDs separated by a small gap (∼50 pixels).
-On the Mayall telescope, the imager has a 36' × 36' field of
-view with 0.26'' pixels.
+The optical observing strategy consists of targeted $griz$ observations of individual candidates with exposure times of 350 s, 350 s, 1100 s and 1100 s (assuming dark conditions) to provide $5\sigma$ detections limits of \editorial{$g=??$}, $r = 24.5$, $i = 24.5$, $z = 24.2$ ensuring the unambiguous detection of the faint (i.e., 0.4L$_∗\star$ ) galaxies in the red cluster sequence up to $z \sim 1.0$ \editorial{(citation?)} and of brightest cluster galaxies (BCGs) to higher redshifts. The choice of filters in our program is driven by the need to segregate early-type galaxies in the cluster through their colors (or photometric redshifts) by sampling blue-ward and red-ward of the 4000\AA\ break.
 
-the near-IR with the National Optical Astronomy
-Observatory (NOAO) Extremely Wide-Field Infrared Imager
-(NEWFIRM)
+For the NEWFIRM observations, we obtained 3600 s of Ks band imaging using 60 s exposures (5 coadded 12 s exposures) taken at 60 different dither positions distributed quasi-randomly over a square $100''\times100''$ region. This produced reduced images with uniform exposure and sky level. The final dithered images cover approximately $28'\times28'$ which comfortably matches the MOSAIC observations.
 
-The
-NEWFIRM camera, designed to quickly map large areas of the
-sky, contains four InSb 2048 × 2048 pixel arrays arranged in a
-2 × 2 pattern with a 28' field of view and an approximately
-1' gap between the CCDs. The detector has a pixel scale of
-0.4'' pixel−1. \citep{Probst2004}
+A NEWFIRM integration of 3600 s allows us to reach a limiting Ks magnitude of $\sim 22.0$ (AB, $3\sigma$). This magnitude limit corresponds to $\sim M_{\star} + 2$ in the cluster luminosity function at $z = 1.0$ as measured by \cite{DePropris1999a}, and assuming Ks AB = Ks Vega $+ 1.86$. This surface brightness limit corresponds to $\sim M_{\star} + 1.0$ at $z = 1.5$, sufficient for detecting sub L$_{\star}$ at this limit, allowing for confident detection of the BCG and associated red cluster sequence.
+
+\begin{table*}
+	\centering
+	\caption[Basic properties of the ten galaxy clusters targeted with the MS.]{Basic properties of the ten galaxy clusters targeted with the MS: Column 1: Our internal cluster name; Column 2: Abell Catalog ID; Column 3: The right ascension of the cluster; Column 4: The declination of the cluster; Column 5: the nominal (often photometric) cluster redshift; Column 6: The measured richness from \cite{Rykoff2012}; Column 7: The date of our observations.} 
+		\begin{tabular}{lccccc} 
+			\hline 
+			Cluster & RA (J2000) & DEC (J2000) & Optical Obs. & NIR Obs. & Filters\\
+			(1) & (2) & (3) & (4) & (5) & (6) \\
+			\hline \hline
+			MSJ010455.4+000336.3 & \nd & 01:04:55.369 & +00:03:36.28 & 0.277 & $129.7\pm4.9$ \\
+			MSJ133520.1+410004.1 & Abell 1763 & 13:35:20.092 & +41:00:04.12 & 0.223 & $191.0\pm5.7$ \\
+			MSJ140102.0+025242.6 & Abell 1835 & 14:01:01.965 & +02:52:42.63 & 0.252 & $135.6\pm5.2$ \\
+			MSJ153656.3+242431.6 & \nd & 15:36:56.253 & +24:24:31.60 & 0.226 & $70.1\pm4.4$ \\ 
+			MSJ164019.8+464241.5 & Abell 2219 & 16:40:19.812 & +46:42:41.51 & 0.225 & $202.6\pm5.4$ \\
+			MSJ172227.2+320757.2 & Abell 2261 & 17:22:27.182 & +32:07:57.24 & 0.224 & $185.8\pm7.4$ \\
+			MSJ211849.1+003337.3 & \nd & 21:18:49.069 & +00:33:37.33 & 0.270 & $121.0\pm4.6$ \\
+			MSJ215422.9+003723.5 & Abell 2392 & 21:54:22.936 & +00:37:23.48 & 0.223 & $87.2\pm4.8$ \\
+			XMMXCSJ124425.9+164758.0 & \nd & 12:44:25.203 & +16:47:48.00 & 0.235 & $11.4\pm1.7$ \\
+			XMMXCSJ125650.2+254803.2 & \nd & 12:56:49.999 & +25:48:02.99 & 0.280 & $8.2\pm1.8$ \\
+			\hline 
+		\end{tabular}
+	\label{tbl:targets} 
+\end{table*}
+
+A summary of our observations is given in Table~\ref{tbl:targets}.
+
 
 \section{Data Reduction and Calibration}\label{sec:data reduction}
-Standard processing of dark frame subtraction, flat fielding,
-sky-subtraction, and bad pixel masking was performed by
-the NEWFIRM Science Pipeline \citep{Swaters2009} to produce five stacked composite images
-for each near-IR band. The final stacked images retain the
-detector pixel scale of 0.4'' pixel−1. Variable seeing conditions
-caused the final observed point source FWHM in the stacked
-images to range from approximately 0.9–1.5''. The H-band
-observations were taken during the best seeing conditions and
-have the smallest FWHM, and the Ks images have the largest
-FWHM. Even in the most crowded portions of the region
-observed, however, the difference in effective resolution at the
-different NEWFIRM bands has a minimal effect on later source matching.
+Standard image reductions including subtraction of dark frames, flat fielding, sky-subtraction, and bad pixel masking was performed by the NOAO virtual observatory using the MOSAIC \citep{Valdes2007} and NEWFIRM \citep{Swaters2009} science pipelines. The resultant FITS files consist of fully reduced images with either all single exposure CCDs mosaicked into a single image extension (as in the case of Mosaic1.1 and NEWFIRM) or as a multi-extension FITS file with each single exposure CCD occupying a separate extension. 
+
+We then mosaic each separate exposure into a master mosaic as described in the following section.
 
 \subsection{Mosaicking}
-Mosaics are created with \textsc{swarp} \citep{Bertin2002}.
+Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. The individual dither frames are stacked and then median combined to produce the final completed mosaic. The final mosaic retains the native plate scale, and header information. The final exposure time is calculated as the median exposure time of the combined images, and similarly the final airmass is median of the individual air masses. \editorial{need to talk about the weight images}
+
+The full parameter file used while creating the mosaics is given in Appendix~\ref{app:swarp}.
 
 \subsection{Astrometric Calibration}
-Images are calibrated with \textsc{scamp} \citep{Bertin2006} and \textsc{photometrypipeline} (PP; \citealt{Mommert2017}).
+Each of the final mosaics produced in the previous section are first astrometrically aligned with \textit{Gaia} \citep{GaiaCollaboration2016} Data Release 1 \citep{GaiaCollaboration2016a} using \textsc{scamp} \citep{Bertin2006} as a part of \textsc{photometrypipeline} (PP; \citealt{Mommert2017}).
+
+Sources are extracted from the mosaics with a signal-to-noise ratio (SNR) of at least ten and with a minimum area of at least 12 pixels. The extracted sources are then matched to the \textit{Gaia} data and a new astrometric solution is calculated. Because the initial astrometric solution from the VO is quite accurate, the resultant corrections are less than $1''$.
 
 \subsection{Photometric Calibration}
-\textit{Sloan Digital Sky Survey} (SDSS; \citealt{York2000}).
-We use the SDSS Data Release 12 \citep{Alam2015}
-We use The Panoramic Survey Telescope and Rapid Response System (Pan-STARRS) Data Release 1 \citep{Chambers2016, Flewelling2016}.
+After the mosaics have been astrometrically aligned, we use PP to produce a photometric solution. PP calculates a photometric zero-point in each of our observed bands by comparing field stars located throughout the mosaic to known photometry from large-area sky surveys. Because our sources are spread across the entire northern sky, and because we prefer to minimize the number of differences between photometric solutions we are limited to two surveys. We first seek photometric data from the \textit{Sloan Digital Sky Survey} (SDSS; \citealt{York2000}) Data Release 13 \citep{Alam2015} \editorial{get a new citation for dr13 this is for dr12}. When our target does not lie within the SDSS footprint we utilize the Panoramic Survey Telescope and Rapid Response System (Pan-STARRS; \citealt{Chambers2016}) Data Release 1 (hereafter PS1; \citealt{Flewelling2016}). Both surveys provide accurate $griz$ magnitudes and large on-line queriable databases for rapid automated calibration.
+
+Sources are extracted from the combined mosaics with a $3''$ diameter aperture; sources with a SNR$\ge10$ are matched to a survey catalog and a photometric zero-point is determined. We use half of the available stars (with accurate catalog photometry) to derive the zero-point resulting in zero-points calculated from approximately $10-500$ stars and with typical uncertainties of \editorial{give zp errors in the different bands}.
 
 \section{Analysis}\label{sec:analysis}
 lorem
 
-\subsection{Source Extraction}
-We used \textsc{SExtractor} \citep{Bertin1996}.
+\subsection{Source Extraction and Photometry}
+For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; \citealt{Bertin1996}) run dual image mode where the $i$ image serves as a detection image. See Appendix~\ref{app:sextractor} for a complete parameter listing. Science catalog photometry is compared to the 
+
+
 
 \subsection{Photometric Redshifts}
 We determine photometric redshifts from the four-band optical images using BPZ \citep{Benitez2000} following the same
 procedure as in Menanteau et al. (2008).
-
 \subsection{Cluster Finding}
 We create RGB images using \textsc{stiff} \citep{Bertin2011}.
 We use \textsc{MaxBCG} \citep{Koester2007b}.
@@ -190,7 +180,7 @@ lorem
 
 lorem
 
-\section*{Acknowledgements} This research made use of \textsc{APLpy}, an open-source plotting package for Python hosted at \url{http://aplpy.github.com}; the \textsc{IPython} package \citep{Perez2007}; \textsc{matplotlib}, a Python library for publication quality graphics \citep{Hunter2007}. \textsc{iraf} is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy under cooperative agreement with the National Science Foundation \citep{Tody1993}. \textsc{PyRAF} is a product of the Space Telescope Science Institute, which is operated by AURA for NASA. Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions.
+\section*{Acknowledgements} This research made use of \textsc{APLpy}, an open-source plotting package for Python hosted at \url{http://aplpy.github.com}; the \textsc{IPython} package \citep{Perez2007}; \textsc{matplotlib}, a Python library for publication quality graphics \citep{Hunter2007}. \textsc{iraf} is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy under cooperative agreement with the National Science Foundation \citep{Tody1993}. \textsc{PyRAF} is a product of the Space Telescope Science Institute, which is operated by AURA for NASA. Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. This work has made use of data from the European Space Agency (ESA) mission {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the {\it Gaia} Multilateral Agreement.
 
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
 % The best way to enter references is to use BibTeX:
@@ -199,5 +189,235 @@ lorem
 
 % if your bibtex file is called example.bib
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+\section{SWARP}\label{app:swarp}
+\begin{verbatim}
+#----------------------------------- Output -----------------------------------
+IMAGEOUT_NAME          coadd.fits      # Output filename
+WEIGHTOUT_NAME       coadd.weight.fits # Output weight-map filename
+
+HEADER_ONLY            N               # Only a header as an output file (Y/N)?
+HEADER_SUFFIX          .head           # Filename extension for additional headers
+
+#------------------------------- Input Weights --------------------------------
+
+WEIGHT_TYPE            NONE            # BACKGROUND,MAP_RMS,MAP_VARIANCE
+# or MAP_WEIGHT
+WEIGHT_SUFFIX          .weight.fits    # Suffix to use for weight-maps
+WEIGHT_IMAGE                           # Weightmap filename if suffix not used
+# (all or for each weight-map)
+
+#------------------------------- Co-addition ----------------------------------
+
+COMBINE                Y               # Combine resampled images (Y/N)?
+COMBINE_TYPE           MEDIAN          # MEDIAN,AVERAGE,MIN,MAX,WEIGHTED,CHI2
+# or SUM
+
+#-------------------------------- Astrometry ----------------------------------
+
+CELESTIAL_TYPE         NATIVE          # NATIVE, PIXEL, EQUATORIAL,
+# GALACTIC,ECLIPTIC, or SUPERGALACTIC
+PROJECTION_TYPE        TAN             # Any WCS projection code or NONE
+PROJECTION_ERR         0.001           # Maximum projection error (in output
+# pixels), or 0 for no approximation
+CENTER_TYPE            MANUAL             # MANUAL, ALL or MOST
+CENTER         00:00:00.0, +00:00:00.0 # Coordinates of the image center
+PIXELSCALE_TYPE        MANUAL          # MANUAL,FIT,MIN,MAX or MEDIAN
+PIXEL_SCALE            0.2666          # Pixel scale
+IMAGE_SIZE             0               # Image size (0 = AUTOMATIC)
+
+#-------------------------------- Resampling ----------------------------------
+
+RESAMPLE               Y               # Resample input images (Y/N)?
+RESAMPLE_DIR           .               # Directory path for resampled images
+RESAMPLE_SUFFIX        .resamp.fits    # filename extension for resampled images
+
+RESAMPLING_TYPE        LANCZOS3        # NEAREST,BILINEAR,LANCZOS2,LANCZOS3
+# or LANCZOS4 (1 per axis)
+OVERSAMPLING           0               # Oversampling in each dimension
+# (0 = automatic)
+INTERPOLATE            N               # Interpolate bad input pixels (Y/N)?
+# (all or for each image)
+
+FSCALASTRO_TYPE        FIXED           # NONE or FIXED
+FSCALE_KEYWORD         FLXSCALE        # FITS keyword for the multiplicative
+# factor applied to each input image
+FSCALE_DEFAULT         1.0             # Default FSCALE value if not in header
+
+GAIN_KEYWORD           GAIN            # FITS keyword for effect. gain (e-/ADU)
+GAIN_DEFAULT           0.0             # Default gain if no FITS keyword found
+# 0 = infinity (all or for each image)
+
+#--------------------------- Background subtraction ---------------------------
+
+SUBTRACT_BACK          Y               # Subtraction sky background (Y/N)?
+# (all or for each image)
+
+BACK_TYPE              AUTO            # AUTO or MANUAL
+# (all or for each image)
+BACK_DEFAULT           0.0             # Default background value in MANUAL
+# (all or for each image)
+BACK_SIZE              128             # Background mesh size (pixels)
+# (all or for each image)
+BACK_FILTERSIZE        3               # Background map filter range (meshes)
+# (all or for each image)
+
+#------------------------------ Memory management -----------------------------
+
+VMEM_DIR               .               # Directory path for swap files
+VMEM_MAX               2047            # Maximum amount of virtual memory (MB)
+MEM_MAX                128             # Maximum amount of usable RAM (MB)
+COMBINE_BUFSIZE        64              # RAM dedicated to co-addition(MB)
+
+#------------------------------ Miscellaneous ---------------------------------
+
+DELETE_TMPFILES        Y               # Delete temporary resampled FITS files
+# (Y/N)?
+COPY_KEYWORDS          OBJECT          # List of FITS keywords to propagate
+# from the input to the output headers
+WRITE_FILEINFO         N               # Write information about each input
+# file in the output image header?
+WRITE_XML              N               # Write XML file (Y/N)?
+XML_NAME               swarp.xml       # Filename for XML output
+VERBOSE_TYPE           NORMAL          # QUIET,NORMAL or FULL
+
+NTHREADS               0               # Number of simultaneous threads for
+# the SMP version of SWarp
+# 0 = automatic
+\end{verbatim}
+
+\section{SExtractor}\label{app:sextractor}
+\begin{verbatim}
+#-------------------------------- Catalog ------------------------------------
+
+CATALOG_NAME     test.cat       # name of the output catalog
+CATALOG_TYPE     ASCII_HEAD     # NONE,ASCII,ASCII_HEAD, ASCII_SKYCAT,
+# ASCII_VOTABLE, FITS_1.0 or FITS_LDAC
+PARAMETERS_NAME  $PIPE/confs/bcs_Catalog.param  # name of the file containing catalog contents
+
+#------------------------------- Extraction ----------------------------------
+
+DETECT_TYPE      CCD            # CCD (linear) or PHOTO (with gamma correction)
+DETECT_MINAREA   12              # min. # of pixels above threshold
+DETECT_MAXAREA   0              # max. # of pixels above threshold (0=unlimited)
+THRESH_TYPE      RELATIVE       # threshold type: RELATIVE (in sigmas)
+# or ABSOLUTE (in ADUs)
+DETECT_THRESH    1.5            # <sigmas> or <threshold>,<ZP> in mag.arcsec-2
+ANALYSIS_THRESH  1.0            # <sigmas> or <threshold>,<ZP> in mag.arcsec-2
+
+FILTER           Y              # apply filter for detection (Y or N)?
+FILTER_NAME      $PIPE/confs/configs/gauss_3.0_5x5.conv   # name of the file containing the filter
+FILTER_THRESH                   # Threshold[s] for retina filtering
+
+DEBLEND_NTHRESH  32             # Number of deblending sub-thresholds
+DEBLEND_MINCONT  0.005          # Minimum contrast parameter for deblending
+
+CLEAN            Y              # Clean spurious detections? (Y or N)?
+CLEAN_PARAM      1.0            # Cleaning efficiency
+
+MASK_TYPE        CORRECT        # type of detection MASKing: can be one of
+# NONE, BLANK or CORRECT
+
+#-------------------------------- WEIGHTing ----------------------------------
+
+WEIGHT_TYPE      NONE           # type of WEIGHTing: NONE, BACKGROUND,
+# MAP_RMS, MAP_VAR or MAP_WEIGHT
+RESCALE_WEIGHTS  Y              # Rescale input weights/variances (Y/N)?
+WEIGHT_IMAGE     weight.fits    # weight-map filename
+WEIGHT_GAIN      Y              # modulate gain (E/ADU) with weights? (Y/N)
+WEIGHT_THRESH                   # weight threshold[s] for bad pixels
+
+#-------------------------------- FLAGging -----------------------------------
+
+FLAG_IMAGE       flag.fits      # filename for an input FLAG-image
+FLAG_TYPE        OR             # flag pixel combination: OR, AND, MIN, MAX
+# or MOST
+
+#------------------------------ Photometry -----------------------------------
+
+PHOT_APERTURES   11.25              # MAG_APER aperture diameter(s) in pixels
+PHOT_AUTOPARAMS  2.5, 3.5       # MAG_AUTO parameters: <Kron_fact>,<min_radius>
+PHOT_PETROPARAMS 2.0, 3.5       # MAG_PETRO parameters: <Petrosian_fact>,
+# <min_radius>
+PHOT_AUTOAPERS   0.0,0.0        # <estimation>,<measurement> minimum apertures
+# for MAG_AUTO and MAG_PETRO
+PHOT_FLUXFRAC    0.5            # flux fraction[s] used for FLUX_RADIUS
+
+SATUR_LEVEL      50000.0        # level (in ADUs) at which arises saturation
+SATUR_KEY        SATURATE       # keyword for saturation level (in ADUs)
+
+MAG_ZEROPOINT    0.0            # magnitude zero-point
+MAG_GAMMA        4.0            # gamma of emulsion (for photographic scans)
+GAIN             0.0            # detector gain in e-/ADU
+GAIN_KEY         GAIN           # keyword for detector gain in e-/ADU
+PIXEL_SCALE      0.0            # size of pixel in arcsec (0=use FITS WCS info)
+
+#------------------------- Star/Galaxy Separation ----------------------------
+
+SEEING_FWHM      1.2            # stellar FWHM in arcsec
+STARNNW_NAME     $PIPE/confs/configs/default.nnw    # Neural-Network_Weight table filename
+
+#------------------------------ Background -----------------------------------
+
+BACK_TYPE        AUTO           # AUTO or MANUAL
+BACK_VALUE       0.0            # Default background value in MANUAL mode
+BACK_SIZE        64             # Background mesh: <size> or <width>,<height>
+BACK_FILTERSIZE  3              # Background filter: <size> or <width>,<height>
+
+BACKPHOTO_TYPE   GLOBAL         # can be GLOBAL or LOCAL
+BACKPHOTO_THICK  24             # thickness of the background LOCAL annulus
+BACK_FILTTHRESH  0.0            # Threshold above which the background-
+# map filter operates
+
+#------------------------------ Check Image ----------------------------------
+
+CHECKIMAGE_TYPE  NONE           # can be NONE, BACKGROUND, BACKGROUND_RMS,
+# MINIBACKGROUND, MINIBACK_RMS, -BACKGROUND,
+# FILTERED, OBJECTS, -OBJECTS, SEGMENTATION,
+# or APERTURES
+CHECKIMAGE_NAME  check.fits     # Filename for the check-image
+
+#--------------------- Memory (change with caution!) -------------------------
+
+MEMORY_OBJSTACK  3000           # number of objects in stack
+MEMORY_PIXSTACK  300000         # number of pixels in stack
+MEMORY_BUFSIZE   1024           # number of lines in buffer
+
+#------------------------------- ASSOCiation ---------------------------------
+
+ASSOC_NAME       sky.list       # name of the ASCII file to ASSOCiate
+ASSOC_DATA       2,3,4          # columns of the data to replicate (0=all)
+ASSOC_PARAMS     2,3,4          # columns of xpos,ypos[,mag]
+ASSOCCOORD_TYPE  PIXEL          # ASSOC coordinates: PIXEL or WORLD
+ASSOC_RADIUS     2.0            # cross-matching radius (pixels)
+ASSOC_TYPE       NEAREST        # ASSOCiation method: FIRST, NEAREST, MEAN,
+# MAG_MEAN, SUM, MAG_SUM, MIN or MAX
+ASSOCSELEC_TYPE  MATCHED        # ASSOC selection type: ALL, MATCHED or -MATCHED
+
+#----------------------------- Miscellaneous ---------------------------------
+
+VERBOSE_TYPE     NORMAL         # can be QUIET, NORMAL or FULL
+HEADER_SUFFIX    .head          # Filename extension for additional headers
+WRITE_XML        N              # Write XML file (Y/N)?
+XML_NAME         sex.xml        # Filename for XML output
+XSL_URL          file:///opt/sextractor_2.19.5/share/sextractor/sextractor.xsl
+# Filename for XSL style-sheet
+NTHREADS         1              # 1 single thread
+
+FITS_UNSIGNED    N              # Treat FITS integer values as unsigned (Y/N)?
+INTERP_MAXXLAG   16             # Max. lag along X for 0-weight interpolation
+INTERP_MAXYLAG   16             # Max. lag along Y for 0-weight interpolation
+INTERP_TYPE      ALL            # Interpolation type: NONE, VAR_ONLY or ALL
+
+#--------------------------- Experimental Stuff -----------------------------
+
+PSF_NAME         default.psf    # File containing the PSF model
+PSF_NMAX         1              # Max.number of PSFs fitted simultaneously
+PATTERN_TYPE     RINGS-HARMONIC # can RINGS-QUADPOLE, RINGS-OCTOPOLE,
+# RINGS-HARMONICS or GAUSS-LAGUERRE
+SOM_NAME         default.som    # File containing Self-Organizing Map weights
+\end{verbatim}
 
 \end{document}
