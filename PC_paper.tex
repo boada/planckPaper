@@ -70,7 +70,7 @@
 	
 \title{Planck Cluster Paper}
 	
-\author{\sc Steven Boada\altaffilmark{1}, JPH, Felipe} 
+\author{\sc SB\altaffilmark{1}, JPH\altaffilmark{1}, FM} 
 	
 \altaffiltext{1}{Rutgers;boada@physics.tamu.edu}
 
@@ -81,7 +81,7 @@
 \end{abstract}
 
 \section{Introduction}
-\editorial{this section has not been edited and is just a bunch of stuff copy and pasted}
+\editorial{this section has not been edited and is just a bunch of stuff copy and pasted. I did update some of the references.}
 Massive galaxy clusters at high redshifts are rare beasts that hold important clues to the evolution of structure in the Universe and in principle can help probe (or falsify) structure formation models under the $\Lambda$CDM paradigm (e.g., Mortonson et al. 2011; Harrison \& Coles 2012; Harrison \& Hotchkiss 2012; Waizmann et al. 2012; Zitrin et al. 2009). Galaxy clusters also harbor a significant fraction of the visible baryons in the Universe, in the form of a hot intracluster medium that leaves an imprint on the Cosmic Microwave Background (CMB) though the Sunyaev-Zel'dovich (SZ; \citealt{Sunyaev1972} effect. 
 
 The surface brightness of the SZ effect does not depend on redshift, therefore providing uniform samples of massive clusters up to arbitrary distances. This has been borne out by the large area surveys of the Atacama Cosmology Telescope (ACT; \citealt{Swetz2011}) and the South Pole Telescope (SPT; \citealt{Carlstrom2011} that have detected hundreds of massive clusters since 2008 up to redshifts of $z \sim 1.4$ (\editorial{see Reichardt et al. 2013 and Hasselfield et al. 2013} for latest results). Now, Planck has released an all-sky SZ sample (PSZ; \citealt{PlanckCollaboration2013a}) that contains 861 confirmed clusters (of which most [683] were known previously) and another 366 unconfirmed cluster candidates. 
@@ -98,7 +98,6 @@ Among the recently released, second, all-sky PSZ catalog \citep{PlanckCollaborat
  
 
 Our strategy is to use the Kitt Peak National Observatory (KPNO) Mayall-4m telescope imaging as the first and fundamental step to confirm the highest significance detections in the PSZ catalog that are visible across the entire northern sky. Following closely the procedure used for ACT follow-up \editorial{citation?}, targets are prioritized by SZ signal-to-noise (S/N). We choose to initially report on targets with PSZ S/N$>5$ as the statistical reliability of PSZ cluster candidates is quite high: according to the Planck team $\sim90$\% of candidates at S/N$>5$ turn out to be ``real'' clusters (\editorial{citation? maybe show the figure from the proposal}).
-
 
 % For semester 2014A alone, this corresponds to a sky area of $\sim20,000$ sq. deg., more than 6 times the area of the current combined ACT+SPT surveys. Following closely the procedure we used for ACT follow-up, we prioritize the target selection by SZ signal-to-noise (S/N). For this initial investigation we will target the $\sim60$ cluster candidates (visible in 2014A) from the PSZ catalog with S/N$>5$. For this sample the statistical reliability of PSZ cluster candidates is quite high: according to the Planck team $\sim90$\% of candidates at S/N$>5$ turn out to be ``real'' clusters (see Fig. 2, left panel). Given this purity value, the proposed observations, utilizing telescopes in both hemispheres, will enable the confirmation of $\approx 50 − 60$ massive clusters at high redshift in semester 2014A alone. We will propose to observe the remaining S/N$>5$ PSZ candidates during semester 2014B.
 
@@ -117,7 +116,7 @@ For the NEWFIRM observations, we obtained 3600 s of Ks band imaging using 60 s e
 
 A NEWFIRM integration of 3600 s allows us to reach a limiting Ks magnitude of $\sim 22.0$ (AB, $3\sigma$). This magnitude limit corresponds to $\sim M_{\star} + 2$ in the cluster luminosity function at $z = 1.0$ as measured by \cite{DePropris1999a}, and assuming Ks AB = Ks Vega $+ 1.86$. This surface brightness limit corresponds to $\sim M_{\star} + 1.0$ at $z = 1.5$, sufficient for detecting sub L$_{\star}$ at this limit, allowing for confident detection of the BCG and associated red cluster sequence.
 
-	\begin{longtable*}{lccccc}
+\begin{longtable*}{lccccc}
 	\caption[Basic properties of the galaxy cluster candidates targeted for observation.]{Basic properties of the galaxy clusters candidates targeted for observation with the MOSAIC and NEWFIRM instruments: Column 1: Cluster name; Column 2: The right ascension of the cluster; Column 3: The declination of the cluster; Column 4: the PSZ catalog S/N ratio; Column 5: The date of MOSAIC observations; Column 6: The data of NEWFIRM observations.}\\
 	\hline
 	Cluster & RA (J2000) & DEC (J2000) & PSZ2 SNR & MOSAIC Obs. & NEWFIRM Obs. \\
@@ -212,14 +211,31 @@ lorem
 \subsection{Source Extraction and Photometry}
 For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; \citealt{Bertin1996}) run dual image mode where the $i$ image serves as a detection image. See Appendix~\ref{app:sextractor} for a complete parameter listing. Science catalog photometry is compared to the 
 
-
-
 \subsection{Photometric Redshifts}
-We determine photometric redshifts from the four-band optical images using BPZ \citep{Benitez2000} following the same procedure as in \cite{Menanteau2008a}.
+We determine photometric redshifts (photo-z) from the four-band optical images using Bayesian Photometric Redshifts (BPZ; \citealt{Benitez2000, Coe2006}) following the same procedure as in \cite{Menanteau2008a}.
+
+\begin{figure*} 
+	\includegraphics[width=\textwidth]{figures/specVSphot.pdf} 
+	\caption{This is a placeholder figure for a figure about how we are doing with the photo-z's. I'm still working out exactly what we should show on the figure, and whether it should be a single or double column figure.} 
+	\label{fig:icd_vs_mass} 
+\end{figure*}
+
+We assess the effectiveness of our photo-z estimates by comparing with the available spectroscopic redshifts (spec-z) from the SDSS. We use three diagnostics to gauge photo-z accuracy. First, we report the full scatter between the photo-z and spec-z, defined as:
+\begin{equation}
+	\sigma_f = \mathrm{RMS}[\delta z/(1+z_{spec})]
+\end{equation}
+where $\delta z = z_{spec} - z_{phot}$. Second, we report the normalized median absolute deviation (NMAD; \citealt{Ilbert2009, Dahlen2013, Molino2017}), given as
+\begin{equation}
+	\sigma_{NMAD} = 1.48 \times \mathrm{median} \bigg{(} \frac{|\delta z|}{1+z_{spec}} \bigg{)}.
+\end{equation}   
+which provides an estimate of the scatter resistant to catastrophic outliers. Finally, the catastrophic outlier fraction (OLF) where we define a catastrophic outlier (following \citealt{Molino2017}) as,
+\begin{equation}
+	\eta = \frac{|\delta z|}{(1+z_{spec})} > 5 \times \sigma_{NMAD}.
+\end{equation}
+
 
 \subsection{Cluster Finding}
-We create RGB images using \textsc{stiff} \citep{Bertin2011}.
-We use \textsc{MaxBCG} \citep{Koester2007b}.
+We create RGB images using \textsc{stiff} \citep{Bertin2011}. We use \textsc{MaxBCG} \citep{Koester2007b}.
 
 \section{Results and Discussion}\label{sec:results}
 
