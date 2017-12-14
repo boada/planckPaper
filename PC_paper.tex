@@ -189,7 +189,7 @@ Standard image reductions including subtraction of dark frames, flat fielding, s
 We then mosaic each separate exposure into a master mosaic as described in the following section.
 
 \subsection{Mosaicking}\label{sec:mosaicks}
-Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. We create three distinct types of mosaics. The individual dither frames are stacked and then median combined to produce the final completed science mosaic. A ``detection'' is created by combining select science mosaics into a chi2 image using either the $i$-band and Ks-band or $i-$ and $z$-band when Ks imaging is not available. Finally we create a set of mosaics use to produce the three color image used for cluster detection. For this we median combine the $griz$ and Ks science mosaics into a ``blue'' ($gr$-bands), ``green'' ($iz-bands$), and ``red'' (Ks-band) mosaic. All final mosaics have a pixelscale of $0.25''/$pix. The final exposure time is calculated as the median exposure time of the combined images, and similarly the final airmass is median of the individual air masses. \editorial{need to talk about the weight images}
+Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. We create three distinct types of mosaics. The individual dither frames are stacked and then median combined to produce the final completed science mosaic. A ``detection'' is created by combining select science mosaics into a chi2 image using either the $i$-band and Ks-band or $i-$ and $z$-band when Ks imaging is not available. Finally we create a set of mosaics use to produce the three color image used for cluster detection. For this we median combine the $griz$ and Ks science mosaics into a ``blue'' ($gr$-bands), ``green'' ($iz-bands$), and ``red'' (Ks-band) mosaic. All final mosaics have a pixelscale of $0\farcs25/$pix. The final exposure time is calculated as the median exposure time of the combined images, and similarly the final airmass is median of the individual air masses. \editorial{need to talk about the weight images}
 
 The full parameter file used while creating the mosaics is given in Appendix~\ref{app:swarp}.
 
@@ -206,13 +206,13 @@ Sources are extracted from the combined mosaics with either a $3''$ or $8''$ dia
 \editorial{Should we talk about the difference between us and SDSS? If so, how should we ``sum up'' the differences in a simple way?} 
 
 \section{Analysis}\label{sec:analysis}
-lorem
+Lorem ipsum dolor amet swag copper mug meh tilde, put a bird on it live-edge tattooed kinfolk before they sold out locavore selvage leggings raclette literally bicycle rights. Hot chicken kickstarter mustache vinyl roof party. Wayfarers brooklyn truffaut twee umami, venmo irony. Typewriter viral pop-up, listicle vaporware organic af salvia keytar twee chillwave austin +1 offal blog. La croix dreamcatcher snackwave, try-hard intelligentsia taxidermy messenger bag air plant godard mustache celiac glossier echo park. Photo booth readymade authentic glossier biodiesel snackwave beard hammock sriracha before they sold out edison bulb fixie PBR\&B. Man bun pabst kogi, crucifix subway tile af tacos cray tumeric lyft cronut lomo tattooed.
 
 \subsection{Source Extraction and Photometry}
 For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}. See Appendix~\ref{app:sextractor} for a complete parameter listing.
 
 \subsection{Photometric Redshifts}
-We determine photometric redshifts (photo-z) from the five-band optical and IR (when available) images using Bayesian Photometric Redshifts (BPZ; \citealt{Benitez2000, Coe2006}) following the same procedure as in \cite{Menanteau2008a}.
+We determine photometric redshifts (photo-z) from the five-band optical and IR (when available) images using Bayesian Photometric Redshifts (BPZ; \citealt{Benitez2000, Coe2006}) following the same procedure as in \cite{Menanteau2009a}.
 
 \begin{figure*} 
 	\includegraphics[width=\textwidth]{figures/specVSphot.pdf} 
@@ -233,9 +233,17 @@ which provides an estimate of the scatter resistant to catastrophic outliers. Fi
 	\eta = \frac{|\delta z|}{(1+z_{spec})} > 5 \times \sigma_{NMAD}.
 \end{equation}
 
-
 \subsection{Cluster Finding}
-We create RGB images using \textsc{stiff} \citep{Bertin2011}. We use \textsc{MaxBCG} \citep{Koester2007b}.
+In this section, we briefly describe the algorithms and methods use to select the galaxy clusters from the multi-wavelength optical/NIR imaging. We follow the methods described in detail in \cite{Menanteau2009a, Menanteau2010}. We direct the reader there for an in depth description and discussion of the methods.  
+
+We first create a three-color image using \textsc{stiff} \citep{Bertin2011}. The red, green, and blue channels are given by the corresponding combined mosaics described in Section~\ref{sec:mosaicks}. We then visually inspect an area of roughly $8' \times 8'$ centered on the position of each unconfirmed cluster; see Table~\ref{tbl:targets}. Potential brightest cluster galaxies (BCGs) are identified by first calculating the absolute limiting magnitude \editorial{needs details}.
+
+Once a potential BCG is selected, the algorithm selects nearby galaxies, within $|z_{BCG} - z| < 0.05$ and 0.5 Mpc projected radius, which BPZ has classified as either E or E/S0 galaxies. These photo-z's of the galaxies are combined using a $3\sigma$ median sigma-clipping algorithm to estimate the cluster's mean redshift, $z_c$. We use this mean cluster redshift measurement and the member selection criteria given previously to estimate the number of cluster members within 1 Mpc, $N_{1\rm Mpc}$, which we define as the richness of the cluster, $N_{gal}$.   
+
+We correct the $N_{gal}$ estimate by subtracting an statistical background 
+
+
+We use \textsc{MaxBCG} \citep{Koester2007b}.
 
 \section{Results and Discussion}\label{sec:results}
 
