@@ -82,7 +82,7 @@
 
 \section{Introduction}
 \editorial{this section has not been edited and is just a bunch of stuff copy and pasted. I did update some of the references.}
-Massive galaxy clusters at high redshifts are rare beasts that hold important clues to the evolution of structure in the Universe and in principle can help probe (or falsify) structure formation models under the $\Lambda$CDM paradigm (e.g., Mortonson et al. 2011; Harrison \& Coles 2012; Harrison \& Hotchkiss 2012; Waizmann et al. 2012; Zitrin et al. 2009). Galaxy clusters also harbor a significant fraction of the visible baryons in the Universe, in the form of a hot intracluster medium that leaves an imprint on the Cosmic Microwave Background (CMB) though the Sunyaev-Zel'dovich (SZ; \citealt{Sunyaev1972} effect. 
+Massive galaxy clusters at high redshifts are rare beasts that hold important clues to the evolution of structure in the Universe and in principle can help probe (or falsify) structure formation models under the $\Lambda$CDM paradigm (\eg, Mortonson et al. 2011; Harrison \& Coles 2012; Harrison \& Hotchkiss 2012; Waizmann et al. 2012; Zitrin et al. 2009). Galaxy clusters also harbor a significant fraction of the visible baryons in the Universe, in the form of a hot intracluster medium that leaves an imprint on the Cosmic Microwave Background (CMB) though the Sunyaev-Zel'dovich (SZ; \citealt{Sunyaev1972} effect. 
 
 The surface brightness of the SZ effect does not depend on redshift, therefore providing uniform samples of massive clusters up to arbitrary distances. This has been borne out by the large area surveys of the Atacama Cosmology Telescope (ACT; \citealt{Swetz2011}) and the South Pole Telescope (SPT; \citealt{Carlstrom2011} that have detected hundreds of massive clusters since 2008 up to redshifts of $z \sim 1.4$ (\editorial{see Reichardt et al. 2013 and Hasselfield et al. 2013} for latest results). Now, Planck has released an all-sky SZ sample (PSZ; \citealt{PlanckCollaboration2013a}) that contains 861 confirmed clusters (of which most [683] were known previously) and another 366 unconfirmed cluster candidates. 
 
@@ -96,7 +96,6 @@ Unless otherwise noted, throughout this paper, we use a concordance cosmological
 \section{Design}\label{sec:design}
 Among the recently released, second, all-sky PSZ catalog \citep{PlanckCollaboration2015} there are 366 unconfirmed SZ detections with S/N $> 4.5$. The vast majority of these must lie at high-z because the Planck confirmation process mostly relied on existing catalogs with a preference for low-z clusters. Furthermore, the confirmed sample has a small fraction (3\%) of $z > 0.6$ clusters compared to that expected ($\sim20$\%) based on the theoretical halo mass function \citep{Jenkins2001, Tinker2008}. If other clusters like ``El Gordo'' exist, they are hiding as high-significance candidates within the objects in this catalog. The design of the observations is to use both optical and near-infrared (NIR) imaging to confirm the SZ detections as real clusters and provide photometric redshifts using the multi-color information.
  
-
 Our strategy is to use the Kitt Peak National Observatory (KPNO) Mayall-4m telescope imaging as the first and fundamental step to confirm the highest significance detections in the PSZ catalog that are visible across the entire northern sky. Following closely the procedure used for ACT follow-up \editorial{citation?}, targets are prioritized by SZ signal-to-noise (S/N). We choose to initially report on targets with PSZ S/N$>5$ as the statistical reliability of PSZ cluster candidates is quite high: according to the Planck team $\sim90$\% of candidates at S/N$>5$ turn out to be ``real'' clusters (\editorial{citation? maybe show the figure from the proposal}).
 
 % For semester 2014A alone, this corresponds to a sky area of $\sim20,000$ sq. deg., more than 6 times the area of the current combined ACT+SPT surveys. Following closely the procedure we used for ACT follow-up, we prioritize the target selection by SZ signal-to-noise (S/N). For this initial investigation we will target the $\sim60$ cluster candidates (visible in 2014A) from the PSZ catalog with S/N$>5$. For this sample the statistical reliability of PSZ cluster candidates is quite high: according to the Planck team $\sim90$\% of candidates at S/N$>5$ turn out to be ``real'' clusters (see Fig. 2, left panel). Given this purity value, the proposed observations, utilizing telescopes in both hemispheres, will enable the confirmation of $\approx 50 − 60$ massive clusters at high redshift in semester 2014A alone. We will propose to observe the remaining S/N$>5$ PSZ candidates during semester 2014B.
@@ -209,16 +208,10 @@ Sources are extracted from the combined mosaics with either a $3''$ or $8''$ dia
 Lorem ipsum dolor amet swag copper mug meh tilde, put a bird on it live-edge tattooed kinfolk before they sold out locavore selvage leggings raclette literally bicycle rights. Hot chicken kickstarter mustache vinyl roof party. Wayfarers brooklyn truffaut twee umami, venmo irony. Typewriter viral pop-up, listicle vaporware organic af salvia keytar twee chillwave austin +1 offal blog. La croix dreamcatcher snackwave, try-hard intelligentsia taxidermy messenger bag air plant godard mustache celiac glossier echo park. Photo booth readymade authentic glossier biodiesel snackwave beard hammock sriracha before they sold out edison bulb fixie PBR\&B. Man bun pabst kogi, crucifix subway tile af tacos cray tumeric lyft cronut lomo tattooed.
 
 \subsection{Source Extraction and Photometry}
-For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}. See Appendix~\ref{app:sextractor} for a complete parameter listing.
+For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; version 2.19.5; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}. See Appendix~\ref{app:sextractor} for a complete parameter listing.
 
 \subsection{Photometric Redshifts}
 We determine photometric redshifts (photo-z) from the five-band optical and IR (when available) images using Bayesian Photometric Redshifts (BPZ; \citealt{Benitez2000, Coe2006}) following the same procedure as in \cite{Menanteau2009a}.
-
-\begin{figure*} 
-	\includegraphics[width=\textwidth]{figures/specVSphot.pdf} 
-	\caption{This is a placeholder figure for a figure about how we are doing with the photo-z's. I'm still working out exactly what we should show on the figure, and whether it should be a single or double column figure.} 
-	\label{fig:icd_vs_mass} 
-\end{figure*}
 
 We assess the effectiveness of our photo-z estimates by comparing with the available spectroscopic redshifts (spec-z) from the SDSS. We use three diagnostics to gauge photo-z accuracy. First, we report the full scatter between the photo-z and spec-z, defined as:
 \begin{equation}
@@ -233,6 +226,15 @@ which provides an estimate of the scatter resistant to catastrophic outliers. Fi
 	\eta = \frac{|\delta z|}{(1+z_{spec})} > 5 \times \sigma_{NMAD}.
 \end{equation}
 
+\begin{figure} 
+	\includegraphics[width=\columnwidth]{figures/specVSphot.pdf} 
+	\caption{Comparison between photometric and spectroscopic redshifts for 2253 galaxies which have spectroscopic redshifts from the SDSS. The photometric redshifts in the top panel use a Bayesian approach with a custom empirical prior on galaxy brightness for the photometric redshifts. The bottom panel shows the difference between the spectroscopic and photometric redshift.} 
+	\label{fig:photozspecz} 
+\end{figure}
+
+Figure~\ref{fig:photozspecz} shows the photometric redshift performance as a function of the true spectroscopic redshift. For the full sample of galaxies we calculate $\sigma_f = \editorial{XX\%}$, $\sigma_{NMAD} = \editorial{XX\%}$, and an outlier fraction, $\eta = \editorial{XX\%}$. When considering the performance of only the galaxies BPZ classified as E and E/S0 type, we find the following results; $\sigma_f = 10.4\%$, $\sigma_{NMAD} = 5.43\%$, and an outlier fraction, $\eta = 2.97\%$. 
+
+
 \subsection{Cluster Finding}
 In this section, we briefly describe the algorithms and methods use to select the galaxy clusters from the multi-wavelength optical/NIR imaging. We follow the methods described in detail in \cite{Menanteau2009a, Menanteau2010}. We direct the reader there for an in depth description and discussion of the methods.  
 
@@ -240,10 +242,9 @@ We first create a three-color image using \textsc{stiff} \citep{Bertin2011}. The
 
 Once a potential BCG is selected, the algorithm selects nearby galaxies, within $|z_{BCG} - z| < 0.05$ and 0.5 Mpc projected radius, which BPZ has classified as either E or E/S0 galaxies. These photo-z's of the galaxies are combined using a $3\sigma$ median sigma-clipping algorithm to estimate the cluster's mean redshift, $z_c$. We use this mean cluster redshift measurement and the member selection criteria given previously to estimate the number of cluster members within 1 Mpc, $N_{1\rm Mpc}$, which we define as the richness of the cluster, $N_{gal}$.   
 
-We correct the $N_{gal}$ estimate by subtracting an statistical background 
+We correct the $N_{gal}$ estimate by subtracting a statistical background of galaxies. We first estimate the number of background ellipticals by selecting galaxies within an annulus ($R_{200} <r < 2R_{200}$) around each cluster's position. We include galaxies with $\delta z = 0.05$ and similar colors as those galaxies assumed to belong to the cluster. These galaxies are subtracted from the cluster's population which provides an corrected $N_{gal}$, $N_{galc}$, which we then use to compute other important quantities. In practice the corrected number of galaxies is between 15\% and 20\% lower than the uncorrected number \citep{Menanteau2010}. We report $N_{galc}$ for the remainder of this work.
 
-
-We use \textsc{MaxBCG} \citep{Koester2007b}.
+%We use \textsc{MaxBCG} \citep{Koester2007b}.
 
 \section{Results and Discussion}\label{sec:results}
 
