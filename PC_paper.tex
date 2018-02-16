@@ -70,7 +70,7 @@
 	
 \title{Planck Cluster Paper}
 	
-\author{\sc SB\altaffilmark{1}, JPH\altaffilmark{1}, FM} 
+\author{\sc SB\altaffilmark{1}, JPH\altaffilmark{1}, FM, PD\altaffilmark{1}} 
 	
 \altaffiltext{1}{Rutgers;boada@physics.tamu.edu}
 
@@ -100,7 +100,7 @@ Our strategy is to use the Kitt Peak National Observatory (KPNO) Mayall-4m teles
 
 % For semester 2014A alone, this corresponds to a sky area of $\sim20,000$ sq. deg., more than 6 times the area of the current combined ACT+SPT surveys. Following closely the procedure we used for ACT follow-up, we prioritize the target selection by SZ signal-to-noise (S/N). For this initial investigation we will target the $\sim60$ cluster candidates (visible in 2014A) from the PSZ catalog with S/N$>5$. For this sample the statistical reliability of PSZ cluster candidates is quite high: according to the Planck team $\sim90$\% of candidates at S/N$>5$ turn out to be ``real'' clusters (see Fig. 2, left panel). Given this purity value, the proposed observations, utilizing telescopes in both hemispheres, will enable the confirmation of $\approx 50 − 60$ massive clusters at high redshift in semester 2014A alone. We will propose to observe the remaining S/N$>5$ PSZ candidates during semester 2014B.
 
-Optical imaging will be sufficient to confirm nearly all of the candidates, but for the highest redshift ones, NIR data will be necessary. Again following the procedure for ACT cluster follow-up: those candidates with some evidence for a high-z brightest cluster galaxy (BCG; note that we can detect BCGs to $z \sim 1.5$) will be targeted with NIR observations to confirm the presence of a BCG and detect the red sequence of cluster members. Observational priority again is given to higher S/N candidates. 
+Optical imaging will be sufficient to confirm nearly all of the candidates, but for the highest redshift ones, NIR data will be necessary. Again following the procedure for ACT cluster follow-up: those candidates with some evidence for a high-z brightest cluster galaxy (BCG; \editorial{note that we can detect BCGs to $z \sim 1.5$}) will be targeted with NIR observations to confirm the presence of a BCG and detect the red sequence of cluster members. Observational priority again is given to higher S/N candidates. 
 
 \subsection{Observations}\label{sec: observations}
 All observations were conducted with the KPNO Mayall telescope. The optical observations were made with the MOSAIC camera mounted at the prime focus. Two detector packages were used for the observations. The earlier MOSAIC1.1 instrument consisted of eight $2048\times4096$ SITe CCDs, arranged $2\times4$, separated by a $∼\sim50$ pixels gap with a pixel scale of $0\farcs26$ pixel$^{-1}$. MOSAIC1.1 was replaced with Mosaic3, in \editorial{year?},  and consists of four new 4k$\times$4k, 15 micron pixel, 500-micron thick LBNL deep-depletion CCDs. Because the only change from MOSAIC1.1 to MOSAIC3 are the CCDs and controllers the both versions have a $36' \times 36'$ field-of-view.
@@ -308,7 +308,6 @@ which provides an estimate of the scatter resistant to catastrophic outliers. Fi
 
 Figure~\ref{fig:photozspecz} shows the photometric redshift performance as a function of the true spectroscopic redshift. For the full sample of galaxies we calculate $\sigma_f = \editorial{XX\%}$, $\sigma_{NMAD} = \editorial{XX\%}$, and an outlier fraction, $\eta = \editorial{XX\%}$. When considering the performance of only the galaxies BPZ classified as E and E/S0 type, we find the following results; $\sigma_f = 10.4\%$, $\sigma_{NMAD} = 5.43\%$, and an outlier fraction, $\eta = 2.97\%$. 
 
-
 \subsection{Cluster Finding}
 In this section, we briefly describe the algorithms and methods use to select the galaxy clusters from the multi-wavelength optical/NIR imaging. We follow the methods described in detail in \cite{Menanteau2009a, Menanteau2010}. We direct the reader there for an in depth description and discussion of the methods.  
 
@@ -318,7 +317,20 @@ Once a potential BCG is selected, the algorithm selects nearby galaxies, within 
 
 We correct the $N_{gal}$ estimate by subtracting a statistical background of galaxies. We first estimate the number of background ellipticals by selecting galaxies within an annulus ($R_{200} <r < 2R_{200}$) around each cluster's position. We include galaxies with $\delta z = 0.05$ and similar colors as those galaxies assumed to belong to the cluster. These galaxies are subtracted from the cluster's population which provides an corrected $N_{gal}$, $N_{galc}$, which we then use to compute other important quantities. In practice the corrected number of galaxies is between 15\% and 20\% lower than the uncorrected number \citep{Menanteau2010}. We report $N_{galc}$ for the remainder of this work.
 
-%We use \textsc{MaxBCG} \citep{Koester2007b}.
+\subsection{Recovery of the Brightest Cluster Galaxies}
+We have designed our observations to detect BCGs to $z\sim1.5$. To quantify the actual depth of our images, we perform a Monte Carlo simulation by injecting artificial elliptical galaxies and computing their recovery fraction. We create the artificial elliptical galaxies with the \textsc{artdata} package, part of \textsc{IRAF} \citep{Tody1993}.
+
+Following the procedure given in \cite{Menanteau2010a}, the synthetic galaxies are created with \textsc{gallist} to have de Vaucouleurs \citep{DeVaucouleurs1948} profiles and surface brightnesses corresponding to their magnitude and assumed sizes. The \textsc{mkobjects} task injects artificial galaxies into our science images with similar noise characteristics as their real counterparts.
+
+We generate thirty artificial elliptical galaxies with apparent magnitudes between 19 mag $< i <$ 27 mag with 0.1 mag spacing. \editorial{Our detection images are an i+K image. So we should really do this for the K-band as well. Are there specific things we need to discuss to make that make sense? Also, instead of following Felipe and giving a hard magnitude limit, why not just increase the apparent mag until we recover 0/30 galaxies?} We repeat this process ten times for each field and report the recovery and depth as the median of the combined results. 
+
+\editorial{discuss the depths and results. How should we combine all of the different runs? I was thinking that we should show all of the different recovery curves in a light gray and a solid black for the median (or mean) of all the different fields. That average would be our reported depth.}
+
+To translate our magnitude depth into a distance we compare the recovery fractions of our simulated elliptical galaxies to models.
+
+
+%We can use the completeness limits estimated from our simulations to determine how far in redshift we can “see” massive clusters. For this, we compare the completeness limits of our observations to the expected and observed (i.e., known) apparent magnitudes of galaxies in clusters as a function of redshift. We estimated the expected apparent galaxy i-band magnitude as a function of redshift using L∗ as defined for the population of red galaxies by Blanton et al. (2003) at z = 0.1 and allowing passive evolution according to a solar metallicity (Bruzual & Charlot 2003) τ = 1.0 Gyr burst model formed at zf = 5. We show this in Figure 3 for a range of luminosities (0.4L∗, L∗, and 4L∗) aimed at representing the cluster members from the faint ones to the BCG.We also show as different gray levels the 80\% completeness as determined by the simulations for the NTT and SOAR run, which provides evidence that we can reach typical L∗ galaxies to z ≈ 0.8 for both data sets (and z ≈ 1 for the SOAR data). We also compare the depth of our imaging campaign to the observed i-band apparent magnitudes of galaxies in three massive high- redshift (z> 1.2) clusters for which we could find suitable data in the literature for comparison.
+
 
 \section{Results}\label{sec:results}
 
@@ -330,7 +342,7 @@ For the 112 fields observed with either MOSAIC or NEWFIRM, we observe eight high
 
 \begin{figure*}
 	\begin{center}
-		\includegraphics[width=\textwidth]{./figures/multimontage.pdf}
+		\includegraphics[width=\textwidth]{./figures/result_mosaic.pdf}
 	\end{center}
 	\caption[Montage of remaining nine clusters]{This is a placeholder figure for our high confidence clusters. I'm planning on making something similar.}  
 	\label{fig:high confidence} 
@@ -388,7 +400,14 @@ Lorem ipsum dolor amet swag copper mug meh tilde, put a bird on it live-edge tat
 
 Lorem ipsum dolor amet swag copper mug meh tilde, put a bird on it live-edge tattooed kinfolk before they sold out locavore selvage leggings raclette literally bicycle rights. Hot chicken kickstarter mustache vinyl roof party. Wayfarers brooklyn truffaut twee umami, venmo irony. Typewriter viral pop-up, listicle vaporware organic af salvia keytar twee chillwave austin +1 offal blog. La croix dreamcatcher snackwave, try-hard intelligentsia taxidermy messenger bag air plant godard mustache celiac glossier echo park. Photo booth readymade authentic glossier biodiesel snackwave beard hammock sriracha before they sold out edison bulb fixie PBR\&B. Man bun pabst kogi, crucifix subway tile af tacos cray tumeric lyft cronut lomo tattooed.
 
-\section*{Acknowledgements} This research made use of \textsc{APLpy}, an open-source plotting package for Python hosted at \url{http://aplpy.github.com}; the \textsc{IPython} package \citep{Perez2007}; \textsc{matplotlib}, a Python library for publication quality graphics \citep{Hunter2007}. \textsc{iraf} is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy under cooperative agreement with the National Science Foundation \citep{Tody1993}. \textsc{PyRAF} is a product of the Space Telescope Science Institute, which is operated by AURA for NASA. Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. This work has made use of data from the European Space Agency (ESA) mission {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the {\it Gaia} Multilateral Agreement.
+\section*{Acknowledgements} 
+This research made use of several open source packages: \textsc{APLpy}, an open-source plotting package for Python hosted at \url{http://aplpy.github.com}; the \textsc{IPython} package \citep{Perez2007}; \textsc{matplotlib}, a Python library for publication quality graphics \citep{Hunter2007} and \textsc{Astropy}, a community developed core Python package for Astronomy \citep{TheAstropyCollaboration2013}.
+\textsc{iraf} is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy under cooperative agreement with the National Science Foundation \citep{Tody1993}. 
+\textsc{PyRAF} is a product of the Space Telescope Science Institute, which is operated by AURA for NASA. 
+Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. 
+This work has made use of data from the European Space Agency (ESA) mission {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the {\it Gaia} Multilateral Agreement.
+This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France. The original description of the VizieR service was published in A\&AS 143, 23.
+This research has made use of the SVO Filter Profile Service (\url{http://svo2.cab.inta-csic.es/theory/fps/}) supported from the Spanish MINECO through grant  AyA2014-55216.
 
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
 % The best way to enter references is to use BibTeX:
