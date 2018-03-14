@@ -318,9 +318,15 @@ Once a potential BCG is selected, the algorithm selects nearby galaxies, within 
 We correct the $N_{gal}$ estimate by subtracting a statistical background of galaxies. We first estimate the number of background ellipticals by selecting galaxies within an annulus ($R_{200} <r < 2R_{200}$) around each cluster's position. We include galaxies with $\delta z = 0.05$ and similar colors as those galaxies assumed to belong to the cluster. These galaxies are subtracted from the cluster's population which provides an corrected $N_{gal}$, $N_{galc}$, which we then use to compute other important quantities. In practice the corrected number of galaxies is between 15\% and 20\% lower than the uncorrected number \citep{Menanteau2010}. We report $N_{galc}$ for the remainder of this work.
 
 \subsection{Recovery of the Brightest Cluster Galaxies}
-We have designed our observations to detect BCGs to $z\sim1.5$. To quantify the actual depth of our images, we perform a Monte Carlo simulation by injecting artificial elliptical galaxies and computing their recovery fraction. We create the artificial elliptical galaxies with the \textsc{artdata} package, part of \textsc{IRAF} \citep{Tody1993}.
+We have designed our observations to detect BCGs to $z\sim1.5$. To quantify the actual depth of our images, we perform a Monte Carlo simulation by injecting artificial sources and computing their recovery fraction. We create the artificial sources with the \textsc{modeling} package, part of \textsc{astropy} \citep{TheAstropyCollaboration2013}.
 
-Following the procedure given in \cite{Menanteau2010a}, the synthetic galaxies are created with \textsc{gallist} to have de Vaucouleurs \citep{DeVaucouleurs1948} profiles and surface brightnesses corresponding to their magnitude and assumed sizes. The \textsc{mkobjects} task injects artificial galaxies into our science images with similar noise characteristics as their real counterparts.
+Following the procedure given in \cite{Menanteau2010a}, the synthetic galaxies are created to have de Vaucouleurs \citep{DeVaucouleurs1948} profiles and surface brightnesses corresponding to their magnitude and assumed sizes. We inject the artificial galaxies into our science images with similar noise characteristics as their real counterparts.
+
+We generate four rounds of one hundred elliptical galaxies spread uniformly across our science imaging. Each round of galaxies are place at different random positions to suppress abnormally boosted recovery fractions due to source confusion. The artificial galaxies have total fluxes corresponding to apparent magnitudes between 19 mag $< i <$ 27 mag with 0.1 mag spacing. 
+
+
+
+
 
 We generate thirty artificial elliptical galaxies with apparent magnitudes between 19 mag $< i <$ 27 mag with 0.1 mag spacing. \editorial{Our detection images are an i+K image. So we should really do this for the K-band as well. Are there specific things we need to discuss to make that make sense? Also, instead of following Felipe and giving a hard magnitude limit, why not just increase the apparent mag until we recover 0/30 galaxies?} We repeat this process ten times for each field and report the recovery and depth as the median of the combined results. 
 
