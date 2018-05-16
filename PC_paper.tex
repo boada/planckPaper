@@ -1,5 +1,5 @@
-\documentclass[apj, revtex4]{emulateapj}
-
+\documentclass[apj, revtex4-1]{emulateapj}
+%\documentclass[apj]{emulateapj}
 %%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
 %\usepackage{amsmath}	% Advanced maths commands
 %\usepackage{amssymb}	% Extra maths symbols
@@ -185,27 +185,70 @@ We generate four rounds of one hundred elliptical galaxies spread uniformly acro
 
 \section{Results}\label{sec:results}
 
+\begin{figure*}
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ1_G084.62-15.86}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ1_G206.45+13.89}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ1_G224.82+13.62}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G029.66-47.63}.pdf}
+	\end{tabular}
+	\caption{RGB (\sdssi\sdssr\sdssg) color images for four PSZ clusters optically confirmed using the our optical imaging. Each panel is centered on the cluster's BCG and has a width of 1 mpc at the corresponding cluster's redshift. The horizontal bar in the lower left of each panel shows the scale of the panel, where north is up and east is to the left. The location of the PSZ detection is denoted by a red star. The dashed and solid concentric circles are $2'$ and $5'$ in radius respectively.}
+\end{figure*}
+
+\begin{figure*}
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G043.44-41.27}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G096.43-20.89}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G098.38+77.22}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G106.11+24.11}.pdf}
+	\end{tabular}
+	\caption{Composite color images for four ACT SZ clusters optically confirmed using the S82 imaging. The horizontal bar shows the scale of the images, where north is up and east is left. White contours show the 148 GHz SZ maps with theminimum andmaximum levels, in $\mu$K, displayed between brackets. The yellow cross shows the location of the centroid of the SZ detection.}
+\end{figure*}
+
+\begin{figure*}
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G107.83-45.45}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G120.76+44.14}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G125.55+32.72}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G137.24+53.93}.pdf}
+	\end{tabular}
+	\caption{Composite color images for four ACT SZ clusters optically confirmed using the S82 imaging. The horizontal bar shows the scale of the images, where north is up and east is left. White contours show the 148 GHz SZ maps with theminimum andmaximum levels, in $\mu$K, displayed between brackets. The yellow cross shows the location of the centroid of the SZ detection.}
+\end{figure*}
+
+\begin{figure*}
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G173.76+22.92}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G191.82-26.64}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G305.76+44.79}.pdf}&
+	\end{tabular}
+	\caption{Composite color images for four ACT SZ clusters optically confirmed using the S82 imaging. The horizontal bar shows the scale of the images, where north is up and east is left. White contours show the 148 GHz SZ maps with theminimum andmaximum levels, in $\mu$K, displayed between brackets. The yellow cross shows the location of the centroid of the SZ detection.}
+\end{figure*}
+
 \begin{table*}
 	\caption[Caption]{Caption}
 	\begin{tabular}{lrlllrrrrr}
 	\hline
-	 Name &  S/N &        RA\_SEX &       DEC\_SEX & BCG\_boada &  zBCG\_boada &  z\_bcg &  Cmag\_i &  z\_extern &  REDSHIFT\_SOURCE \\
+	 Name &  S/N &        RA SEX &       DEC SEX & BCG boada &  zBCG boada &  z bcg &  Cmag i &  z extern &  REDSHIFT SOURCE \\
 	\hline
- PSZ1\_G084.62-15.86 & 6.01 &  21:49:42.524 &  +33:09:17.29 &      5641 &        0.30 &    NaN &   22.93 &      0.37 &             50.0 \\
- PSZ1\_G206.45+13.89 & 5.90 &  07:29:51.234 &  +11:56:31.31 &      3365 &        0.41 &   0.41 &   20.00 &      0.38 &             10.0 \\
- PSZ1\_G224.82+13.62 & 5.51 &           NaN &           NaN &      4697 &        0.16 &   0.28 &   22.91 &      0.29 &             10.0 \\
- PSZ2\_G029.66-47.63 & 5.74 &  21:45:29.940 &  -21:43:26.29 &      6414 &        0.33 &    NaN &   22.88 &       NaN &              NaN \\
- PSZ2\_G043.44-41.27 & 5.55 &  21:36:43.728 &  -10:19:02.15 &      3484 &        0.42 &    NaN &   23.31 &       NaN &              NaN \\
- PSZ2\_G096.43-20.89 & 5.81 &  22:48:09.402 &  +35:33:49.45 &      5035 &        0.28 &    NaN &   23.42 &       NaN &              NaN \\
- PSZ2\_G098.38+77.22 & 5.51 &  13:18:08.274 &  +38:30:20.10 &      1894 &        0.81 &    NaN &   23.66 &       NaN &             -1.0 \\
- PSZ2\_G106.11+24.11 & 5.70 &  19:21:31.852 &  +74:33:27.17 &      2848 &        0.14 &    NaN &   23.29 &       NaN &              NaN \\
- PSZ2\_G107.83-45.45 & 7.09 &  00:07:35.605 &  +16:07:02.39 &      2742 &        0.51 &    NaN &   23.60 &       NaN &              NaN \\
- PSZ2\_G120.76+44.14 & 5.59 &  13:12:53.537 &  +72:55:06.05 &      3804 &        0.35 &    NaN &   22.68 &       NaN &              NaN \\
- PSZ2\_G125.55+32.72 & 6.49 &  11:25:34.008 &  +83:58:55.75 &      2310 &        0.24 &    NaN &   21.93 &       NaN &              NaN \\
- PSZ2\_G137.24+53.93 & 7.87 &  11:40:59.525 &  +61:07:07.07 &      2560 &        0.46 &    NaN &   23.54 &       NaN &              NaN \\
- PSZ2\_G173.76+22.92 & 5.80 &  07:17:26.636 &  +44:05:02.97 &      2966 &        0.11 &    NaN &   22.81 &       NaN &              NaN \\
- PSZ2\_G191.82-26.64 & 6.17 &  04:38:28.283 &  +04:37:19.91 &      1827 &        0.18 &    NaN &   23.49 &       NaN &             -1.0 \\
- PSZ2\_G305.76+44.79 & 5.72 &  12:59:53.612 &  -18:01:35.05 &      2911 &        0.75 &    NaN &   23.01 &       NaN &             -1.0 \\
+ PSZ1 G084.62-15.86 & 6.01 &  21:49:42.524 &  +33:09:17.29 &      5641 &        0.30 &    NaN &   22.93 &      0.37 &             50.0 \\
+ PSZ1 G206.45+13.89 & 5.90 &  07:29:51.234 &  +11:56:31.31 &      3365 &        0.41 &   0.41 &   20.00 &      0.38 &             10.0 \\
+ PSZ1 G224.82+13.62 & 5.51 &           NaN &           NaN &      4697 &        0.16 &   0.28 &   22.91 &      0.29 &             10.0 \\
+ PSZ2 G029.66-47.63 & 5.74 &  21:45:29.940 &  -21:43:26.29 &      6414 &        0.33 &    NaN &   22.88 &       NaN &              NaN \\
+ PSZ2 G043.44-41.27 & 5.55 &  21:36:43.728 &  -10:19:02.15 &      3484 &        0.42 &    NaN &   23.31 &       NaN &              NaN \\
+ PSZ2 G096.43-20.89 & 5.81 &  22:48:09.402 &  +35:33:49.45 &      5035 &        0.28 &    NaN &   23.42 &       NaN &              NaN \\
+ PSZ2 G098.38+77.22 & 5.51 &  13:18:08.274 &  +38:30:20.10 &      1894 &        0.81 &    NaN &   23.66 &       NaN &             -1.0 \\
+ PSZ2 G106.11+24.11 & 5.70 &  19:21:31.852 &  +74:33:27.17 &      2848 &        0.14 &    NaN &   23.29 &       NaN &              NaN \\
+ PSZ2 G107.83-45.45 & 7.09 &  00:07:35.605 &  +16:07:02.39 &      2742 &        0.51 &    NaN &   23.60 &       NaN &              NaN \\
+ PSZ2 G120.76+44.14 & 5.59 &  13:12:53.537 &  +72:55:06.05 &      3804 &        0.35 &    NaN &   22.68 &       NaN &              NaN \\
+ PSZ2 G125.55+32.72 & 6.49 &  11:25:34.008 &  +83:58:55.75 &      2310 &        0.24 &    NaN &   21.93 &       NaN &              NaN \\
+ PSZ2 G137.24+53.93 & 7.87 &  11:40:59.525 &  +61:07:07.07 &      2560 &        0.46 &    NaN &   23.54 &       NaN &              NaN \\
+ PSZ2 G173.76+22.92 & 5.80 &  07:17:26.636 &  +44:05:02.97 &      2966 &        0.11 &    NaN &   22.81 &       NaN &              NaN \\
+ PSZ2 G191.82-26.64 & 6.17 &  04:38:28.283 &  +04:37:19.91 &      1827 &        0.18 &    NaN &   23.49 &       NaN &             -1.0 \\
+ PSZ2 G305.76+44.79 & 5.72 &  12:59:53.612 &  -18:01:35.05 &      2911 &        0.75 &    NaN &   23.01 &       NaN &             -1.0 \\
  	\hline
 	\end{tabular}
 \label{tbl:results}
@@ -223,21 +266,21 @@ We recover a cluster at $z_{cl} = 0.271 \pm 0.099$ with 18 members. This is a sy
 \subsubsection{PSZ1 G206.45+13.89}
 We find a cluster at $z_{cl} = 0.399 \pm 0.05$. We detect 73 potential cluster members, although a bright star (V $= 4.5$ mag; \citealt{Hog2000}) only $\sim4\farcm9$ away from the reported BCG. The contaminating star prevents an accurate photo-z estimate for many cluster cluster members.
 
-\subsubsection{PSZ1$\_$G224.82+13.62}
+\subsubsection{PSZ1 G224.82+13.62}
 previously confirmed
 
-\subsubsection{PSZ2\_G029.66-47.63}
-\subsubsection{PSZ2\_G043.44-41.27}
-\subsubsection{PSZ2\_G096.43-20.89}
-\subsubsection{PSZ2\_G098.38+77.22}
-\subsubsection{PSZ2\_G106.11+24.11}
-\subsubsection{PSZ2\_G107.83-45.45}
-\subsubsection{PSZ2\_G120.76+44.14}
-\subsubsection{PSZ2\_G125.55+32.72}
-\subsubsection{PSZ2\_G137.24+53.93}
-\subsubsection{PSZ2\_G173.76+22.92}
-\subsubsection{PSZ2\_G191.82-26.64}
-\subsubsection{PSZ2\_G305.76+44.79}
+\subsubsection{PSZ2 G029.66-47.63}
+\subsubsection{PSZ2 G043.44-41.27}
+\subsubsection{PSZ2 G096.43-20.89}
+\subsubsection{PSZ2 G098.38+77.22}
+\subsubsection{PSZ2 G106.11+24.11}
+\subsubsection{PSZ2 G107.83-45.45}
+\subsubsection{PSZ2 G120.76+44.14}
+\subsubsection{PSZ2 G125.55+32.72}
+\subsubsection{PSZ2 G137.24+53.93}
+\subsubsection{PSZ2 G173.76+22.92}
+\subsubsection{PSZ2 G191.82-26.64}
+\subsubsection{PSZ2 G305.76+44.79}
 
 %During the course of our observation campaign thirty clusters were confirmed through either dedicated follow up from the \textit{Planck} team (\eg, \citealt{PlanckCollaboration2015, PlanckCollaboration2016a}) or through independent programs (\eg, \citealt{Liu2015a, VanderBurg2016, Burenin2017, Burenin2018, Amodeo2018, Barrena2018, Streblyanska2018}). We can use this opportunity to validate our cluster detection method against known clusters. The thirty clusters are indicated in Table~\ref{tbl:preobserved}.
 
