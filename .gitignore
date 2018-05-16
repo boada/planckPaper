@@ -29,3 +29,5 @@
 /comments/*
 /papers/*
 /proposals/*
+
+*.png
