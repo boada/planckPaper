@@ -3,7 +3,10 @@ This is a version tracking repo for the planck cluster paper.
 
 ## Authors
 
-- Steven Boada (Rutgers University)
+- Steven Boada (Rutgers University)                                            
+- Jack Hughes (Rutgers University)                                             
+- Peter Doze (Rutgers University)                                             
+- Felipe Menanteau (University of Illinois) 
 
 ## License
 
