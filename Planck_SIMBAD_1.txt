@@ -49,7 +49,7 @@ Just stars and a star cluster and PSZ cluster.
 --------------------------------------------------------------------------------------------------------
 PSZ1_G224.82+13.62 (no BCG pointing for this one)       search radius 5 arcminutes
 
-This cluster has also been confirmed in the Barrena et al. paper (http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1803.05764) as a rich, massive cluster. 
+This cluster has also been confirmed in the Barrena et al. paper (1) as a rich, massive cluster. 
 
 SIMBAD
 2E 0759.2-0355 -- X-ray source   18.97" 0.316'
