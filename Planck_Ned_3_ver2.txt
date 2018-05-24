@@ -275,15 +275,15 @@ PSZ2_G137.24+53.93    11:40:59.525  +61:07:07.07   z=0.46 search radius 2.82arcm
              http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1608.02013 (redshift))))
 18.  source: http://adsabs.harvard.edu/cgi-bin/bib_query?2010ApJS..187..272W (position)
              http://adsabs.harvard.edu/cgi-bin/bib_query?2010ApJS..187..272W
-             Wen+Han+Liu
+             Wen+Han+Liu  (redshift)
 
 
 
 PSZ2_G137.24+53.93 has a NRAO VLA Sky Survey radio source 0.145 arcminutes away from the BCG pointing 
-with a log flux density of 1.46 mJy at 1.4 GHz. Also a VFK2015 radio source 0.270 arcminutes away, 
-and a Sixth Cambridge radio source 0.598 arcminutes away with a log flux density of 2.23 mJy at 0.151 GHz. 
+with a log flux density of 1.46 mJy at 1.4 GHz(2). Also a VFK2015 radio source 0.270 arcminutes away, 
+and a Sixth Cambridge radio source 0.598 arcminutes away with a log flux density of 2.23 mJy at 0.151 GHz (6 15). 
 There is a SDSS galaxy 0.603 arcminutes away with a spectral redshift of 0.44, and a WHL galaxy cluster 
-0.608 arcminutes away with a photometric redshift of 0.44 (2, 6, 15, 16, 18).
+0.608 arcminutes away with a photometric redshift of 0.44 (16, 18).
 ----------------------------------------------------------------------------------------------------------------------
 PSZ2_G173.76+22.92   07:17:26.636  +44:05:02.97   z=0.11  search radius 5/8.25
 
