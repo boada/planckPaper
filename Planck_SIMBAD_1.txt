@@ -1,0 +1,170 @@
+SOURCES:
+1.
+Optical validation and characterization of Planck PSZ1 sources at the Canary Islands observatories. I. First year of ITP13 observations
+http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1803.05764
+
+2.
+2E 0759.2-0355 -- X-ray source   18.97" 0.316'
+The Einstein Observatory Soft X-ray Source List
+https://ui.adsabs.harvard.edu/?#abs/1994HEAO2.C.......M/abstract
+
+3.
+ROSAT all-sky survey faint source catalogue. 
+https://ui.adsabs.harvard.edu/?#abs/2000IAUC.7432R...1V
+
+4.
+RASS X-ray Cluster
+https://ui.adsabs.harvard.edu/?#abs/2000ApJS..129..435B
+
+5.
+EINSTEIN Extended Source Survey
+https://ui.adsabs.harvard.edu/?#abs/1997AJ....113.2134O
+
+6.
+ZwCl 1312+7311 -- Cluster of Galaxies     160.78"  2.679'
+https://ui.adsabs.harvard.edu/?#abs/2003ApJ...591..662D
+
+7.
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+PSZ1_G084.62-15.86      21:49:42.524 +33:09:17.29   search radius 5arcminutes 
+
+SIMBAD
+Same x-ray sources plus some stars.
+
+
+-------------------------------------------------------------------------------------------------------
+PSZ1_G206.45+13.89          07:29:51.234 +11:56:31.31             search radius 5 arcminutes
+
+This cluster has been previously confirmed in Barrena et al. (1.) as a rich, massive cluster. 
+
+SIMBAD
+Just stars and a star cluster and PSZ cluster.
+
+--------------------------------------------------------------------------------------------------------
+PSZ1_G224.82+13.62 (no BCG pointing for this one)       search radius 5 arcminutes
+
+This cluster has also been confirmed in the Barrena et al. paper (1) as a rich, massive cluster. 
+
+SIMBAD
+2E 0759.2-0355 -- X-ray source   18.97" 0.316'
+The Einstein Observatory Soft X-ray Source List
+https://ui.adsabs.harvard.edu/?#abs/1994HEAO2.C.......M/abstract
+
+
+According to the SIMBAD search there is an Einstein Observatory soft x-ray source $0\farcm316$ away from the BCG pointing (2.). 
+
+
+---------------------------------------------------------------------------------------------------------
+PSZ2_G029.66-47.63  21:45:29.940  -21:43:26.29            search radius 5 arcminutes 
+
+SIMBAD
+
+1RXS J214536.5-214102 -- X-ray source  170.41" 2.84'
+ROSAT all-sky survey faint source catalogue. 
+https://ui.adsabs.harvard.edu/?#abs/2000IAUC.7432R...1V
+   
+
+From the SIMBAD search there is a ROSAT faint x-ray source $2\farcm84$ away from the BCG coordinates (4.).
+
+
+-----------------------------------------------------------------------------------------------------------
+PSZ2_G043.44-41.27 21:36:43.728   -10:19:02.15               search radius 5 arcminutes 
+
+SIMBAD
+1RXS J213644.4-101904 -- X-ray source   10.19" 0.169' 
+ROSAT all-sky survey faint source catalogue. 
+https://ui.adsabs.harvard.edu/?#abs/2000IAUC.7432R...1V
+
+
+Also, from the SIMBAD search there is a ROSAT faint x-ray source $0\farcm16$ away from the cluster BCG (4.).
+
+
+---------------------------------------------------------------------------------------------------------------
+PSZ2_G096.43-20.89  22:48:09.402   +35:33:49.45                 search radius 5 arcminutes
+
+SIMBAD 
+Nothing new
+------------------------------------------------------------------------------------------------------------------\
+PSZ2_G098.38+77.22   13:18:08.274   +38:30:20.10         z=.81   search radius 2.2arcmin/5
+
+SIMBAD
+Nothing new
+
+---------------------------------------------------------------------------------------------------------------------
+PSZ2_G106.11+24.11   19:21:31.852  +74:33:27.17     z=.14  search radius 5 arcmin/6.7
+
+SIMBAD
+RXC J1921.3+7433 -- Cluster of Galaxies    50.50" 0.841'
+RASS X-ray Cluster
+https://ui.adsabs.harvard.edu/?#abs/2000ApJS..129..435B
+
+
+According to the SIMBAD search, there is a RASS x-ray cluster $0\farcm84$ away from the BCG pointing (4).
+
+
+---------------------------------------------------------------------------------------------------------------
+PSZ2_G107.83-45.45  00:07:35.605   +16:07:02.39    z=.51  search radius 2.67/5
+
+
+SIMBAD
+[VV2006] J000730.8+160732 -- Quasar     75.08"  1.251' 
+Veron-Cetty+Veron, 2006
+The Sloan Digital Sky Survey Quasar Catalog. V. Seventh Data Release 
+https://ui.adsabs.harvard.edu/?#abs/2010AJ....139.2360S
+NOTHING NEW
+
+---------------------------------------------------------------------------------------------------------------------------
+PSZ2_G120.76+44.14  13:12:53.537  +72:55:06.05    z=.35  search radius 3.34arcminutes/5
+
+
+SIMBAD
+ACO 1705 -- Cluster of Galaxies     8.22" 0.137'   z~0.296  
+https://ui.adsabs.harvard.edu/?#abs/2002ApJS..139..313D (position)
+https://ui.adsabs.harvard.edu/?#abs/1987ApJS...63..543S (redshift)
+
+
+EXSS 1311.5+7312 -- X-ray source     100.47"  1.674'
+EINSTEIN Extended Source Survey
+https://ui.adsabs.harvard.edu/?#abs/1997AJ....113.2134O
+
+ZwCl 1312+7311 -- Cluster of Galaxies     160.78"  2.679'
+https://ui.adsabs.harvard.edu/?#abs/2003ApJ...591..662D
+
+
+From the SIMBAD search there is an Einstein extended x-ray source $1\farcm67 away from the BCG pointing (5), and a Zwicky cluster $2\farcm67$ away (6).
+
+
+---------------------------------------------------------------------------------------------------------------------------
+PSZ2_G125.55+32.72  11:25:34.008   +83:58:55.75  z=0.24  search radius 4.35arcminute/5
+
+SIMBAD
+Nothing
+-------------------------------------------------------------------------------------------------------------------------
+PSZ2_G137.24+53.93    11:40:59.525  +61:07:07.07   z=0.46 search radius 2.82arcminutes/5
+
+SIMBAD
+[VV2006] J114107.2+610329 -- Quasar   224.57" zspec = 1.76
+nvm
+
+----------------------------------------------------------------------------------------------------------------------
+PSZ2_G173.76+22.92   07:17:26.636  +44:05:02.97   z=0.11  search radius 5/8.25
+
+SIMBAD
+Nothing new
+-------------------------------------------------------------------------------------------------------------------------
+PSZ2_G191.82-26.64    04:38:28.283  +04:37:19.91  z=0.18  search radius 5/5.44
+
+SIMBAD
+Nothing
+-------------------------------------------------------------------------------------------------------------------------- 
+PSZ2_G305.76+44.79   12:59:53.612  -18:01:35.05   z=0.75  search radius 2.24/5
+
+SIMBAD
+Nothing new
+
