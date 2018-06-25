@@ -174,11 +174,11 @@ We generate four rounds of one hundred elliptical galaxies spread uniformly acro
 
 \begin{figure*}
 	\includegraphics[width=\textwidth]{figures/recovery_redshift.pdf}
-	\caption{\textit{Left:} Histogram of the \sdssi-band magnitude corresponding to 80\% completeness in galaxy recovery. When 80\% completeness is not achieved we show the limiting magnitude with the highest completeness. \textit{Right:} Observed \sdssi-band magnitudes of L$_{\star}$, 0.4L$_{\star}$, and 4L$_{\star}$ (BCG) early-type galaxies as a function of redshift. We define an L$_{\star}$ galaxy following \cite{Blanton2003} as a population of red galaxies at $z = 0.1$ and allow it to evolve passively. The left and right panels can be combined to estimate the limiting redshift to which we could identify galaxy clusters.}
+	\caption{\textit{Left:} Histogram of the \sdssi-band magnitude corresponding to 80\% completeness in galaxy recovery. When 80\% completeness is not achieved we show the limiting magnitude with the highest completeness. \textit{Right:} Observed \sdssi-band magnitudes of \lstar, 0.4L\lstar, and 4\lstar\ (BCG) early-type galaxies as a function of redshift. We define an L\lstar\ galaxy following \cite{Blanton2003} as a population of red galaxies at $z = 0.1$ and allow it to evolve passively. The left and right panels can be combined to estimate the limiting redshift to which we could identify galaxy clusters.}
 	\label{fig:recovery_redshift}
 \end{figure*}
 
-\editorial{This is almost directly taken from FM2010 -- edit.} We use the individual field's completion limit to estimate the redshift to which we can reliably detect massive clusters. For this, we compare the completeness limits of our observations to the expected and observed (\ie, known) apparent magnitudes of galaxies in clusters as a function of redshift. We estimated the expected apparent galaxy \sdssi-band magnitude as a function of redshift using L$_{\star}$ as defined for the population of red galaxies by \cite{Blanton2003} at $z = 0.1$ and allowing passive evolution according to a solar metallicity \citep{Bruzual2003} $\tau = 1.0$ Gyr burst model formed at $zf = 5$. We show this in Figure~\ref{fig:recovery_redshift} for a range of luminosities (L$_{\star}$, 0.4L$_{\star}$, and 4L$_{\star}$) aimed at representing the cluster members from the faint ones to the BCG.
+\editorial{This is almost directly taken from FM2010 -- edit.} We use the individual field's completion limit to estimate the redshift to which we can reliably detect massive clusters. For this, we compare the completeness limits of our observations to the expected and observed (\ie, known) apparent magnitudes of galaxies in clusters as a function of redshift. We estimated the expected apparent galaxy \sdssi-band magnitude as a function of redshift using \lstar\ as defined for the population of red galaxies by \cite{Blanton2003} at $z = 0.1$ and allowing passive evolution according to a solar metallicity \citep{Bruzual2003} $\tau = 1.0$ Gyr burst model formed at $zf = 5$. We show this in Figure~\ref{fig:recovery_redshift} for a range of luminosities (\lstar, 0.4\lstar, and 4\lstar) aimed at representing the cluster members from the faint ones to the BCG.
 
 \section{Results}\label{sec:results}
 In this section, we give the results of our cluster finding. We report high confidence, high richness clusters. A high confidence result consists of a clear BCG and many accompanying satellite galaxies. For the 85 fields observed with MOSAIC, we observe fifteen high confidence clusters (see Figures~\ref{fig:Clusters1}--\ref{fig:Clusters4}). In the following subsections we present on each of the eight high confidence observations individually, and group the medium and low confidence observations together.
@@ -236,7 +236,7 @@ In this section, we give the results of our cluster finding. We report high conf
 	\centering
 	\begin{tabular}{lcccccccc}
 	\hline
-	Cluster & SNR & $\alpha$ (J2000) & $\delta$ (J2000) & Sep. ($'$) & $z_{cl}$ & $z_{clerr}$ & Ngal_c & New\\
+	Cluster & SNR & $\alpha$ (J2000) & $\delta$ (J2000) & Sep. ($'$) & $z_{cl}$ & $z_{clerr}$ & Ngal$_c$ & New\\
 	(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9)\\
 	\hline
 	 PSZ1 G$084.62-15.86$ & 6.01 & $21:49:42.524$ & $+33:09:17.29$ & 1.14 & 0.27 & 0.10 & 18 & \\
@@ -314,49 +314,40 @@ This cluster at $z_{cl} = 0.182 \pm 0.06$ has four NVSS sources $0\farcm981$, $2
 Finally, at $z_{cl} = 0.737 \pm 0.07$, this cluster has a PMN radio source $0\farcm019$ away from the BCG coordinate with a log flux density of 1.71 mJy at 4.85 GHz \citep{Griffith1993}.
 
 \section{Discussion}\label{sec:discussion}
-In this section, we discuss the results given in the previous section as a whole, and frame those results in the context of the broader PSZ sample. For $0.1 < z_{cl} < 0.8$ we identified fifteen rich cluster systems. Figure~\ref{fig:z_vs_snr} shows the redshifts of the clusters in this survey, turquoise stars, in the context of previously known PSZ cluster sample, blue points. The previously known sample includes results from dedicated follow up by the \planck\ team (\eg, \citealt{PlanckCollaboration2015, PlanckCollaboration2016a}) and through independent follow up programs (\eg, \citealt{Liu2015a, VanderBurg2016, Burenin2018, Amodeo2018, Barrena2018}) \editorial{doesn't actually include VanderBurg and Burenin yet. Some of these only have 1-2 objects detected and they are claiming to have a cluster. I don't know if we want to include them in our sample of "confirmed" or not. An easy thing to do would be to cite them saying they have done follow up but because they aren't given in the ``official'' catalogs we exclude them from the discussion. Or we can add them.} The white line shows the median SNR as a function of redshift, and the orange bands enclose 90\%, 80\%, and 50\% of the data in bands 1, 2, and 3 respectively.
+In this section, we discuss the results given in the previous section as a whole, and frame those results in the context of the broader PSZ sample. From the 85 fields observed, we identified fifteen rich cluster systems at $0.1 < z_{cl} < 0.8$. Because our observations are limited to objects with SNR$>5\sigma$, we would expect at most one failed detection. This leads to three possible alternatives.
 
-\begin{figure*}
-	\includegraphics[width=\textwidth]{figures/confirmed_and_us.pdf}
-	\caption{SNR as a function of cluster redshift for the \editorial{1230} previously confirmed PSZ clusters and the fifteen clusters observed in this work. Clusters observed as part of this survey are given by turquoise stars, whereas other previously observed clusters are shown by blue points. The white line shows the median SNR as a function of cluster redshift. The the orange bands enclose 90\%, 80\%, and 50\% of the data in bands labedled 1, 2 and 3 respectively.}
-	\label{fig:z_vs_snr}
-\end{figure*}
-
-Because our observations are limited to objects with SNR$>5\sigma$, we would expect at most one failed detection. This leads to three possible alternatives.
 \begin{enumerate}
 	\item The vast majority of clusters in our sample at low-$z$.
 	\item The vast majority of the clusters in our sample lie at redshifts beyond our optical detection limits.
+	\item The vast majority of clusters are obscured by the Milky Way.
 	\item The vast majority of cluster candidates in our sample are not true $5\sigma$ detections.
 \end{enumerate}
 
-\editorial{One:} The initial design of our survey uses an $8'\times8'$ search window centered on the PSZ position. Low-$z$ clusters could appear as isolated elliptical galaxies and thus would not be classified as clusters. In follow up inspection of the full--sized mosaics, approximately 1 \degsq, reveals no such low-$z$ structures. In addition, using the halo mass function from \cite{Tinker2008}, we expect roughly two thousand clusters with $M_{500} > 1\times10^{14}$ below $z=0.1$. The PSZ catalog alone contains 787 confirmed clusters at $z<0.1$. Combined with catalogs from other large area sky surveys quickly reaches and exceeds the rough expected number. Simply, there is not enough volume in the universe below $z=0.1$ to hide a significant population of rich galaxy clusters.
+\begin{figure}
+	\includegraphics[width=\columnwidth]{figures/cluster_forecast.pdf}
+	\caption{The predicted number of clusters more massive than $M_{500}=3$, 6 and $9 \times 10^{14}\msol$ (solid lines) as a function of redshift and normalized to unity from the mass function of \cite{Tinker2008}. For reference we show the 50\% and 90\% fractional completeness levels. The blue histogram shows the normalized cumulative distribution of confirmed PSZ clusters.}
+	\label{fig:cluster_forecast}
+\end{figure}
 
-\editorial{Two:} The median limiting \sdssi-band magnitude of our survey is 23 mag, corresponding to a limiting redshift of $z=0.72$ for an \mstar\ galaxy. While it is possible that a number of cluster candidates corresponding to real clusters exists above this redshift, it is unlikely that these correspond to a population of the high SNR objects targeted by this survey. Massive clusters, such as those targeted by this survey, are exceedingly rare objects. For example there are only twelve clusters at $z>0.72$ in PSZ2, only five of which are above $z=0.8$. Further follow up observations with deep infrared imaging will be required to place further limits on these high-$z$ objects.
+\editorial{One:} The initial design of our survey uses an $8'\times8'$ search window centered on the PSZ position. Low-$z$ clusters could appear as isolated elliptical galaxies and thus would not be classified as clusters. In follow up inspection of the full--sized mosaics, approximately 1 \degsq, reveals no such low-$z$ structures. In addition, we compute the expected fraction of galaxy clusters as a function of redshift from the cluster mass function of \cite{Tinker2008}. Figure~\ref{fig:cluster_forecast} shows the expected cumulative distributions of three intermediate mass clusters, solid lines, as well as the distribution of confirmed PSZ clusters. The previously confirmed cluster sample includes results from dedicated follow up by the \planck\ team \citeeg{PlanckCollaboration2015, PlanckCollaboration2016a}. From these numerical simulations we know that a low fraction ($<5\%$) of all clusters with $M_{500}=3-9\times10^{14}~\msol$ are expected to reside at redshifts less than 0.1. Of the 85 fields observed, we expect approximately four clusters to lie at such low redshifts. We recover three low-z clusters during the course of our analysis.
 
-\editorial{Three:} Perhaps the most plausible explination is that no optical counterpart to the PSZ detection exists. Previous works \citeeg{Barrena2018} find a similar fraction of non-detections, and consider both high noise values in the \planck\ $Y_{500}$ maps \citep{PlanckCollaboration2014a} along with contamination from foreground radio sources. As part of our NED search, we find that approximately 75\% of confimred PSZ sources have a NVSS radio source (39.6 mJy average flux) within $5'$ of the PSZ position. unconfirmed PSZ sources show slightly fewer sources with approximately 55\% having a NVSS radio source (25.1 mJy average flux) within $5'$.
+\editorial{Two:} The median limiting \sdssi-band magnitude of our survey is 23 mag, corresponding to a limiting redshift of $z=0.72$ for an \mstar\ galaxy. While it is possible that a number of cluster candidates corresponding to real clusters exists above this redshift, it is unlikely that these correspond to a population of the high SNR objects targeted by this survey. Massive clusters, such as those targeted by this survey, are exceedingly rare objects. For example there are only twelve clusters at $z>0.72$ in PSZ2, only five of which are above $z=0.8$. Again, Figure~\ref{fig:cluster_forecast} allows us to estimate the number of clusters missed with our observing limits. At $z>0.7$, we expect $\sim18\%$ of clusters with $M_{500}=3\times10^{14}~\msol$, corresponding to only fifteen clusters of our 85 observed fields. While high-$z$ objects were expectedly missed by this survey, high-$z$ objects along cannot account for the high number of still unconfirmed clusters. We expect further follow up observations with deep infrared imaging will be required to place further limits on these high-$z$ objects.
 
-\editorial{what are the chances of a source's SNR being scattered up? Does anyone report that? $5\sigma$ corresponds to 99.9999426697\% purity or $1/1744278$ will be false.}
+\editorial{Three: Jack mentioned that we can look at the distributions as a function of galactic latitude. If we are primarily finding galaxies which are far away from the galaxy there may be some argument to be made that there are many clusters hiding behind the stars in the Milky Way.}
 
-\subsection{Notes on Non-detections}
+\editorial{Four:} Perhaps the most plausible explanation is that no optical counterpart to the PSZ detection exists. Previous works \citeeg{Barrena2018} find a similar fraction of non-detections, and consider both high noise values in the \planck\ $Y_{500}$ maps \citep{PlanckCollaboration2014a} along with contamination from foreground radio sources. As part of our NED search, we find that approximately 75\% of confirmed PSZ sources have a NVSS radio source (39.6 mJy average flux) within $5'$ of the PSZ position. unconfirmed PSZ sources show slightly fewer sources with approximately 55\% having a NVSS radio source (25.1 mJy average flux) within $5'$.
 
-\editorial{This is where we would talk about how we disagree with some of the previous studies if we want to go thtat route. I can see benefits either way.}
-
-During the course of our observation campaign thirty clusters were confirmed through either dedicated follow up from the \planck\ team (\eg, \citealt{PlanckCollaboration2015, PlanckCollaboration2016a}) or through independent programs (\eg, \citealt{Liu2015a, VanderBurg2016, Burenin2017, Burenin2018, Amodeo2018, Barrena2018, Streblyanska2018}).
-
-
-In the complete PSZ catalog, we observe 7\% of clusters and cluster candidates with SNR $>5$.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\editorial{$5\sigma$ corresponds to 99.9999426697\% purity or $1/1744278$ will be false.}
 
 \section{Summary}\label{sec:summary}
 
 \editorial{following FM2010}
 
-In this work, we report on our analysis of seventeen nights of observing spread over three years (2014--2017). We utilize and independently develope a piepleline to process the \sdssg\sdssr\sdssi\sdssz\ imaging taken with both the MOSAIC 1.1 and MOSAIC 2 imagers on the KPNO Mayall-4m telescope. We present the first results from the complete data set of 85 fields, fifteen rich galaxy clusters of which twelve were previously unknown.
+In this work, we report on our analysis of seventeen nights of observing spread over three years (2014--2017). We utilize and independently develop a pipeline to process the \sdssg\sdssr\sdssi\sdssz\ imaging taken with both the MOSAIC 1.1 and MOSAIC 2 imagers on the KPNO Mayall-4m telescope. We present the first results from the complete data set of 85 fields, fifteen rich galaxy clusters of which twelve were previously unknown.
 
 The newly discovered clusters range in photometric redshift between $0.13 < z < 0.74$. The upper redshift limit is due to the depth of imaging restricting us to clusters at $z<0.8$. This prevents us from finding the most interesting rich clusters at very high redshifts.
 
-A large motivation for this work has come from the recent sucesses of other SZ follow up programs \citeeg{Bayliss2016, Sifon2015a, Kirk2015}. We present this sample of clusters to aid in the confirmation of the PSZ sources, and to potentially reveal clusters with interesting astrophysical properties. The PSZ sources which remain unconfirmed have the potential to be the most interesting.
+A large motivation for this work has come from the recent successes of other SZ follow up programs \citeeg{Bayliss2016, Sifon2015a, Kirk2015}. We present this sample of clusters to aid in the confirmation of the PSZ sources, and to potentially reveal clusters with interesting astrophysical properties. The PSZ sources which remain unconfirmed have the potential to be the most interesting.
 
 In future work, we will present the properties of lower richness clusters and small groups of galaxies in addition to multi-wavelength studies using the clusters detected as part of this survey.
 
