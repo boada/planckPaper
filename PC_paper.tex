@@ -81,11 +81,11 @@ Clusters were initially confirmed by cross correlating with previous catalogs (s
 
 This paper is organized as follows: sections \ref{sec:design} through \ref{sec:analysis} describe the design, observations, data reduction and calibration, and creation of derived data products. In Section~\ref{sec:results}, we present the main results of our observations, and discuss the results in Section~\ref{sec:discussion}. In Section~\ref{sec:summary}, we summarize the key results and conclude.
 
-Unless otherwise noted, throughout this paper, we use a concordance cosmological model ($\Omega_\Lambda = 0.7$, $\Omega_m = 0.3$, and $H_0= 70$ \kms \mpc), assume a Chabrier initial mass function \citep{Chabrier2003}, and use AB magnitudes \citep{Oke1974}.
+Unless otherwise noted, throughout this paper, we use a concordance cosmological model ($\Omega_\Lambda = 0.7$, $\Omega_m = 0.3$, and $H_0= 70$ \kms \permpc), assume a Chabrier initial mass function \citep{Chabrier2003}, and use AB magnitudes \citep{Oke1974}.
 
 \section{Design}\label{sec:design}
 Our observational design is motivated by the release of the second, all-sky PSZ catalog\footnote{\url{http://szcluster-db.ias.u-psud.fr/sitools/client-user/SZCLUSTER_DATABASE/project-index.html}} (hereafter PSZ2; \citealt{PlanckCollaboration2015}) which contains 559 unconfirmed SZ detections with S/N $> 4.5$. We posit that the vast
-majority of these must lie at $z>0.4$ because the \planck\ confirmation process \citep{PlanckCollaboration2014} mostly relied on existing catalogs which have a preference for low$-z$ clusters. Furthermore, the confirmed sample of PSZ2 has only a small fraction (3\%) of $z > 0.6$ clusters compared to that expected ($\sim20$\%) based on the theoretical halo mass function \citeeg{Jenkins2001, Tinker2008} for mass limit of XXXX (need to get this number). If other clusters as massive like el ``El Gordo'' exist, they are hiding as high-significance candidates within the objects in this {\it all-sky} catalog.
+majority of these must lie at $z>0.4$ because the \planck\ confirmation process \citep{PlanckCollaboration2014} mostly relied on existing catalogs which have a preference for low$-z$ clusters. Furthermore, the confirmed sample of PSZ2 has only a small fraction (3\%) of $z > 0.6$ clusters compared to that expected ($\sim20$\%) based on the theoretical halo mass function \citeeg{Jenkins2001, Tinker2008} for mass limit of \editorial{XXXX}. If other clusters as massive like el ``El Gordo'' exist, they are hiding as high-significance candidates within the objects in this {\it all-sky} catalog.
 
 The core of our observational design relies on the use of optical imaging to confirm the SZ detections as real clusters and provide photometric redshifts using the multi-color information. This design is based on the previous success with the ACT cluster confirmation process using 4-m class telescopes.
 %
@@ -118,6 +118,9 @@ Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. We create t
 
 The full parameter file used while creating the mosaics is given in Appendix~\ref{app:swarp}.
 
+\subsection{Source Extraction and Photometry}
+For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; version 2.19.5; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}. See Appendix~\ref{app:sextractor} for a complete parameter listing.
+
 \subsection{Astrometric Calibration}
 Each of the final science mosaics produced in the previous section are first astrometrically aligned with \textit{Gaia} \citep{GaiaCollaboration2016} Data Release 1 \citep{GaiaCollaboration2016a} using \textsc{scamp} \citep{Bertin2006} as a part of \textsc{photometrypipeline}\footnote{\url{https://github.com/mommermi/photometrypipeline}} (PP; \citealt{Mommert2017}).
 
@@ -131,15 +134,10 @@ Sources are extracted from the combined mosaics with either a $3''$ or $8''$ dia
 \editorial{Should we talk about the difference between us and SDSS? If so, how should we ``sum up'' the differences in a simple way?}
 
 \section{Analysis}\label{sec:analysis}
-Lorem ipsum dolor amet swag copper mug meh tilde, put a bird on it live-edge tattooed kinfolk before they sold out locavore selvage leggings raclette literally bicycle rights. Hot chicken kickstarter mustache vinyl roof party. Wayfarers brooklyn truffaut twee umami, venmo irony. Typewriter viral pop-up, listicle vaporware organic af salvia keytar twee chillwave austin +1 offal blog. La croix dreamcatcher snackwave, try-hard intelligentsia taxidermy messenger bag air plant godard mustache celiac glossier echo park. Photo booth readymade authentic glossier biodiesel snackwave beard hammock sriracha before they sold out edison bulb fixie PBR\&B. Man bun pabst kogi, crucifix subway tile af tacos cray tumeric lyft cronut lomo tattooed.
-
-\subsection{Source Extraction and Photometry}
-For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; version 2.19.5; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}. See Appendix~\ref{app:sextractor} for a complete parameter listing.
-
 \subsection{Photometric Redshifts}
-We determine photometric redshifts (photo$-z$) from the five-band optical images using Bayesian Photometric Redshifts (BPZ; \citealt{Benitez2000, Coe2006}) following the same procedure as in \cite{Menanteau2009a}.
+We determine photometric redshifts (photo-$z$) from the five-band optical images using Bayesian Photometric Redshifts (BPZ; \citealt{Benitez2000, Coe2006}) following the same procedure as in \cite{Menanteau2009a}.
 
-We assess the effectiveness of our photo$-z$ estimates by comparing with the available spectroscopic redshifts (spec$-z$) from the SDSS. We use three diagnostics to gauge photo$-z$ accuracy. First, we report the full scatter between the photo$-z$ and spec$-z$, defined as:
+We assess the effectiveness of our photo-$z$ estimates by comparing with the available spectroscopic redshifts (spec$-z$) from the SDSS. We use three diagnostics to gauge photo-$z$ accuracy. First, we report the full scatter between the photo-$z$ and spec-$z$, defined as:
 \begin{equation}
 	\sigma_f = \mathrm{RMS}[\delta z/(1+z_{spec})]
 \end{equation}
@@ -154,11 +152,11 @@ which provides an estimate of the scatter resistant to catastrophic outliers. Fi
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{figures/specVSphot.pdf}
-	\caption{Comparison between photometric and spectroscopic redshifts for 2253 galaxies which have spectroscopic redshifts from the SDSS. The photometric redshifts in the top panel use a Bayesian approach with a custom empirical prior on galaxy brightness for the photometric redshifts. The bottom panel shows the difference between the spectroscopic and photometric redshift.}
+	\caption{Comparison between photometric and spectroscopic redshifts for 1588 elliptical galaxies which have spectroscopic redshifts from the SDSS. The photometric redshifts in the top panel use a Bayesian approach with a custom empirical prior on galaxy brightness for the photometric redshifts. The bottom panel shows the difference between the spectroscopic and photometric redshift.}
 	\label{fig:photozspecz}
 \end{figure}
 
-Figure~\ref{fig:photozspecz} shows the photometric redshift performance as a function of the true spectroscopic redshift. For the full sample of galaxies we calculate $\sigma_f = \editorial{XX\%}$, $\sigma_{NMAD} = \editorial{XX\%}$, and an outlier fraction, $\eta = \editorial{XX\%}$. When considering the performance of only the galaxies BPZ classified as E and E/S0 type, we find the following results; $\sigma_f = 10.4\%$, $\sigma_{NMAD} = 5.43\%$, and an outlier fraction, $\eta = 2.97\%$.
+Figure~\ref{fig:photozspecz} shows the photo-$z$ performance as a function of the true spectroscopic redshift. Because we are primarily concerned with identifying clusters containing elliptical galaxies, we show only galaxies classified E/S0 by BPZ. We find $\sigma_f = 0.067$, $\sigma_{NMAD} = 0.048$, and an outlier fraction, $\eta = 0.9\%$.
 
 \subsection{Cluster Finding}
 In this section, we briefly describe the algorithms and methods use to select the galaxy clusters from the multi-wavelength optical imaging. We follow the methods described in detail in \cite{Menanteau2009a, Menanteau2010}. We direct the reader there for an in depth description and discussion of the methods.
@@ -329,15 +327,31 @@ In this section, we discuss the results given in the previous section as a whole
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{figures/cluster_forecast.pdf}
-	\caption{The predicted number of clusters more massive than $M_{500c}=3$, 6 and $9 \times 10^{14}\msol$ (solid lines) as a function of redshift and normalized to unity from the mass function of \cite{Tinker2008}. For reference we show the 50\% and 90\% fractional completeness levels. The blue histogram shows the normalized cumulative distribution of confirmed PSZ clusters.}
+	\caption{Top: The predicted number of clusters as a function of redshift and normalized to unity from the mass function of \cite{Tinker2008}. At each redshift the lower mass limit is given by the mass in the bottom panel at the corresponding redshift. The blue PSZ Confirmed curve shows the normalized, cumulative number of confirmed clusters as a function of redshift. For reference we show the 50\% and 90\% fractional completeness levels.
+	Bottom: Cluster mass as a function of redshift. Redshift bins are the same as \cite{PlanckCollaboration2016} Figure 27.
+	In each panel the solid and dashed orange lines show the median and region enclosing 68\% of the data respectively.}
 	\label{fig:cluster_forecast}
 \end{figure}
 
-\editorial{One:} The initial design of our survey uses an $8'\times8'$ search window centered on the PSZ position. Low-$z$ clusters could appear as isolated elliptical galaxies and thus would not be classified as clusters. In follow up inspection of the full--sized mosaics, approximately 1 \degsq, reveals no such low-$z$ structures. In addition, we compute the expected fraction of galaxy clusters as a function of redshift from the cluster mass function of \cite{Tinker2008}. Figure~\ref{fig:cluster_forecast} shows the expected cumulative distributions of three intermediate mass clusters, solid lines, as well as the distribution of confirmed PSZ clusters. The previously confirmed cluster sample includes results from dedicated follow up by the \planck\ team \citeeg{PlanckCollaboration2015, PlanckCollaboration2016a}. From these numerical simulations we know that a low fraction ($<5\%$) of all clusters with $M_{500}=3-9\times10^{14}~\msol$ are expected to reside at redshifts less than 0.1. Of the 85 fields observed, we expect approximately four clusters to lie at such low redshifts. We recover three low$-z$ clusters during the course of our analysis.
+\editorial{One:} The initial design of our survey uses an $8'\times8'$ search window centered on the PSZ position. Low-$z$ clusters could appear as isolated elliptical galaxies and thus would not be classified as clusters. In follow up inspection of the full--sized mosaics, approximately 1 \degsq, reveals no such low-$z$ structures. In addition, we compute the expected fraction of galaxy clusters as a function of redshift from the cluster mass function of \cite{Tinker2008}. The cluster mass sensitivity of \planck\ varies with redshift (see Figure 27, \citealt{PlanckCollaboration2016}). To capture this variability, we draw random (with replacement) samples from the confirmed PSZ2 clusters. Because each cluster is previously confirmed the PSZ2 catalog provides an M$_{500}$ estimate of the total mass. The bottom panel of Figure~\ref{fig:cluster_forecast} shows the cluster mass as a function of redshift, where the gray lines are individual samples and the orange solid and dashed curves are the median and 68\% limits respectively.
 
-\editorial{Two:} The median limiting \sdssi-band magnitude of our survey is 23 mag, corresponding to a limiting redshift of $z=0.72$ for an \mstar\ galaxy. While it is possible that a number of cluster candidates corresponding to real clusters exists above this redshift, it is unlikely that these correspond to a population of the high SNR objects targeted by this survey. Massive clusters, such as those targeted by this survey, are exceedingly rare objects. For example there are only twelve clusters at $z>0.72$ in PSZ2, only five of which are above $z=0.8$. Again, Figure~\ref{fig:cluster_forecast} allows us to estimate the number of clusters missed with our observing limits. At $z>0.7$, we expect $\sim18\%$ of clusters with $M_{500c}=3\times10^{14}~\msol$, corresponding to only fifteen clusters of our 85 observed fields. While high-$z$ objects were expectedly missed by this survey, high-$z$ objects along cannot account for the high number of still unconfirmed clusters. We expect further follow up observations with deep infrared imaging will be required to place further limits on these high-$z$ objects.
+The top panel of Figure~\ref{fig:cluster_forecast} shows the expected cumulative distribution of galaxy clusters as a function of redshift.
 
-\editorial{Three: Jack mentioned that we can look at the distributions as a function of galactic latitude. If we are primarily finding galaxies which are far away from the galaxy there may be some argument to be made that there are many clusters hiding behind the stars in the Milky Way.}
+ From these numerical simulations we know that a low fraction ($<5\%$) of all clusters detectable by \planck\ are expected to reside at redshifts less than 0.1. Of the 85 fields observed, we expect approximately four clusters to lie at such low redshifts. We recover three low$-z$ clusters during the course of our analysis.
+
+\editorial{Two:} The median limiting \sdssi-band magnitude of our survey is 23 mag, corresponding to a limiting redshift of $z=0.72$ for an \mstar\ galaxy (see Figure~\ref{fig:recovery_redshift}). While it is possible that a number of cluster candidates corresponding to real clusters exists above this redshift, it is unlikely that these correspond to a population of the high SNR objects targeted by this survey. Massive clusters, such as those targeted by this survey, are exceedingly rare objects. For example there are only twelve clusters at $z>0.72$ in PSZ2, only five of which are above $z=0.8$. Again, Figure~\ref{fig:cluster_forecast} allows us to estimate the number of clusters missed with our observing limits. At $z>0.7$, we expect $\sim18\%$ of clusters with $M_{500c}=3\times10^{14}~\msol$, corresponding to only fifteen clusters of our 85 observed fields. While high-$z$ objects were expectedly missed by this survey, high-$z$ objects along cannot account for the high number of still unconfirmed clusters. We expect further follow up observations with deep infrared imaging will be required to place further limits on these high-$z$ objects.
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{figures/N_vs_density.pdf}
+	\caption{Right: Object Density in units of number per \arcminsq as a function of the 80\% \sdssi-band limiting magnitude taken from Figure~\ref{fig:recovery_redshift}. Fields where no cluster is identified are given by blue circles and fields with confirmed clusters are shown by orange stars. Left: Histogram of the object surface density of observed fields.}
+	\label{fig:N_vs_density}
+\end{figure}
+
+\editorial{Three:} It is possible that the underlying cause for failed cluster identification is confusion from source crowding in our images. If a cluster lies behind a dense foreground of Milky Way sources, then it could be difficult to visually identify the cluster. To estimate the object surface density in our fields, we sum the number of objects reported by \textsc{SExtractor} and dividing by the sky-area of the image. We explore the possibility that we fail to confirm a cluster in the majority of fields because of foreground contamination in Figure~\ref{fig:N_vs_density}. The right panel shows the surface density of objects in the search area as a function of the limiting \sdssi-band magnitude (see also the left panel of Figure~\ref{fig:recovery_redshift}). The right panel shows the number of observed fields with the corresponding object density. In both panels, the fields where we do not identify a cluster is shown in blue, and the successfully identified clusters are in orange.
+
+Our identified clusters fall in a relatively narrow range of object densities, $10-30$ Objects \perarcminsq. Roughly two thirds of our fields fall within this range. Of the 31 objects outside our identification range, 15 fields have higher densities. If all fifteen fields contain an obscured cluster we could still not account for the vast majority of fields where we did not identify a cluster, 51 fields or $\sim60\%$ of our observed sample.
+
+Perhaps more interesting are the sixteen fields where the object surface density is lower than our identification range. These are fields where it should be relatively easy to identify a massive cluster should it exist. Of course, the presence of a massive cluster could raise the object density above the lower identification threshold. These fields, especially the fields with deep optical limiting magnitudes are prime candidates for the potential high-$z$ clusters lurking beyond our reach.
 
 \editorial{Four:} Perhaps the most plausible explanation is that no optical counterpart to the PSZ detection exists. Previous works \citeeg{Barrena2018} find a similar fraction of non-detections, and consider both high noise values in the \planck\ $Y_{500}$ maps \citep{PlanckCollaboration2014a} along with contamination from foreground radio sources. As part of our NED search, we find that approximately 75\% of confirmed PSZ sources have a NVSS radio source (39.6 mJy average flux) within $5'$ of the PSZ position. unconfirmed PSZ sources show slightly fewer sources with approximately 55\% having a NVSS radio source (25.1 mJy average flux) within $5'$.
 
