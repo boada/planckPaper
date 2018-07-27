@@ -234,86 +234,118 @@ In this section, we give the results of our cluster finding. We report high conf
 \end{figure*}
 
 \begin{table*}
-	\caption[Summary of Cluster Finding]{Summary of cluster finding: Column 1: The PSZ cluster name; Column 2: PSZ2 SNR; Column 3: BCG Right Ascension in J2000; Column 4: BCG Declination in J2000; Column 5: BCG separation from PSZ position in arcmintues; Columns 6: Cluster redshift; Column 7: Cluster redshift uncertanty; Column 8: Corrected number of member galaxies; Column 9: New discovery? }
+	\caption[Summary of Cluster Finding]{Summary of cluster finding: Column 1: The PSZ2 cluster name; Column 2: PSZ2 signal-to-noise ratio; Column 3: PSZ1 ID number; Column 4: BCG Right Ascension in J2000; Column 5: BCG Declination in J2000; Column 6: BCG separation from PSZ position in arcmintues; Column 7: Cluster photometric redshift with 1-$\sigma$ uncertanty; Column 8: Corrected number of member galaxies; Column 9: New confirmation? }
 	\centering
 	\begin{tabular}{lcccccccc}
 	\hline
-	Cluster & SNR & $\alpha$ (J2000) & $\delta$ (J2000) & Sep. ($'$) & $z_{cl}$ & $z_{clerr}$ & Ngal$_c$ & New\\
-	(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9)\\
+	Cluster & SNR & PSZ1 ID & $\alpha$ (J2000) & $\delta$ (J2000) & Sep. ($'$) & $z_{cl}$ & Ngal$_c$ & New\\
+	(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) \\
 	\hline
-	 PSZ1 G$084.62-15.86$ & 6.01 & $21:49:42.524$ & $+33:09:17.29$ & 1.14 & 0.27 & 0.10 & 18 & \\
-	 PSZ1 G$206.45+13.89$ & 5.90 & $07:29:51.234$ & $+11:56:31.31$ & 1.97 & 0.40 & 0.05 & 73 & \\
-	 PSZ1 G$224.82+13.62$ & 5.51 & $08:01:41.492$ & $-04:03:44.48$ & 0.17 & 0.24 & 0.04 & 38 & \\
-	 PSZ2 G$029.66-47.63$ & 5.74 & $21:45:29.940$ & $-21:43:26.29$ & 4.73 & 0.34 & 0.03 & 130 & $\checkmark$ \\
-	 PSZ2 G$043.44-41.27$ & 5.55 & $21:36:43.728$ & $-10:19:02.15$ & 1.24 & 0.42 & 0.04 & 116 & $\checkmark$ \\
-	 PSZ2 G$096.43-20.89$ & 5.81 & $22:48:09.402$ & $+35:33:49.45$ & 0.49 & 0.24 & 0.04 & 54 & $\checkmark$ \\
-	 PSZ2 G$098.38+77.22$ & 5.51 & $13:18:08.274$ & $+38:30:20.10$ & 5.84 & 0.78 & 0.05 & 58 & $\checkmark$ \\
-	 PSZ2 G$106.11+24.11$ & 5.70 & $19:21:31.852$ & $+74:33:27.17$ & 0.51 & 0.14 & 0.06 & \editorial{0} & $\checkmark$ \\
-	 PSZ2 G$107.83-45.45$ & 7.09 & $00:07:35.605$ & $+16:07:02.39$ & 0.83 & 0.54 & 0.05 & 30 & $\checkmark$ \\
-	 PSZ2 G$120.76+44.14$ & 5.59 & $13:12:53.537$ & $+72:55:06.05$ & 2.02 & 0.35 & 0.03 & 92 & $\checkmark$ \\
-	 PSZ2 G$125.55+32.72$ & 6.49 & $11:25:34.008$ & $+83:58:55.75$ & 1.44 & 0.21 & 0.06 & 32 & $\checkmark$ \\
-	 PSZ2 G$137.24+53.93$ & 7.87 & $11:40:59.525$ & $+61:07:07.07$ & 4.61 & 0.45 & 0.06 & 40 & $\checkmark$ \\
-	 PSZ2 G$173.76+22.92$ & 5.80 & $07:17:26.636$ & $+44:05:02.97$ & 1.62 & 0.14 & 0.04 & \editorial{0} & $\checkmark$ \\
-	 PSZ2 G$191.82-26.64$ & 6.17 & $04:38:28.283$ & $+04:37:19.91$ & 5.18 & 0.18 & 0.06 & 24 & $\checkmark$ \\
-	 PSZ2 G$305.76+44.79$ & 5.72 & $12:59:53.612$ & $-18:01:35.05$ & 0.44 & 0.74 & 0.08 & 48 & $\checkmark$ \\
+	 PSZ2 G$029.66-47.63$ & 5.74 & \nd & $21:45:29.940$ & $-21:43:26.29$ & 4.73 & $0.34 \pm 0.03$ & 130 & $\checkmark$ \\
+	 PSZ2 G$043.44-41.27$ & 5.55 & \nd & $21:36:43.728$ & $-10:19:02.15$ & 1.24 & $0.42 \pm 0.04$ & 116 & $\checkmark$ \\
+	 PSZ2 G$084.62-15.86$ & 6.01 &      284 & $21:49:42.524$ & $+33:09:17.29$ & 1.14 & $0.27 \pm 0.10$ & 18 & \\
+	 PSZ2 G$096.43-20.89$ & 5.81 & \nd & $22:48:09.402$ & $+35:33:49.45$ & 0.49 & $0.24 \pm 0.04$ & 54 & $\checkmark$ \\
+	 PSZ2 G$098.38+77.22$ & 5.51 &      346 & $13:18:08.274$ & $+38:30:20.10$ & 5.84 & $0.78 \pm 0.05$ & 58 & $\checkmark$ \\
+	 PSZ2 G$106.11+24.11$ & 5.70 & \nd & $19:21:31.852$ & $+74:33:27.17$ & 0.51 & $0.14 \pm 0.06$ & \editorial{0} & $\checkmark$ \\
+	 PSZ2 G$107.83-45.45$ & 7.09 & \nd & $00:07:35.605$ & $+16:07:02.39$ & 0.83 & $0.54 \pm 0.05$ & 30 & $\checkmark$ \\
+	 PSZ2 G$120.76+44.14$ & 5.59 & \nd & $13:12:53.537$ & $+72:55:06.05$ & 2.02 & $0.35 \pm 0.03$ & 92 & $\checkmark$ \\
+	 PSZ2 G$125.55+32.72$ & 6.49 & \nd & $11:25:34.008$ & $+83:58:55.75$ & 1.44 & $0.21 \pm 0.06$ & 32 & $\checkmark$ \\
+	 PSZ2 G$137.24+53.93$ & 7.87 & \nd & $11:40:59.525$ & $+61:07:07.07$ & 4.61 & $0.45 \pm 0.06$ & 40 & $\checkmark$ \\
+	 PSZ2 G$173.76+22.92$ & 5.80 & \nd & $07:17:26.636$ & $+44:05:02.97$ & 1.62 & $0.14 \pm 0.04$ & \editorial{0} & $\checkmark$ \\
+	 PSZ2 G$191.82-26.64$ & 6.17 &      646 & $04:38:28.283$ & $+04:37:19.91$ & 5.18 & $0.18 \pm 0.06$ & 24 & $\checkmark$ \\
+	 PSZ2 G$206.45+13.89$ & 5.90 &      682 & $07:29:51.234$ & $+11:56:31.31$ & 1.97 & $0.40 \pm 0.05$ & 73 & \\
+	 PSZ2 G$224.82+13.62$ & 5.51 &      752 & $08:01:41.492$ & $-04:03:44.48$ & 0.17 & $0.24 \pm 0.04$ & 38 & \\
+	 PSZ2 G$305.76+44.79$ & 5.72 &     1070 & $12:59:53.612$ & $-18:01:35.05$ & 0.44 & $0.74 \pm 0.08$ & 48 & $\checkmark$ \\
 	\hline
 	\end{tabular}
 \label{tbl:results}
 \end{table*}
 
 \subsection{Notes on Specific Clusters}
-In the following subsections, we note previously known sources by querying the NASA/IPCA Extragalactic Database (NED)\footnote{\url{https://ned.ipac.caltech.edu/}} and the SIMBAD (Set of Identifications, Measurements, and Bibliography for Astronomical Data) astronomical database\footnote{\url{http://simbad.u-strasbg.fr/simbad/}} \citep{Wenger2000}. We include sources from the NRAO (National Radio Astronomy Observatory) VLA (Very Large Array) Sky Survey (NVSS; \citealt{Condon1998}), the R\"{o}ntgensatellit (ROSAT) All-Sky Survey Bright Source Catalog (RASS-BSC; \citealt{Voges1999a}), the ROSAT All-Sky Faint Source Catalog (RASS-FSC; \citealt{Voges2000}), and the SDSS. We make note of x-ray and radio sources within $5'$ of the reported BCG pointing and other catalogs as pertinent to the individual cluster.
+In the following subsections, we note previously known sources by querying the NASA/IPCA Extragalactic Database (NED)\footnote{\url{https://ned.ipac.caltech.edu/}} and the SIMBAD (Set of Identifications, Measurements, and Bibliography for Astronomical Data) astronomical database\footnote{\url{http://simbad.u-strasbg.fr/simbad/}} \citep{Wenger2000}. We include sources from the NRAO (National Radio Astronomy Observatory) VLA (Very Large Array) Sky Survey (NVSS; \citealt{Condon1998}), the R\"{o}ntgensatellit (ROSAT) All-Sky Survey Bright Source Catalog (RASS-BSC; \citealt{Voges1999a}), the ROSAT All-Sky Faint Source Catalog (RASS-FSC; \citealt{Voges2000}), and the SDSS. We make note of  confident associations of X-ray and radio sources with the BCG or other clusters members within $5^\prime$ of the reported BCG pointing (within $10^\prime$ for the three low redshift clusters).
 
-\subsubsection{PSZ1 G084.62-15.86}
-We recover a cluster at $z_{cl} = 0.27 \pm 0.09$ with 18 members. This is a system with at least three possible BCGs. From the chosen BCG, there are two faint RASS-FSC sources $0\farcm36$ and $0\farcm84$ away from the reported BCG coordinate. Also, there are two NVSS sources $0\farcm66$ and $2\farcm82$ from the BCG pointing with log flux densities of 1.29 and 0.48 mJy at 1.4 GHz. This cluster, with a PSZ1 ID of 283, has been previously confirmed by the \textit{Planck} team; where they found the photometric redshift of the cluster at $z_{spec} = 0.364 \pm none$ \citep{PlanckCollaboration2016a}.
+\subsubsection{PSZ2 G029.66-47.63}  % 21:45:44	-21:46:49
+This is a rich cluster at $z_{cl} = 0.34 \pm 0.03$ with 130 members, approximately $5^\prime$ to the northwest of the \planck\ position. The X-ray source 1RXS J214531.1$-$214339 is coincident with the BCG. Our data show another, slightly less rich, system (with $z_{cl} = 0.33 \pm 0.04$ and 76 members) within $0\farcm5$ of the \planck\ position. Both systems likely contribute to the \planck\ SZ signal.  This is the richest cluster in our sample.
 
-\subsubsection{PSZ1 G206.45+13.89}
-We find a cluster at $z_{cl} = 0.39 \pm 0.05$. We detect 73 potential cluster members, although a bright star (V $= 4.5$ mag; \citealt{Hog2000}) only $\sim4\farcm9$ away from the reported BCG. The contaminating star prevents an accurate photo$-z$ estimate for many cluster cluster members. This system has four NVSS sources $0\farcm63$, $2\farcm86$, $4\farcm08$, and $4\farcm60$ away from the BCG pointing. They possess a log flux density of 1.12, 0.7, 0.46, and 1.65 mJy respectively at 1.4 GHz. This cluster has been previously confirmed in \citep{Barrena2018} as a rich, massive cluster. It has been recognized with the PSZ1 ID 682 where they found a photometric redshift of $z_{phot} = 0.44 \pm 0.04$.
+%has one NVSS source $3\farcm20$ away from the BCG coordinate with a log flux density of 0.8 mJy at 1.4 Ghz, and one RASS-FSC $0\farcm34$ away from the reported BCG pointing. From the SIMBAD search there is a ROSAT faint x-ray source $2\farcm84$ away from the BCG coordinates \citep{Bohringer2000}.
 
-\subsubsection{PSZ1 G224.82+13.62}
-This system, at $z_{cl} = 0.23 \pm 0.05$ has two NVSS sources $2\farcm09$ and $4\farcm10$ away from the \planck\ pointing. The sources possess a log flux density of 0.51 and 0.86 mJy respectively at 1.4 GHz. According to the SIMBAD search there is an Einstein Observatory soft x-ray source $0\farcm316$ away from the BCG pointing (2). This cluster has also been confirmed in the \citep{Barrena2018} as a rich, massive cluster with the PSZ1 ID 752 and a photometric redshift of $z_{cl} = 0.25 \pm 0.03$.
+\subsubsection{PSZ2 G043.44-41.27}  % 21:36:44	 -10:17:48
+This is the second richest cluster we have found; the system is at $z_{cl} = 0.41 \pm 0.03$ with 116 members.  There are two plausible BCGs with nearly the same photo-$z$; the one we select is slightly brighter in the $i$-band, yields a slightly higher number of cluster members, and is positionally coincident with the X-ray source 1RXS J213644.4$-$101904. The other bright galaxy is at R.A.=21:36:38.6, decl.=$-$10:18:35.7, some $1\farcm3$ to the west. This galaxy is associated with a bright radio source (NVSS J213638$-$101836) with a flux density of $107.8 \pm 3.3$ mJy at 1.4 GHz that has been classified as a symmetric double \citep{douglas+96}.
+%\bibitem[Douglas et al.(1996)]{douglas+96} Douglas, J.~N., Bash, F.~N., Bozyan, F.~A., Torrence, G.~W., \& Wolfe, C.\ 1996, \aj, 111, 1945
+%   PSZ2_G043.44-41.27_3484    griz: 20.04 18.31 17.51 17.45
+%   PSZ2_G043.44-41.27_3764    griz: 19.91 18.25 17.53 17.39
+%   NVSS J213638-101836
 
-\subsubsection{PSZ2 G029.66-47.63}
-\editorial{Check the citations for the two RASS sources. Did they come from the same place or are they a bright and a faint source?}
-\peditorial{SIMBAD has no reference for the position instead it points the external catalog VizieR, it displays the bright and faint ROSAT catalogs but there is no information in the bright catalog. Following the faint catalog the first author is Voges.}
-The PSZ2 cluster at $z_{cl} = 0.33 \pm 0.03$ has one NVSS source $3\farcm20$ away from the BCG coordinate with a log flux density of 0.8 mJy at 1.4 Ghz, and one RASS-FSC $0\farcm34$ away from the reported BCG pointing. From the SIMBAD search there is a ROSAT faint x-ray source $2\farcm84$ away from the BCG coordinates \citep{Bohringer2000}.
+\subsubsection{PSZ2 G084.62$-$15.86} % 21:49:44	+33:10:23.81
+This cluster was previously confirmed by the \planck\ team, where they quote a spectroscopic cluster redshift (from two members) of $z_{\rm spec} = 0.364$ \citep{PlanckCollaboration2016a}.
+%Planck intermediate results. XXXVI. Optical identification and redshifts of Planck SZ sources with telescopes at the Canary Islands observatories
+This system has at least three bright member galaxies within 2$^\prime$ of the \planck\ position that are plausible BCG candidates. Among these we chose the brightest one in the $i$-band (which is about an arcminute south of the \planck\ team's chosen BCG) and recovered the cluster at $z_{\rm photo} = 0.27 \pm 0.10$ with 18 members.
+% Two RASS-FSC X-ray sources are positionally coincident with the cluster.
+The \planck\ team's selected BCG is associated with a radio source (NVSS J214940+331031) with a flux density of $19.7\pm 0.8$ mJy at 1.4 GHz.
+%  Steven's BCG  griz=20.99 18.78 18.08 18.08
+%  Planck's BCG  griz=20.69 18.92 18.27 18.26
+%
 
-\subsubsection{PSZ2 G043.44-41.27}
-We find this system at $z_{cl} = 0.41 \pm 0.03$ with one NVSS source $1\farcm37$ away from the BCG coordinate. The radio source is a symmetric double with a log flux density of 2.71 mJy at 0.365 GHz. Also, from the SIMBAD search there is a RASS-FSC $0\farcm16$ away from the cluster BCG \citep{Bohringer2000}.
+\subsubsection{PSZ2 G096.43-20.89} % 22:48:09	+35:33:21.47
+The BCG of this cluster is only $0\farcm5$ from the \planck\ position. The cluster's redshift is $z_{cl} = 0.24 \pm 0.04$ with 54 members. An X-ray source (1RXS J224806.6+353230) is $1\farcm44$ away from the BCG position.  This cluster appears to extend more toward the southwest quadrant in the direction of a cataloged Zwicky cluster (ZwCl 2245.6+3516; \citealt{Zwicky1968}).
+% PSZ2_G096.43-20.89_5035  22:48:09.4 35:33:49.4 griz : 18.70 17.16 16.54 16.57
+% PSZ2_G096.43-20.89_4888  22:48:13.7 35:33:17.3 griz : 19.19 17.70 17.08 17.07
 
-\subsubsection{PSZ2 G096.43-20.89}
-At $z_{cl} = 0.24 \pm 0.03$ this system has one RASS-BSC source $1\farcm44$ away from the BCG position. There are three NVSS sources $4\farcm18$, $4\farcm86$, and $4\farcm89$ from the BCG position. The log flux densities are 1.46, 0.72, and 1.39 mJy respectively at 1.4 GHz. There is a Zwicky cluster $3\farcm55$ away from the BCG position that is 17' in diameter with a richness of 89. It is classified as medium compact \citep{Zwicky1968}.
+\subsubsection{PSZ2 G098.38+77.22} % 13:18:25	+38:35:06.94
+This is the highest redshift cluster in the sample at $z_{cl} = 0.78 \pm 0.05$ with 58 members; it is $5\farcm8$ away from the \planck\ position. About $2^\prime$ east of our chosen BCG there is a luminous ($i\sim 20$ mag), red galaxy (SDSS J131814.99+383055.8) with a spectroscopic redshift of $z=0.726$. This galaxy has similar colors to the cluster BCG and may be part of the system.
 
-\subsubsection{PSZ2 G098.38+77.22}
-This cluster at $z_{cl} = 0.77 \pm 0.05$ has a Faint Images of the Radio Sky at Twenty-centimeters (FIRST; \citealt{Becker1995}) source $1\farcm76$ from the BCG position with a log flux density of 0.10 mJy at 1.4 GHz. There is a SDSS galaxy that is $1\farcm44$ away with a spectral redshift of 0.726 \editorial{Cite individual SDSS DR?}. And a quasi stellar object $2\farcm02$ away from the BCG position with a redshift of 0.2 (85).
+%has a Faint Images of the Radio Sky at Twenty-centimeters (FIRST; \citealt{Becker1995}) source $1\farcm76$ from the BCG position with a log flux density of 0.10 mJy at 1.4 GHz. There is a SDSS galaxy that is $1\farcm44$ away with a spectral redshift of 0.726 \editorial{Cite individual SDSS DR?}. And a quasi stellar object $2\farcm02$ away from the BCG position with a redshift of 0.2 (85).
 
-\subsubsection{PSZ2 G106.11+24.11}
-\peditorial{NED gives a broken ads link but it does give the title, when I search on title instead of the WGA I'm lead to the citation} %http://adsabs.harvard.edu/abs/1995SPIE.2518..120B
-We find this system at $z_{cl} = 0.14 \pm 0.06$ with a RASS-BSC source and a WGA ROSAT
-%(http://adsabs.harvard.edu/abs/1995SPIE.2518..120B)
-source $0\farcm26$ and $0\farcm21$ away from the BCG position respectively. \editorial{check peter's vizier catalog citation.} According to the SIMBAD search, there is a RASS x-ray cluster $0\farcm84$ away from the BCG pointing \citep{Bohringer2000}. \peditorial{The citation from SIMBAD is given directly with the ICRS coordinates, not form external catalog. And the first author on this is Bohringer}
+\subsubsection{PSZ2 G106.11+24.11}  % 19:21:24	 +74:33:21.87
+PSZ2 G106.11+24.11 is a low redshift system at $z_{cl} = 0.14 \pm 0.06$.  The BCG is a large galaxy close to the \planck\ position.  There are 33 members before correcting for background \editorial{revise the Table to quote a better estimate of Ngals}. This object was identified as an X-ray cluster (RXC J1921.3+7433) based on its extent in the RASS \citep{Bohringer2000}, although these authors did not publish a redshift. Using their flux value and our photometric redshift, we estimate the cluster's X-ray luminosity in the 0.1-2.4 keV band to be $L_{\rm X} \sim 2.6\times 10^{44}$ erg s$^{-1}$. This luminosity value is broadly consistent with those of other confirmed \planck\ clusters at this redshift range \citep{PlanckCollaboration2015}.
 
-\subsubsection{PSZ2 G107.83-45.45}
-This cluster at $z_{cl} = 0.54 \pm 0.05$ has a NVSS source $1\farcm28$ from the BCG postion with a log flux density of 0.89 mJy at 1.4 GHz, and a SDSS galaxy $1\farcm89$ away with a spectral redshift of 0.566 (61).
+% Table 1
+%                                                       1e-12       frac
+%  Name                   RA      Dec      z       rate F_X    F_X*  err     L_x    N_H  ID  Ref
+% RXC J1921.3+7433...	...	290.3389	74.5654	0.0000	0.13	  2.97	2.97	  9.1	 0.00	7.9	...	1
+% Table 5  X-Ray Properties of the NORAS Cluster X-Ray Sources
+% Name                   L_X      R_X     R_X  P_ext   r_c   r_min  HR  error   \DeltaHR
+% RXC J1921.3+7433 ...	0.00 	11.0 	0.00	 17.6	 2.0	  1.5	0.91	 0.13	-0.07
 
-\subsubsection{PSZ2 G120.76+44.14}
-At an estimated $z_{cl} = 0.34 \pm 0.03$, this cluster has an ABELL HHP90 galaxy $0\farcm11$ away with a spectral redshift of 0.29 \citep{Huchra1990}, and a RASS-FSC source $0\farcm17$ from the BCG pointing \citep{Voges2000}. From the SIMBAD search there is an Einstein extended x-ray source $1\farcm67$ away from the BCG pointing \citep{Oppenheimer1997}, and a Zwicky cluster $2\farcm67$ away (6).
+\subsubsection{PSZ2 G107.83-45.45}  % 0:07:35	+16:07:51.05
+This cluster at $z_{cl} = 0.54 \pm 0.05$ has 30 members.  The BCG (SDSS J000735.62+160701.8) as well as another member (SDSS J000736.15+160508.9) have spectroscopic redshifts from the SDSS of $z=0.5673$ and $z=0.5667$, respectively.  There are 4 other galaxies with SDSS spectroscopic redshifts (0.5649, 0.5661, 0.5655, and 0.5625) within $7^\prime$ (2.7 Mpc) of the BCG.
 
-\subsubsection{PSZ2 G125.55+32.72}
-We estimate this PSZ2 source at $z_{cl} = 0.21 \pm 0.06$. It has a Westerbork Northern Sky Survey (WENSS) radio source $0\farcm17$ away with a log flux density of 1.61 mJy at 0.325 GHz \citep{Rengelink1997}. There is also a NVSS source $2\farcm92$ away at 1.62 mJy at 0.325 GHz, and a bright RASS-BSC $2\farcm96$ away from the BCG pointing. A littler farther out there are two more NVSS sources $3\farcm81$ and $4\farcm98$ away, at 0.56 and 1.02 mJy respectively at 1.4 GHz.
+\subsubsection{PSZ2 G120.76+44.14} % 13:12:39	+72:53:23.47
+The BCG we select yields an estimated redshift for the cluster of $z_{cl} = 0.35 \pm 0.03$ with 92 members; this galaxy has a published spectroscopic redshift of $z=0.2959$ \citep{Huchra1990}.  We associate the cluster with Abell 1705 and the RASS X-ray source 1RXS J131252.0+725514.
 
-\subsubsection{PSZ2 G137.24+53.93}
-This cluster at $z_{cl} = 0.45 \pm 0.05$, has a NVSS source $0\farcm14$ away from the BCG pointing with a log flux density of 1.46 mJy at 1.4 GHz. Also a VFK2015 radio source $0\farcm27$ away (6), and a Sixth Cambridge radio source $0\farcm59$ away with a log flux density of 2.23 mJy at 0.151 GHz (15). There is a SDSS galaxy $0\farcm60$ away with a spectral redshift of 0.44 (16), and a WHL galaxy cluster $0\farcm60$ away with a photometric redshift of 0.44 (18).
+Approximately $2\farcm6$ south of the PSZ2 position, there is a luminous red galaxy with a gravitationally lensed arc that is the BCG of a rich system cataloged as WL 1312.5+7252 with a photometric redshift of 0.55 \citep{Dahle2003}. This galaxy is also a radio source (NVSS J131230+725051) with a flux density of $3.5 \pm 0.5$ mJy (1.4 GHz).  Our analysis also yields a rich cluster with this BCG ($\alpha$=13:12:30.9, $\delta$=+72:50:54.2) with Ngal$_c$ = 89 at $z=0.59 \pm 0.05$.
+% This is the ID of the 2nd BCG  Object PSZ2_G120.76+44.14_2498   RA,DEC: 13:12:30.9 72:50:54.2
 
-\subsubsection{PSZ2 G173.76+22.92}
-\peditorial{need help on B3 citation}
-This system at $z_{cl} = 0.13 \pm 0.03$ has a Third Bologna catalog galaxy $0\farcm012$ away at a redshift of 0.06 \citep{Ficarra1985}. It also possesses a VFK2015 radio source $0\farcm16$ away from the BCG pointing (2), and two radio sources, a Sixth Cambridge, and NVSS source at $0\farcm715$, and $3\farcm826$ away respectively. The Sixth Cambridge and the NVSS sources have log flux densities of 3.09 and 0.94 mJy at 0.151 and 1.4 GHz (6,40).
+Given the similar optical richnesses of these two systems it is likely that both contribute to the \planck\ SZ signal.  \editorial{Or maybe we should say this: On the other hand, given the strong mass sensitivity of SZ selection, perhaps the southern cluster is more likely to be the source of the SZ signal?}
 
-\subsubsection{PSZ2 G191.82-26.64}
-This cluster at $z_{cl} = 0.18 \pm 0.06$ has four NVSS sources $0\farcm981$, $2\farcm346$, $2\farcm585$, and $4\farcm570$ away from the BCG coordinate. They possess a log flux density of 0.97, 1.39, 1.36, 1.12 mJy at 1.4 GHz.
+\subsubsection{PSZ2 G125.55+32.72} %  11:25:35	 +83:57:29.12
+There are two plausible BCGs in this cluster; the one we select yields a redshift of $z_{cl} = 0.21 \pm 0.06$ and 32 members.  The other BCG (R.A.=11:25:46.8, decl.=+83:55:04.4) is about 0.14 mag fainter in the $i$-band and, using it for cluster finding, results on a cluster at $z_{cl} = 0.20 \pm 0.03$ with 31 members.  These two plausible BCGs are separated by $\sim$4$^\prime$. Both BCGs are radio sources: the northern galaxy (corresponding to our selected BCG) is cataloged as NVSS J112535+835858 with a 1.4 GHz flux density of $10.2 \pm 0.9$ mJy; the southern one corresponds to NVSS J112550+835508 with a flux density at the same frequency of $3.6 \pm 0.6$ mJy. The southern galaxy is about 1$^\prime$ away from the RASS X-ray source  1RXS J112547.3+835559.  Both systems should contribute to the \planck\ SZ signal and the quoted richness in Table~\ref{tbl:results} is almost surely an underestimate of the richness of the combined system.
 
-\subsubsection{PSZ2 G305.76+44.79}
-Finally, at $z_{cl} = 0.73 \pm 0.07$, this cluster has a PMN radio source $0\farcm019$ away from the BCG coordinate with a log flux density of 1.71 mJy at 4.85 GHz \citep{Griffith1993}.
+% BCG: PSZ2_G125.55+32.72_2310  11:25:34.0 83:58:55.7  griz:  19.18 17.39 16.74 16.52
+% Gal: PSZ2_G125.55+32.72_1736  11:25:46.8 83:55:04.4  griz:  19.19 17.55 16.88 16.78
+
+\subsubsection{PSZ2 G137.24+53.93} % 11:41:07	+61:11:39.02
+Here we find a cluster at $z_{cl} = 0.45 \pm 0.06$ with 40 members.  The BCG is a radio source (NVSS J114059+610658) with a flux density of $10.2 \pm 0.9$ mJy (1.4 GHz) and has a spectroscopic redshift from the SDSS of $z=0.4770$.  Another cluster member also has a concordant SDSS spectroscopic redshift of $z=0.4697$.  The cluster has been cataloged as WHL J114058.8+610631 with a similar photometric redshift.
+
+\subsubsection{PSZ2 G173.76+22.92} % 7:17:28	+44:03:27.62
+This low redshift system, which we find at $z_{cl} = 0.14 \pm 0.04$, has a very interesting BCG.  It is cataloged in NED as B3~0713+441 and has a spectroscopic redshift of $z=0.0652$ \citep{Bauer2000}. It is associated with the RASS X-ray source 1RXS J071726.9+440557 as well as a bright radio source (NVSS J071726+440504) with a flux density of $220.4\pm 7.6$ mJy (at 1.4 GHz).  Higher resolution images from FIRST reveal that this radio source is double lobed.  Some 6$^\prime$ to the east is a cataloged Seyfert 1 galaxy (2MASX J07180060+4405271) with a spectroscopic redshift of $z=0.0614$ \citep{Michel1988} and a 1.4 GHz radio flux of $50.8 \pm 1.6 $ mJy (NVSS J071800+440527).
+
+% J071726.9+440557  B3 0713+441 5.51e-12  07 17 26.71 +44 05 04.3 220.4   0.88   16.6*  0.0652 1 Galaxy
+% J071800.7+440527  IRAS F07144+4410 2.42e-11  07 18 00.69 +44 05 27.4 50.8   1.00   15.5   0.0614  Sy1
+
+\subsubsection{PSZ2 G191.82-26.64} % 4:38:37	+04:42:02.64
+This is another low redshift cluster at $z_{cl} = 0.18 \pm 0.06$ with 24 members. Two cluster members are associated with radio sources: NVSS J043836+043824 and NVSS J043818+043802 with 1.4 GHz flux densities of $24.8 \pm 1.2$ mJy and $22.7 \pm 1.5$ mJy, respectively.
+
+\subsubsection{PSZ2 G206.45+13.89}  %  7:29:59	 +11:56:22.64
+We find a cluster at $z_{cl} = 0.39 \pm 0.05$ with 73 cluster members.  A bright star (V $= 4.5$ mag; \citealt{Hog2000}) lies only $\sim4\farcm9$ away from the reported BCG, which prevents accurate photo-$z$ estimates for a significant fraction of the projected area of the cluster. This cluster has been previously confirmed in \citet{Barrena2018} as a rich cluster with a spectroscopic redshift of $z_{\rm spec} = 0.406$ from 45 members. We confirm the presence of a possible gravitationally-lensed arc $\sim$13$^{\prime\prime}$ northeast of the BCG.
+
+\subsubsection{PSZ2 G224.82+13.62}  % 8:01:42	-4:03:54
+The BCG of this system is partially obscured by a nearby star and was not fully deblended in our catalogs.  Still we are able to find a rich cluster at $z_{cl} = 0.23 \pm 0.05$ with 38 members.  An interesting aspect of this cluster is that it is positionally coincident with an unidentified X-ray source (2E 0759.2$-$0355) from the {\it Einstein Observatory} \citep{Harris1990}. This cluster was confirmed by \cite{Barrena2018} with a spectroscopic redshift of $z_{\rm spec} = 0.274$ from 28 members.
+
+\subsubsection{PSZ2 G305.76+44.79}  % 12:59:54	 -18:01:59
+Finally, PSZ2 G305.76+44.79 is our second highest redshift cluster at $z_{cl} = 0.74 \pm 0.08$ with 48 members. The BCG is associated with radio source PMN J1259$-$1801 with a 1.4 GHz flux density of $42.2\pm 1.4$ mJy from the NVSS.
+
+% AT20GJ125954-180133 12:59:54.01 -18:01:33.8    89    82    40 p   .     41.8
 
 \section{Discussion}\label{sec:discussion}
 In this section, we discuss the results given in the previous section as a whole, and frame those results in the context of the broader PSZ sample. From the 85 fields observed, we identified fifteen rich cluster systems at $0.1 < z_{cl} < 0.8$. Because our observations are limited to objects with SNR$>5\sigma$, we would expect at most one failed detection. This leads to three possible alternatives.
