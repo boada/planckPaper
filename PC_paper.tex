@@ -59,36 +59,45 @@
 
 \begin{document}
 
-\title{Planck Cluster Paper}
+\title{Optical Follow Up of high Confidence \planck\ Cluster Candidates}
 
-\author{\sc SB\altaffilmark{1}, JPH\altaffilmark{1}, FM\altaffilmark{2}, PD\altaffilmark{1}}
+\author{\sc Steven Boada\altaffilmark{1},
+John P. Hughes\altaffilmark{1},
+Felipe Menanteau\altaffilmark{2,3},
+Peter Doze\altaffilmark{1},
+L. Felipe Barrientos\altaffilmark{4},
+L. Infante\altaffilmark{4}
+}
 
-\altaffiltext{1}{Rutgers;boada@physics.rutgers.edu}
-\altaffiltext{2}{Illinois}
+\altaffiltext{1}{Department of Physics and Astronomy, Rutgers, the State University of New Jersey, 136 Frelinghuysen Road, Piscataway, NJ 08854-8019, USA; \href{mailto:boada@physics.rutgers.edu}{boada@physics.rutgers.edu}}
+\altaffiltext{2}{National Center for Supercomputing Applications, 1205 West Clark St., Urbana, IL 61801, USA}
+\altaffiltext{3}{Department of Astronomy, University of Illinois at Urbana-Champaign, 1002 W. Green Street, Urbana, IL 61801, USA}
+\altaffiltext{4}{Instituto de Astrof\'isica y Centro de Astroingeniería, Facultad de Física, Pontificia Universidad Cat\'olica de Chile, Casilla 306, Santiago 22, Chile}
+
 
 \begin{abstract}
-	\noindent \editorial{Copied and pasted from poposals.} We propose to continue our program of optical imaging to unveil all of the most massive clusters in	the observable Universe. We start from the all-sky \planck\ Sunyaev-Zel'dovich (SZ) catalogs, which contain several hundred high significance (signal-to-noise ratio, SNR $> 5$) unconfirmed cluster candidates. Since SZ selection favors high mass clusters and the \planck\ confirmation process favored	low redshift systems, the highest significance unconfirmed candidates are, therefore, likely massive clusters ($M_{500} > 5 ×\times 10^{14}$ \Msol) at relatively high redshift ($z > 0.5$). Our proposed observations,	using MOSAIC-3 on Mayall, are designed to confirm the presence of a brightest cluster galaxy (to $z \sim 1$) and red sequence of accompanying cluster members (to $z \sim 0.7$). Preliminary results from our observations over the past two years have validated our approach by the detection of optical clusters in a number of \planck\ candidates, including the discovery of rich systems at $z = 0.553$ and $z = 0.830$ that rival the most massive clusters known. The proposed observations represent the first step required to provide a complete all-sky census throughout the observable Universe of the most massive, high redshift clusters. Their expected high redshift and high mass make the unconfirmed \planck\ clusters, arguably, the most important available sample for probing deviations from $\Lambda$CDM and defining the high-mass end of the cluster mass function.
+\noindent We report on newly identified galaxy clusters selected from the second all-sky \planck\ Sunyaev-Zel'dovich (SZ) catalog (PSZ2), and have a detection of at least $5\sigma$. The clusters are identified in deep, optical imaging from the Kitt Peak National Observatory 4m Mayall telescope taken between 2014 and 2017. Focusing on the highest richness systems, we identify galaxy clusters through a combination of visual image inspection and the maxBCG algorithm. Galaxy clusters are considered to be confirmed if they are both rich (Ngal $>20$) and spatially coordinate ($<5'$) with the reported PSZ2 position. Of the 85 fields containing unconfirmed sources observed, we characterize 18 (21\% of observed sample) correspondent galaxy clusters ($ 0.13 < z < 0.74$), 15 of which are previously unknown. We discuss three possible scenarios -- all low-$z$, all high-$z$, obscured by the Milky Way -- which could lead to the low identification fraction, and determine that no single scenario could account for the low purity of rich galaxy clusters.
 \end{abstract}
 
 \section{Introduction}
-\editorial{this section has not been edited and is just a bunch of stuff copy and pasted. I did update some of the references.}
+Galaxy clusters, especially massive clusters, are extraordinary objects which contain vital clues to the structure and evolution of the universe. The generally accepted $\Lambda$CDM cosmological model makes detailed predictions about the number and total mass distribution of galaxy clusters throughout the universe. These galaxy clusters, particularly at high redshift, play a cruicial role in constraining large scale structure formation and evolution \citeeg{Mortonson2011, Harrison2012, Harrison2013, Waizmann2013}.
 
-Massive clusters of galaxies are the extraordinary objects which hold important clues to the evolution of structure in the universe. The widely accepted $\Lambda$CDM model of cosmology makes specific predictions about the mass distribution of galaxy clusters in the universe. The number of galaxy clusters, especially at high redshifts, can help constrain structure formation models (\eg, Mortonson et al. 2011; Harrison \& Coles 2012; Harrison \& Hotchkiss 2012; Waizmann et al. 2012; Zitrin et al. 2009). Galaxy clusters also harbor a significant fraction of the visible baryons in the Universe, in the form of a hot intracluster medium that leaves an imprint on the Cosmic Microwave Background (CMB) though the Sunyaev-Zel'dovich effect (SZ; \citealt{Sunyaev1972} effect.
+Large-area sky surveys, both currently underway and planned, are identifying many tens of thousands of galaxy clusters for both detailed examinations of our cosmological models and as probes of fundamental physics. Today, the largest number of galaxy clusters are identified through ground based, millimeter wave surveys conducted by the South Pole Telescope (SPT; \citealt{Carlstrom2011} or the Atacama Cosmology Telescope (ACT; \citealt{Swetz2011}), among others. These surveys have identified hundreds of massive galaxy clusters below $z \sim 1.4$ \citeeg{Brodwin2010, Foley2011, Menanteau2012, Hasselfield2013a, Reichardt2013, Bayliss2016}. This detection approach exploits the cluster's hot intracluster medium which imprints a telltale signature on the Cosmic Microwave Background (CMB) through the Sunyaev-Zel'dovich effect (SZ; \citealt{Sunyaev1972}) effect.
 
-Using the SZ effect to discover clusters of galaxies has the distinct advantage that the surface brightness of the SZ effect does not dim with increasing redshift. This allows homogeneous samples of massive clusters to be detected out to arbitrary distances. Ground based, large area-sky surveys such as those with the Atacama Cosmology Telescope (ACT; \citealt{Swetz2011}) and the South Pole Telescope (SPT; \citealt{Carlstrom2011} have produced catalogs of hundreds of massive clusters below $z \sim 1.4$ \citeeg{Hasselfield2013a, Reichardt2013a}. Now, \planck\ \citep{Tauber2010, PlanckCollaboration2011} has released an all-sky SZ sample (PSZ; \citealt{PlanckCollaboration2014, PlanckCollaboration2015}) that contains 861 confirmed clusters (of which most [683] were known previously) and another 366 unconfirmed cluster candidates.
+Deep, wide field photometric surveys such as the ongoing Hyper Suprime-Cam Survey \citep{Aihara2018a} and Dark Energy Survey (DES; \citealt{DES2005}), as well as future surveys like the Large Synoptic Survey Telescope (LSST; \citealt{LSST2012}), \textit{Euclid}, and WFIRST will discover many thousands additional galaxy clusters at redshifts to $z=1$ \citeeg{DarkEnergySurveyCollaboration2016} and beyond. While a powerful discovery method, photometric surveys suffer from cosmological dimming or K-correction \citep{Hogg2002}. \editorial{Need more words.}
 
-Clusters were initially confirmed by cross correlating with previous catalogs (see Section 4; \citealt{PlanckCollaboration2014}). More recently, dedicated follow up of still-unconfirmed clusters has begun in earnest \citeeg{Liu2015a, PlanckCollaboration2015, PlanckCollaboration2016a, Burenin2017, Barrena2018, Amodeo2018, Streblyanska2018}.
+Using the SZ effect to discover clusters of galaxies has the distinct advantage that the surface brightness of the SZ effect does not dim with increasing redshift. This allows homogeneous samples of massive clusters to be detected out to arbitrary distances. Now, \planck\ \citep{Tauber2010, PlanckCollaboration2011} has released an all-sky SZ sample (hereafter PSZ; \citealt{PlanckCollaboration2014, PlanckCollaboration2015a}) that contains 1943 detections with 1330 confirmed clusters and another 613 (currently) unconfirmed cluster candidates. Clusters were initially confirmed by cross correlating with previous catalogs (see Section 4; \citealt{PlanckCollaboration2014}). More recently, dedicated follow up of still-unconfirmed clusters has begun in earnest \citeeg{Liu2015a, PlanckCollaboration2015, PlanckCollaboration2016a, VanderBurg2016, Burenin2017, Barrena2018, Amodeo2018, Streblyanska2018}.
 
-This paper is organized as follows: sections \ref{sec:design} through \ref{sec:analysis} describe the design, observations, data reduction and calibration, and creation of derived data products. In Section~\ref{sec:results}, we present the main results of our observations, and discuss the results in Section~\ref{sec:discussion}. In Section~\ref{sec:summary}, we summarize the key results and conclude.
+In this paper we report on our efforts to classify unconfirmed PSZ sources. This paper is organized as follows: sections \ref{sec:design} through \ref{sec:analysis} describe the design, observations, data reduction and calibration, and creation of derived data products. In Section~\ref{sec:results}, we present the main results of our observations, and discuss the results in Section~\ref{sec:discussion}. In Section~\ref{sec:summary}, we summarize the key results and conclude.
 
 Unless otherwise noted, throughout this paper, we use a concordance cosmological model ($\Omega_\Lambda = 0.7$, $\Omega_m = 0.3$, and $H_0= 70$ \kms \permpc), assume a Chabrier initial mass function \citep{Chabrier2003}, and use AB magnitudes \citep{Oke1974}.
 
 \section{Design}\label{sec:design}
-Our observational design is motivated by the release of the second, all-sky PSZ catalog\footnote{\url{http://szcluster-db.ias.u-psud.fr/sitools/client-user/SZCLUSTER_DATABASE/project-index.html}} (hereafter PSZ2; \citealt{PlanckCollaboration2015}) which contains 559 unconfirmed SZ detections with S/N $> 4.5$. We posit that the vast majority of these must lie at $z>0.4$ because the \planck\ confirmation process \citep{PlanckCollaboration2014} mostly relied on existing catalogs which have a preference for low$-z$ clusters. Furthermore, the confirmed sample of PSZ2 has only a small fraction (3\%) of $z > 0.6$ clusters compared to that expected ($\sim20$\%) based on the theoretical halo mass function \citeeg{Jenkins2001, Tinker2008} for mass limit of \editorial{XXXX}. If other clusters as massive like el ``El Gordo'' exist, they are hiding as high-significance candidates within the objects in this {\it all-sky} catalog.
+Our observational design is motivated by the release of the second, all-sky PSZ catalog\footnote{\url{http://szcluster-db.ias.u-psud.fr/sitools/client-user/SZCLUSTER_DATABASE/project-index.html}} (hereafter PSZ2; \citealt{PlanckCollaboration2015a}) which contains 559 unconfirmed SZ detections with signal-to-noise ratio (SNR) $> 4.5$. We posit that the vast majority of these must lie at $z>0.4$ because the \planck\ confirmation process \citep{PlanckCollaboration2014} mostly relied on existing catalogs which have a preference for low-$z$ clusters. Furthermore, the confirmed sample of PSZ2 has only a small fraction (3\%) of $z > 0.6$ clusters compared to that expected ($\sim20$\%) based on the theoretical halo mass function \citeeg{Jenkins2001, Tinker2008} for mass limit of $6\times10^{14}$ \msol. If other clusters as massive like el ``El Gordo'' exist, they are hiding as high-significance candidates within the objects in this \textit{it all-sky} catalog.
 
 The core of our observational design relies on the use of optical imaging to confirm the SZ detections as real clusters and provide photometric redshifts using the multi-color information. This design is based on the previous success with the ACT cluster confirmation process using 4-m class telescopes.
 %
-For example, assuming WMAP7 cosmology \citep{Komatsu2011} with the \cite{Tinker2008} halo mass function, there should be only $\sim4$ clusters as massive as “El Gordo” ($\leq 2 \times 10^{15}$ \Msol) at $z > 0.6$ in the full area covered by the \planck\ PSZ catalog (83.7\% of the sky). Although \planck’s larger beam size (compared to both ACT and SPT) makes it more sensitive to clusters at lower redshifts (due to their larger projected area on the sky), among the confirmed clusters in the recently released all-sky \planck\ SZ catalog are the two highest significance high-redshift SZ detections from ACT (as well as several other ACT and SPT clusters).
+For example, assuming WMAP7 cosmology \citep{Komatsu2011} with the \cite{Tinker2008} halo mass function, there should be only $\sim4$ clusters as massive as ``El Gordo'' ($\leq 2 \times 10^{15}$ \Msol) at $z > 0.6$ in the full area covered by the \planck\ PSZ catalog (83.7\% of the sky). Although \planck’s larger beam size (compared to both ACT and SPT) makes it more sensitive to clusters at lower redshifts (due to their larger projected area on the sky), among the confirmed clusters in the recently released all-sky \planck\ SZ catalog are the two highest significance high-redshift SZ detections from ACT (as well as several other ACT and SPT clusters).
 
 Our strategy for this project is to use the Kitt Peak National Observatory (KPNO) Mayall-4m telescope imaging as the first and fundamental step to confirm the highest significance detections in the PSZ2 catalog that are visible across the entire northern sky.
 %
@@ -96,14 +105,14 @@ Our strategy for this project is to use the Kitt Peak National Observatory (KPNO
 %the Dark Energy Survey (DES; \citealt{DES2005}) Data Release 1 (DR1;
 %\citealt{Abbott2018}) imaging and catalogs.
 %
-Following closely the procedure used for ACT follow-up \citeeg{Menanteau2013}, targets are prioritized by SZ signal-to-noise ratio (SNR). We choose to initially report on targets with PSZ2 SNR $>5$ as the statistical reliability of PSZ2 cluster candidates should be quite high: according to the \planck\ team $\sim90$\% of candidates at SNR $>5$ are expected be ``real'' clusters (see Figure 11; \citealt{PlanckCollaboration2016}).
+Following closely the procedure used for ACT follow-up \citeeg{Menanteau2013}, targets are prioritized by SZ SNR. We choose to initially report on targets with PSZ2 SNR $>5$ as the statistical reliability of PSZ2 cluster candidates should be quite high: according to the \planck\ team $\sim90$\% of candidates at SNR $>5$ are expected be ``real'' clusters (see Figure 11; \citealt{PlanckCollaboration2015a}).
 %
-Optical imaging should be sufficient to confirm nearly all of the candidates, but for the highest redshift ones, near-IR data will be necessary. Again following the procedure for ACT cluster follow-up: those candidates with some evidence for a high$-z$ brightest cluster galaxy (BCG) will be targeted with near-IR observations to confirm the presence of a BCG and detect the red sequence of cluster members. Observational priority again is given to higher S/N candidates.
+Optical imaging should be sufficient to confirm nearly all of the candidates, but for the highest redshift ones, near-IR data will be necessary. Again following the procedure for ACT cluster follow-up: those candidates with some evidence for a high-$z$ brightest cluster galaxy (BCG) will be targeted with near-IR observations to confirm the presence of a BCG and detect the red sequence of cluster members. Observational priority again is given to higher SNR candidates.
 
 \subsection{Observations}\label{sec: observations}
-All observations were conducted with the KPNO Mayall telescope. The optical observations were made with the MOSAIC camera mounted at the prime focus. Two detector packages were used for the observations. The earlier MOSAIC1.1 instrument consisted of eight $2048\times4096$ SITe CCDs, arranged $2\times4$, separated by a $∼\sim50$ pixels gap with a pixel scale of $0\farcs26$ \perpixel. MOSAIC1.1 was replaced with Mosaic3, in mid-2015, and consists of four new 4k$\times$4k, 15 micron pixel, 500-micron thick LBNL deep-depletion CCDs. Because the only change from MOSAIC1.1 to MOSAIC3 are the CCDs and controllers both versions have a $36' \times 36'$ field-of-view.
+All observations were conducted with the KPNO Mayall telescope. The optical observations were made with the MOSAIC camera mounted at the prime focus. Two detector packages were used for the observations. The earlier MOSAIC1.1 instrument consisted of eight $2048\times4096$ SITe CCDs, arranged $2\times4$, separated by a $∼\sim50$ pixels gap with a pixel scale of $0\farcs26$ \perpixel. MOSAIC1.1 was replaced with MOSAIC3, in mid-2015, and consists of four new 4k$\times$4k, 15 micron pixel, 500-micron thick LBNL deep-depletion CCDs. Because the only change from MOSAIC1.1 to MOSAIC3 are the CCDs and controllers both versions have a $36' \times 36'$ field-of-view.
 
-The optical observing strategy consists of targeted $griz$ observations of individual candidates with total exposure times of 360 s, 360 s, 1100 s and 1100 s (assuming dark conditions). The final exposures consist of four dithered positions with individual exposures of 90 s for the $gr$-bands or 275 s for the $iz$-bands. These exposure times are designed to provide $5\sigma$ detections limits of \editorial{$g=??$}, $r = 24.5$, $i = 24.5$, $z = 24.2$ ensuring the unambiguous detection of the faint (i.e., 0.4\lstar) galaxies in the red cluster sequence up to $z \sim 1.0$ \editorial{(citation?)} and of brightest cluster galaxies (BCGs) to higher redshifts. The choice of filters in our program is driven by the need to segregate early-type galaxies in the cluster through their colors (or photometric redshifts) by sampling blue-ward and red-ward of the 4000\AA\ break.
+The optical observing strategy consists of targeted $griz$ observations of individual candidates with total exposure times of 360 s, 360 s, 1100 s and 1100 s (assuming dark conditions). The final exposures consist of four dithered positions with individual exposures of 90 s for the $gr$-bands or 275 s for the $iz$-bands. These exposure times are designed to provide $5\sigma$ detections limits of \editorial{$g=??$}, $r = 24.5$, $i = 24.5$, $z = 24.2$ ensuring the unambiguous detection of the faint (\ie, 0.4\lstar) galaxies in the red cluster sequence up to $z \sim 1.0$ \editorial{(citation?)} and of brightest cluster galaxies (BCGs) to higher redshifts. The choice of filters in our program is driven by the need to segregate early-type galaxies in the cluster through their colors (or photometric redshifts) by sampling blue-ward and red-ward of the 4000\AA\ break.
 
 \section{Data Reduction and Calibration}\label{sec:data reduction}
 Standard image reductions including subtraction of dark frames, flat fielding, sky-subtraction, and bad pixel masking was performed by the NOAO virtual observatory using the MOSAIC \citep{Valdes2007} science pipelines. The resultant FITS files consist of fully reduced images with either all single exposure CCDs mosaicked into a single image extension (as in the case of Mosaic1.1) or as a multi-extension FITS file with each single exposure CCD occupying a separate extension.
@@ -111,68 +120,72 @@ Standard image reductions including subtraction of dark frames, flat fielding, s
 We then mosaic each separate exposure into a master mosaic as described in the following section.
 
 \subsection{Mosaicking}\label{sec:mosaicks}
-Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. We create three distinct types of mosaics. The individual dither frames are stacked and then median combined to produce the final completed science mosaic. A ``detection'' is created by combining select science mosaics into a ``chi2'' image using either the \sdssi- and \sdssz-band when both are available and of sufficient quality. Finally we create a set of mosaics use to produce the three color image used for cluster finding. We median combine the $griz$ science mosaics into a ``blue'' (\sdssg-band), ``green'' (\sdssr-band), and ``red'' (\sdssi\sdssz-band) mosaic. All final mosaics have a pixel scale of $0\farcs25$ \perpixel. The final exposure time is calculated as the median exposure time of the combined images, and similarly the final airmass is median of the individual air masses. \editorial{need to talk about the weight images}
+Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. We create three distinct types of mosaics. The individual dither frames are stacked and then median combined to produce the final completed science mosaic. A ``detection'' is created by combining select science mosaics into a ``chi2'' image using either the \sdssi- and \sdssz-band when both are available and of sufficient quality. Finally we create a set of mosaics use to produce the three color image used for cluster finding. We median combine the \sdssg\sdssr\sdssi\sdssz\ science mosaics into a ``blue'' (\sdssg-band), ``green'' (\sdssr-band), and ``red'' (\sdssi\sdssz-band) mosaic. All final mosaics have a pixel scale of $0\farcs25$ \perpixel. The final exposure time is calculated as the median exposure time of the combined images, and similarly the final airmass is median of the individual air masses.
 
-%Finally, a smaller-sized ($\sim20'$ on a side) image is cropped from the full science mosaics. This small image serves as the actual science frame. The smaller size significantly decreases the number of sources recovered which reduces the time required to produce derived quantities (photometric redshifts, etc.).
-
-The full parameter file used while creating the mosaics is given in Appendix~\ref{app:swarp}.
+%The full parameter file used while creating the mosaics is given in Appendix~\ref{app:swarp}.
 
 \subsection{Source Extraction and Photometry}\label{sec:sextractor}
-For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; version 2.19.5; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}. See Appendix~\ref{app:sextractor} for a complete parameter listing.
+For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; version $2.19.5$; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}.
+
+%See Appendix~\ref{app:sextractor} for a complete parameter listing.
 
 \subsection{Astrometric Calibration}
 Each of the final science mosaics produced in the previous section are first astrometrically aligned with \textit{Gaia} \citep{GaiaCollaboration2016} Data Release 1 \citep{GaiaCollaboration2016a} using \textsc{scamp} \citep{Bertin2006} as a part of \textsc{photometrypipeline}\footnote{\url{https://github.com/mommermi/photometrypipeline}} (PP; \citealt{Mommert2017}).
 
-Sources are extracted from the mosaics with a signal-to-noise ratio (SNR) of at least ten and with a minimum area of at least 12 pixels. The extracted sources are then matched to the \textit{Gaia} data and a new astrometric solution is calculated. Because the initial astrometric solution from the VO is quite accurate, the resultant corrections are much less than $1''$.
+Sources are extracted from the mosaics with a SNR of at least ten and with a minimum area of at least 12 pixels. The extracted sources are then matched to the \textit{Gaia} data and a new astrometric solution is calculated. Matching all science images to the \textit{Gaia} world coordinate system ensures that we have a common alignment across all observing runs. Because the initial astrometric solution from the VO is quite accurate, the resultant corrections are much less than $1''$.
 
 \subsection{Photometric Calibration}
-After the mosaics have been astrometrically aligned, we use PP to produce a photometric solution. PP calculates a photometric zero-point in each of our observed bands by comparing field stars located throughout the mosaic to known photometry from large-area sky surveys. Because our sources are spread across the entire northern sky, and because we prefer to minimize the number of differences between photometric solutions we are limited to two optical surveys. For the optical data, we first seek photometric data from the \textit{Sloan Digital Sky Survey} (SDSS; \citealt{York2000}) Data Release 13 (DR13; \citealt{Albareti2017}). When our target does not lie within the SDSS footprint we utilize the Panoramic Survey Telescope and Rapid Response System (Pan-STARRS; \citealt{Chambers2016}) Data Release 1 (hereafter PS1; \citealt{Flewelling2016}). Both surveys provide accurate \sdssg\sdssr\sdssi\sdssz\ magnitudes and large on-line queriable databases for rapid automated calibration.
+After the mosaics have been astrometrically aligned, we use PP to produce a photometric solution. PP calculates a photometric zero-point in each of our observed bands by comparing field stars located throughout the science mosaic to known photometry from large-area sky surveys. Because our sources are spread across the entire northern sky, and because we prefer to minimize the number of differences between photometric solutions we are limited to two optical surveys. We first seek photometric data from the \textit{Sloan Digital Sky Survey} (SDSS; \citealt{York2000}) Data Release 13 (DR13; \citealt{Albareti2017}). When our target does not lie within the SDSS footprint we utilize the Panoramic Survey Telescope and Rapid Response System (Pan-STARRS; \citealt{Chambers2016}) Data Release 1 (hereafter PS1; \citealt{Flewelling2016}). Both surveys provide accurate \sdssg\sdssr\sdssi\sdssz\ magnitudes and large on-line queriable databases for rapid automated calibration.
 
-Sources are extracted from the combined mosaics with either a $3''$ or $8''$ diameter aperture for optical sources respectively; sources with a SNR $\ge10$ are matched to a survey catalog and a photometric zero-point is determined. We use half of the available stars (with accurate catalog photometry) to derive the zero-point resulting in zero-points calculated from approximately $10-500$ stars and with typical uncertainties of 0.05 mag for the \sdssg\sdssr\sdssi-bands and 0.16 mag for the \sdssz-band.
+Sources are extracted from the combined mosaics with either a $3''$ (12 pixel) diameter aperture for optical sources respectively; sources with a SNR $\ge10$ are matched to a survey catalog and a photometric zero-point is determined. We use half of the available stars (with accurate catalog photometry) to derive the zero-point resulting in zero-points calculated from approximately $10-500$ stars and with typical uncertainties of 0.05 mag for the \sdssg\sdssr\sdssi-bands and 0.16 mag for the \sdssz-band.
 
 \section{Analysis}\label{sec:analysis}
 \subsection{Photometric Redshifts}
+\editorial{Try to clean up the use of ``photo-z'' vs. $z_\mathrm{phot}$ vs. $z_\mathrm{bpz}$ and all of that stuff to make sure we are consistent}
 We determine photometric redshifts (photo-$z$) from the five-band optical images using Bayesian Photometric Redshifts (BPZ; \citealt{Benitez2000, Coe2006}) following the same procedure as in \cite{Menanteau2009a}.
 
-We assess the effectiveness of our photo-$z$ estimates by comparing with the available spectroscopic redshifts (spec$-z$) from the SDSS. We use three diagnostics to gauge photo-$z$ accuracy. First, we report the full scatter between the photo-$z$ and spec-$z$, defined as:
-\begin{equation}
-	\sigma_f = \mathrm{RMS}[\delta z/(1+z_{spec})]
+We assess the effectiveness of our photo-$z$ estimates by comparing with the available spectroscopic redshifts (spec-$z$) from the SDSS. We use three diagnostics to gauge photo-$z$ accuracy. First, we report the full scatter between the photo-$z$ and spec-$z$, defined as:
+\begin{equation}\label{eqn:scatter}
+	\sigma_f = \mathrm{RMS}[\delta z/(1+z_\mathrm{spec})]
 \end{equation}
-where $\delta z = z_{spec} - z_{phot}$. Second, we report the normalized median absolute deviation (NMAD; \citealt{Ilbert2009, Dahlen2013, Molino2017}), given as
-\begin{equation}
-	\sigma_{NMAD} = 1.48 \times \mathrm{median} \bigg{(} \frac{|\delta z|}{1+z_{spec}} \bigg{)}.
+where $\delta z = z_\mathrm{spec} - z_\mathrm{phot}$. Second, we report the normalized median absolute deviation (NMAD; \citealt{Ilbert2009, Dahlen2013, Molino2017}), given as
+\begin{equation}\label{eqn:nmad}
+	\sigma_\mathrm{NMAD} = 1.48 \times \mathrm{median} \bigg{(} \frac{|\delta z|}{1+z_\mathrm{spec}} \bigg{)}.
 \end{equation}
 which provides an estimate of the scatter resistant to catastrophic outliers. Finally, the catastrophic outlier fraction (OLF) where we define a catastrophic outlier (following \citealt{Molino2017}) as,
-\begin{equation}
-	\eta = \frac{|\delta z|}{(1+z_{spec})} > 5 \times \sigma_{NMAD}.
+\begin{equation}\label{eqn:OLF}
+	\eta = \frac{|\delta z|}{(1+z_\mathrm{spec})} > 5 \times \sigma_\mathrm{NMAD}.
 \end{equation}
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{figures/specVSphot.pdf}
-	\caption{Comparison between photometric and spectroscopic redshifts for 1588 elliptical galaxies which have spectroscopic redshifts from the SDSS. The photometric redshifts in the top panel use a Bayesian approach with a custom empirical prior on galaxy brightness for the photometric redshifts. The bottom panel shows the difference between the spectroscopic and photometric redshift.}
+	\caption{Comparison between photometric and spectroscopic redshifts for 1588 elliptical galaxies which have spectroscopic redshifts from the SDSS. \textit{Top:} The photometric redshifts are those reported by BPZ with a custom empirical prior on galaxy brightness for the photometric redshifts. \textit{Bottom:} The difference between the spectroscopic and photometric redshifts, $z_\mathrm{spec} - z_\mathrm{bpz}$, as a function of spectroscopic redshift. In both panels the shading scales (darker is greater) with the density of points where bins with fewer than three points are shown as single points. The solid black line shows the 1:1 relation.}
 	\label{fig:photozspecz}
 \end{figure}
 
-Figure~\ref{fig:photozspecz} shows the photo-$z$ performance as a function of the true spectroscopic redshift. Because we are primarily concerned with identifying clusters containing elliptical galaxies, we show only galaxies classified E/S0 by BPZ. We find $\sigma_f = 0.067$, $\sigma_{NMAD} = 0.048$, and an outlier fraction, $\eta = 0.9\%$.
+Figure~\ref{fig:photozspecz} shows the photo-$z$ performance as a function of the true spectroscopic redshift. Because we are primarily concerned with identifying clusters containing elliptical galaxies, we show only galaxies classified E/S0 by BPZ. We find $\sigma_f = 0.067$, $\sigma_\mathrm{NMAD} = 0.048$, and an outlier fraction, $\eta = 0.9\%$.
 
 \subsection{Cluster Finding}
 In this section, we briefly describe the algorithms and methods use to select the galaxy clusters from the multi-wavelength optical imaging. We follow the methods described in detail in \cite{Menanteau2009a, Menanteau2010} and direct the reader there for an in depth description and discussion of the methods.
 
-We first create a three-color image using \textsc{stiff} \citep{Bertin2011}. The red, green, and blue channels are given by the corresponding combined mosaics described in Section~\ref{sec:mosaicks}. We then visually inspect an area of roughly $8' \times 8'$ centered on the position of each unconfirmed PSZ detection. Potential BCGs are selected manually, and are identified by their characteristic colors and accompanying member galaxies. \editorial{should really say some more words here.}
+We first create a three-color image using \textsc{stiff} \citep{Bertin2011}. The red, green, and blue channels are given by the corresponding combined mosaics described in Section~\ref{sec:mosaicks}. We then visually inspect an area of roughly $10' \times 10'$ centered on the position of each unconfirmed PSZ detection. Potential BCGs are selected manually, and are identified by their characteristic colors and accompanying member galaxies.
 
-Once a potential BCG is selected, the algorithm selects nearby galaxies, within $|z_{BCG} - z| < 0.05$ and 0.5 Mpc projected radius, which BPZ has classified as either E or E/S0 galaxies. These photo-$z$'s of the galaxies are combined using a $3\sigma$ median sigma-clipping algorithm to estimate the cluster's mean redshift, $z_c$. We use this mean cluster redshift measurement and the member selection criteria given previously to estimate the number of cluster members within 1 Mpc, $N_{1\rm Mpc}$, which we define as the richness of the cluster, $N_{gal}$.
+% more words describing what the algorithm does?
 
-We correct the $N_{gal}$ estimate by subtracting a statistical background of galaxies. We first estimate the number of background ellipticals by selecting galaxies within an annulus ($R_{200} <r < 2R_{200}$) around each cluster's position. We include galaxies with $\delta z = 0.05$ and similar colors as those galaxies assumed to belong to the cluster. These galaxies are subtracted from the cluster's population which provides an corrected $N_{gal}$, $N_{galc}$, which we then use to compute other important quantities. In practice the corrected number of galaxies is between 15\% and 20\% lower than the uncorrected number \citep{Menanteau2010}. We report $N_{galc}$ for the remainder of this work.
+Once a potential BCG is selected, the algorithm selects nearby galaxies, within $|z_\mathrm{BCG} - z| < 0.05$ and 0.5 Mpc projected radius, which BPZ has classified as either E or E/S0 galaxies. These photo-$z$'s of the galaxies are combined using a $3\sigma$ median sigma-clipping algorithm to estimate the cluster's mean redshift, $z_\mathrm{cl}$. We use this mean cluster redshift measurement and the member selection criteria given previously to estimate the number of cluster members within 1 Mpc which we define as the richness \citeeg{Abell1958} of the cluster, Ngal.
 
-\subsection{Recovery of the Brightest Cluster Galaxies}
+We correct the Ngal estimate by subtracting a statistical background of galaxies. We first estimate the number of background ellipticals by selecting galaxies within an annulus ($R_{200} <r < 2R_{200}$) around each cluster's position. We include galaxies with $\delta z = 0.05$ and similar colors as those galaxies assumed to belong to the cluster. These galaxies are subtracted from the cluster's population which provides an corrected Ngal, Ngal$_\mathrm{c}$, which we then use to compute other important quantities. In practice the corrected number of galaxies is between 15\% and 20\% lower than the uncorrected number \citep{Menanteau2010}. We report Ngal$_\mathrm{c}$ for the remainder of this work.
+
+\subsection{Recovery of the Brightest Cluster Galaxies}\label{sec:cluster finding}
 We have designed our observations to detect BCGs to $z\sim1.5$. To quantify the actual depths of our images, we perform two distinct tests. First, we perform a Monte Carlo simulation by injecting artificial sources and compute their recovery fractions. Second, we fit a power-law model to the bright side of each field's dn/dm curve and identify the magnitude at which dn/dm is a specific fraction of the model.
 
 The Monte Carlo simulation broadly follows the procedure given in \cite{Menanteau2010a}. We create the artificial sources with the \textsc{modeling} package, part of \textsc{astropy} \citep{TheAstropyCollaboration2013}. The synthetic galaxies are created to have de Vaucouleurs \citep{DeVaucouleurs1948} profiles and surface brightnesses corresponding to their magnitude and assumed sizes. We inject the artificial galaxies into our science images with similar noise characteristics as their real counterparts.
 
-We generate ten rounds of one hundred elliptical galaxies spread randomly across our science imaging. Each round of galaxies are placed at different random positions to suppress abnormally boosted recovery fractions due to source confusion. The artificial galaxies have total fluxes corresponding to apparent magnitudes between 20 mag $< \sdssi <$ 25 mag with 0.1 mag spacing. We report the 80\% \sdssi-band limit for each field, which is the magnitude where 80\% of the simulated galaxies are recovered.
+We generate ten rounds of one hundred elliptical galaxies spread randomly across our science imaging. Each round of galaxies are placed at different random positions to suppress abnormally boosted recovery fractions due to source confusion. The artificial galaxies have total fluxes corresponding to apparent magnitudes between 20 mag $< \sdssi <$ 25 mag with $0.2$ mag spacing. We report the 80\% \sdssi-band limit for each field, which is the magnitude where 80\% of the simulated galaxies are recovered.
 
 \begin{figure*}
-	\includegraphics[width=\textwidth]{figures/recovery_redshift.pdf}
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/recovery_redshift.pdf}
 	\caption{\textit{Left:} Histogram of the \sdssi-band magnitude corresponding to 80\% completeness in galaxy recovery. When 80\% completeness is not achieved we show the limiting magnitude with the highest completeness. \textit{Right:} Observed \sdssi-band magnitudes of $\lstar$, $0.4\lstar$, and $4\lstar$ (BCG) early-type galaxies as a function of redshift. We define an \lstar\ galaxy following \cite{Blanton2003} as a population of red galaxies at $z = 0.1$ and allow it to evolve passively. The left and right panels can be combined to estimate the limiting redshift to which we could identify galaxy clusters.}
 	\label{fig:recovery_redshift}
 \end{figure*}
@@ -184,15 +197,17 @@ The completeness limits reported by each method are consistent and provide an im
 With a limiting magnitude reported for each field, we are able to estimate the redshift to which we could reliably identify massive galaxy clusters. We compare the completeness limits of our observations to the expected (\ie, known) apparent magnitudes of galaxies in clusters as a function of redshift. We define the expected apparent \sdssi-band magnitude of a galaxy following the population of red galaxies defined by \cite{Blanton2003}. The \lstar, 0.4\lstar, and 4\lstar galaxies (representing faint members to bright BCGs) are composed of stars formed in a burst at $zf = 5$, with solar metallicity \citep{Bruzual2003}, and allowed to evolve passively, $\tau = 1.0$ Gyr. We show the expected \sdssi-band apparent magnitude as a function of redshift for each galaxy in the right panel of Figure~\ref{fig:recovery_redshift}.
 
 \section{Results}\label{sec:results}
-In this section, we give the results of our cluster finding. We report high confidence, high richness clusters. A high confidence result consists of a clear BCG and many accompanying satellite galaxies. For the 85 fields observed with MOSAIC, we observe fifteen high confidence clusters (see Figures~\ref{fig:Clusters1}--\ref{fig:Clusters4}). In the following subsections we present on each of the eight high confidence observations individually, and group the medium and low confidence observations together.
+Here, we give the results of our cluster finding. We report high confidence, high richness clusters. A high confidence result consists of a clear BCG and many accompanying satellite galaxies. For the 85 fields observed with MOSAIC, we observe fifteen high confidence clusters (see Figures~\ref{fig:Clusters1}--\ref{fig:Clusters4}). In the following subsections we present on each of the eight high confidence observations individually, and group the medium and low confidence observations together.
+
+In the following subsections, we note previously known sources by querying the NASA/IPCA Extragalactic Database (NED)\footnote{\url{https://ned.ipac.caltech.edu/}} and the SIMBAD (Set of Identifications, Measurements, and Bibliography for Astronomical Data) astronomical database\footnote{\url{http://simbad.u-strasbg.fr/simbad/}} \citep{Wenger2000}. We include sources from the NRAO (National Radio Astronomy Observatory) VLA (Very Large Array) Sky Survey (NVSS; \citealt{Condon1998}), the R\"{o}ntgensatellit (ROSAT) All-Sky Survey Bright Source Catalog (RASS-BSC; \citealt{Voges1999a}), the ROSAT All-Sky Faint Source Catalog (RASS-FSC; \citealt{Voges2000}), and the SDSS. We make note of confident associations of X-ray and radio sources with the BCG or other clusters members within $5'$ of the reported BCG pointing (within $10'$ for the three low redshift clusters).
 
 \begin{figure*}
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ1_G084.62-15.86}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ1_G206.45+13.89}.pdf}\\
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ1_G224.82+13.62}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G029.66-47.63}.pdf}
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G029.66-47.63}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G043.44-41.27}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G084.62-15.86}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G096.43-20.89}.pdf}
 	\end{tabular}
 	\caption{RGB (\sdssi\sdssr\sdssg) color images for four PSZ clusters optically confirmed using the our optical imaging. Each panel is centered on the cluster's BCG and has a width of 1 mpc at the corresponding cluster's redshift. The horizontal bar in the lower left of each panel shows the scale of the panel, where north is up and east is to the left. The location of the PSZ detection is denoted by a red star. The dashed and solid concentric circles are $2'$ and $5'$ in radius respectively.}
 	\label{fig:Clusters1}
@@ -201,10 +216,10 @@ In this section, we give the results of our cluster finding. We report high conf
 \begin{figure*}
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G043.44-41.27}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G096.43-20.89}.pdf}\\
 		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G098.38+77.22}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G106.11+24.11}.pdf}
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G106.11+24.11}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G107.83-45.45}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G120.76+44.14}.pdf}
 	\end{tabular}
 	\caption{RGB (\sdssi\sdssr\sdssg) color images for four PSZ clusters optically confirmed using the our optical imaging. Each panel is centered on the cluster's BCG and has a width of 1 mpc at the corresponding cluster's redshift. The horizontal bar in the lower left of each panel shows the scale of the panel, where north is up and east is to the left. The location of the PSZ detection is denoted by a red star. The dashed and solid concentric circles are $2'$ and $5'$ in radius respectively.}
 	\label{fig:Clusters2}
@@ -213,10 +228,10 @@ In this section, we give the results of our cluster finding. We report high conf
 \begin{figure*}
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G107.83-45.45}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G120.76+44.14}.pdf}\\
 		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G125.55+32.72}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G137.24+53.93}.pdf}
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G137.24+53.93}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G173.76+22.92}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G191.82-26.64}.pdf}
 	\end{tabular}
 	\caption{RGB (\sdssi\sdssr\sdssg) color images for four PSZ clusters optically confirmed using the our optical imaging. Each panel is centered on the cluster's BCG and has a width of 1 mpc at the corresponding cluster's redshift. The horizontal bar in the lower left of each panel shows the scale of the panel, where north is up and east is to the left. The location of the PSZ detection is denoted by a red star. The dashed and solid concentric circles are $2'$ and $5'$ in radius respectively.}
 	\label{fig:Clusters3}
@@ -225,8 +240,8 @@ In this section, we give the results of our cluster finding. We report high conf
 \begin{figure*}
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G173.76+22.92}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G191.82-26.64}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G206.45+13.89}.pdf}&
+		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G224.82+13.62}.pdf}\\
 		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G305.76+44.79}.pdf}&
 	\end{tabular}
 	\caption{RGB (\sdssi\sdssr\sdssg) color images for four PSZ clusters optically confirmed using the our optical imaging. Each panel is centered on the cluster's BCG and has a width of 1 mpc at the corresponding cluster's redshift. The horizontal bar in the lower left of each panel shows the scale of the panel, where north is up and east is to the left. The location of the PSZ detection is denoted by a red star. The dashed and solid concentric circles are $2'$ and $5'$ in radius respectively.}
@@ -234,133 +249,124 @@ In this section, we give the results of our cluster finding. We report high conf
 \end{figure*}
 
 \begin{table*}
-	\caption[Summary of Cluster Finding]{Summary of cluster finding: Column 1: The PSZ2 cluster name; Column 2: PSZ2 signal-to-noise ratio; Column 3: PSZ1 ID number; Column 4: BCG Right Ascension in J2000; Column 5: BCG Declination in J2000; Column 6: BCG separation from PSZ position in arcmintues; Column 7: Cluster photometric redshift with 1-$\sigma$ uncertanty; Column 8: Corrected number of member galaxies; Column 9: New confirmation? }
+	\caption[Summary of Cluster Confirmation]{Summary of cluster confirmation: Column 1: The PSZ2 cluster name; Column 2: PSZ2 signal-to-noise ratio; Column 3: PSZ1 ID number; Column 4: BCG Right Ascension in J2000; Column 5: BCG Declination in J2000; Column 6: BCG separation from PSZ position in arcmintues; Column 7: Cluster photometric redshift with 1-$\sigma$ uncertanty; Column 8: Corrected number of member galaxies; Column 9: New confirmation? }
 	\centering
 	\begin{tabular}{lcccccccc}
 	\hline
-	Cluster & SNR & PSZ1 ID & $\alpha$ (J2000) & $\delta$ (J2000) & Sep. ($'$) & $z_{cl}$ & Ngal$_c$ & New\\
+	Cluster & SNR & PSZ1 ID & $\alpha$ (J2000) & $\delta$ (J2000) & Sep. ($'$) & $z_\mathrm{cl}$ & Ngal$_c$ & New\\
 	(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9) \\
 	\hline
 	 PSZ2 G$029.66-47.63$ & 5.74 & \nd & $21:45:29.940$ & $-21:43:26.29$ & 4.73 & $0.34 \pm 0.03$ & 130 & $\checkmark$ \\
 	 PSZ2 G$043.44-41.27$ & 5.55 & \nd & $21:36:43.728$ & $-10:19:02.15$ & 1.24 & $0.42 \pm 0.04$ & 116 & $\checkmark$ \\
-	 PSZ2 G$084.62-15.86$ & 6.01 &      284 & $21:49:42.524$ & $+33:09:17.29$ & 1.14 & $0.27 \pm 0.10$ & 18 & \\
+	 PSZ2 G$084.62-15.86$ & 6.01 & 284 & $21:49:42.524$ & $+33:09:17.29$ & 1.14 & $0.27 \pm 0.10$ & 18 & \\
 	 PSZ2 G$096.43-20.89$ & 5.81 & \nd & $22:48:09.402$ & $+35:33:49.45$ & 0.49 & $0.24 \pm 0.04$ & 54 & $\checkmark$ \\
-	 PSZ2 G$098.38+77.22$ & 5.51 &      346 & $13:18:08.274$ & $+38:30:20.10$ & 5.84 & $0.78 \pm 0.05$ & 58 & $\checkmark$ \\
-	 PSZ2 G$106.11+24.11$ & 5.70 & \nd & $19:21:31.852$ & $+74:33:27.17$ & 0.51 & $0.14 \pm 0.06$ & \editorial{0} & $\checkmark$ \\
+	 PSZ2 G$098.38+77.22$ & 5.51 & 346 & $13:18:08.274$ & $+38:30:20.10$ & 5.84 & $0.78 \pm 0.05$ & 58 & $\checkmark$ \\
+	 PSZ2 G$106.11+24.11$ & 5.70 & \nd & $19:21:31.852$ & $+74:33:27.17$ & 0.51 & $0.14 \pm 0.06$ & 27 & $\checkmark$ \\
 	 PSZ2 G$107.83-45.45$ & 7.09 & \nd & $00:07:35.605$ & $+16:07:02.39$ & 0.83 & $0.54 \pm 0.05$ & 30 & $\checkmark$ \\
 	 PSZ2 G$120.76+44.14$ & 5.59 & \nd & $13:12:53.537$ & $+72:55:06.05$ & 2.02 & $0.35 \pm 0.03$ & 92 & $\checkmark$ \\
 	 PSZ2 G$125.55+32.72$ & 6.49 & \nd & $11:25:34.008$ & $+83:58:55.75$ & 1.44 & $0.21 \pm 0.06$ & 32 & $\checkmark$ \\
 	 PSZ2 G$137.24+53.93$ & 7.87 & \nd & $11:40:59.525$ & $+61:07:07.07$ & 4.61 & $0.45 \pm 0.06$ & 40 & $\checkmark$ \\
-	 PSZ2 G$173.76+22.92$ & 5.80 & \nd & $07:17:26.636$ & $+44:05:02.97$ & 1.62 & $0.14 \pm 0.04$ & \editorial{0} & $\checkmark$ \\
-	 PSZ2 G$191.82-26.64$ & 6.17 &      646 & $04:38:28.283$ & $+04:37:19.91$ & 5.18 & $0.18 \pm 0.06$ & 24 & $\checkmark$ \\
-	 PSZ2 G$206.45+13.89$ & 5.90 &      682 & $07:29:51.234$ & $+11:56:31.31$ & 1.97 & $0.40 \pm 0.05$ & 73 & \\
-	 PSZ2 G$224.82+13.62$ & 5.51 &      752 & $08:01:41.492$ & $-04:03:44.48$ & 0.17 & $0.24 \pm 0.04$ & 38 & \\
-	 PSZ2 G$305.76+44.79$ & 5.72 &     1070 & $12:59:53.612$ & $-18:01:35.05$ & 0.44 & $0.74 \pm 0.08$ & 48 & $\checkmark$ \\
+	 PSZ2 G$173.76+22.92$ & 5.80 & \nd & $07:17:26.636$ & $+44:05:02.97$ & 1.62 & $0.14 \pm 0.04$ & 117 & $\checkmark$ \\
+	 PSZ2 G$191.82-26.64$ & 6.17 & 646 & $04:38:28.283$ & $+04:37:19.91$ & 5.18 & $0.18 \pm 0.06$ & 24 & $\checkmark$ \\
+	 PSZ2 G$206.45+13.89$ & 5.90 & 682 & $07:29:51.234$ & $+11:56:31.31$ & 1.97 & $0.40 \pm 0.05$ & 73 & \\
+	 PSZ2 G$224.82+13.62$ & 5.51 & 752 & $08:01:41.492$ & $-04:03:44.48$ & 0.17 & $0.24 \pm 0.04$ & 38 & \\
+	 PSZ2 G$305.76+44.79$ & 5.72 & 1070 & $12:59:53.612$ & $-18:01:35.05$ & 0.44 & $0.74 \pm 0.08$ & 48 & $\checkmark$ \\
 	\hline
 	\end{tabular}
 \label{tbl:results}
 \end{table*}
 
-\subsection{Notes on Specific Clusters}
-In the following subsections, we note previously known sources by querying the NASA/IPCA Extragalactic Database (NED)\footnote{\url{https://ned.ipac.caltech.edu/}} and the SIMBAD (Set of Identifications, Measurements, and Bibliography for Astronomical Data) astronomical database\footnote{\url{http://simbad.u-strasbg.fr/simbad/}} \citep{Wenger2000}. We include sources from the NRAO (National Radio Astronomy Observatory) VLA (Very Large Array) Sky Survey (NVSS; \citealt{Condon1998}), the R\"{o}ntgensatellit (ROSAT) All-Sky Survey Bright Source Catalog (RASS-BSC; \citealt{Voges1999a}), the ROSAT All-Sky Faint Source Catalog (RASS-FSC; \citealt{Voges2000}), and the SDSS. We make note of  confident associations of X-ray and radio sources with the BCG or other clusters members within $5^\prime$ of the reported BCG pointing (within $10^\prime$ for the three low redshift clusters).
+\subsection{PSZ2 G029.66-47.63} % 21:45:44	-21:46:49
+This is a rich cluster at $z_\mathrm{cl} = 0.34 \pm 0.03$ with 130 members, approximately $5^\prime$ to the northwest of the \planck\ position. The X-ray source 1RXS J214531.1$-$214339 is coincident with the BCG. Our data show another, slightly less rich, system (with $z_\mathrm{cl} = 0.33 \pm 0.04$ and 76 members) within $0\farcm5$ of the \planck\ position. Both systems likely contribute to the \planck\ SZ signal. This is the richest cluster in our sample.
 
-\subsubsection{PSZ2 G029.66-47.63}  % 21:45:44	-21:46:49
-This is a rich cluster at $z_{cl} = 0.34 \pm 0.03$ with 130 members, approximately $5^\prime$ to the northwest of the \planck\ position. The X-ray source 1RXS J214531.1$-$214339 is coincident with the BCG. Our data show another, slightly less rich, system (with $z_{cl} = 0.33 \pm 0.04$ and 76 members) within $0\farcm5$ of the \planck\ position. Both systems likely contribute to the \planck\ SZ signal.  This is the richest cluster in our sample.
+\subsection{PSZ2 G043.44-41.27} % 21:36:44	 -10:17:48
+This is the second richest cluster we have found; the system is at $z_\mathrm{cl} = 0.41 \pm 0.03$ with 116 members. There are two plausible BCGs with nearly the same photo-$z$; the one we select is slightly brighter in the \sdssi-band, yields a slightly higher number of cluster members, and is positionally coincident with the X-ray source 1RXS J213644.4$-$101904. The other bright galaxy is at $\alpha$=21:36:38.6, $\delta$=$-$10:18:35.7, some $1\farcm3$ to the west. This galaxy is associated with a bright radio source (NVSS J213638$-$101836) with a flux density of $107.8 \pm 3.3$ mJy at 1.4 GHz that has been classified as a symmetric double \citep{Douglas1996}.
 
-\subsubsection{PSZ2 G043.44-41.27}  % 21:36:44	 -10:17:48
-This is the second richest cluster we have found; the system is at $z_{cl} = 0.41 \pm 0.03$ with 116 members.  There are two plausible BCGs with nearly the same photo-$z$; the one we select is slightly brighter in the $i$-band, yields a slightly higher number of cluster members, and is positionally coincident with the X-ray source 1RXS J213644.4$-$101904. The other bright galaxy is at R.A.=21:36:38.6, decl.=$-$10:18:35.7, some $1\farcm3$ to the west. This galaxy is associated with a bright radio source (NVSS J213638$-$101836) with a flux density of $107.8 \pm 3.3$ mJy at 1.4 GHz that has been classified as a symmetric double \citep{Douglas1996}.
-
-\subsubsection{PSZ2 G084.62$-$15.86} % 21:49:44	+33:10:23.81
-This cluster was previously confirmed by the \planck\ team, where they quote a spectroscopic cluster redshift (from two members) of $z_{\rm spec} = 0.364$ \citep{PlanckCollaboration2016a}.
-%Planck intermediate results. XXXVI. Optical identification and redshifts of Planck SZ sources with telescopes at the Canary Islands observatories
-This system has at least three bright member galaxies within 2$^\prime$ of the \planck\ position that are plausible BCG candidates. Among these we chose the brightest one in the $i$-band (which is about an arcminute south of the \planck\ team's chosen BCG) and recovered the cluster at $z_{\rm photo} = 0.27 \pm 0.10$ with 18 members.
+\subsection{PSZ2 G084.62$-$15.86} % 21:49:44	+33:10:23.81
+This cluster was previously confirmed by the \planck\ team, where they quote a spectroscopic cluster redshift (from two members) of $z_\mathrm{spec} = 0.364$ \citep{PlanckCollaboration2016a}. This system has at least three bright member galaxies within 2$^\prime$ of the \planck\ position that are plausible BCG candidates. Among these we chose the brightest one in the \sdssi-band (which is about an arcminute south of the \planck\ team's chosen BCG) and recovered the cluster at $z_\mathrm{photo} = 0.27 \pm 0.10$ with 18 members.
 % Two RASS-FSC X-ray sources are positionally coincident with the cluster.
 The \planck\ team's selected BCG is associated with a radio source (NVSS J214940+331031) with a flux density of $19.7\pm 0.8$ mJy at 1.4 GHz.
-%  Steven's BCG  griz=20.99 18.78 18.08 18.08
-%  Planck's BCG  griz=20.69 18.92 18.27 18.26
+% Steven's BCG griz=20.99 18.78 18.08 18.08
+% Planck's BCG griz=20.69 18.92 18.27 18.26
 
-\subsubsection{PSZ2 G096.43-20.89} % 22:48:09	+35:33:21.47
-The BCG of this cluster is only $0\farcm5$ from the \planck\ position. The cluster's redshift is $z_{cl} = 0.24 \pm 0.04$ with 54 members. An X-ray source (1RXS J224806.6+353230) is $1\farcm44$ away from the BCG position.  This cluster appears to extend more toward the southwest quadrant in the direction of a cataloged Zwicky cluster (ZwCl 2245.6+3516; \citealt{Zwicky1968}).
-% PSZ2_G096.43-20.89_5035  22:48:09.4 35:33:49.4 griz : 18.70 17.16 16.54 16.57
-% PSZ2_G096.43-20.89_4888  22:48:13.7 35:33:17.3 griz : 19.19 17.70 17.08 17.07
+\subsection{PSZ2 G096.43-20.89} % 22:48:09	+35:33:21.47
+The BCG of this cluster is only $0\farcm5$ from the \planck\ position. The cluster's redshift is $z_\mathrm{cl} = 0.24 \pm 0.04$ with 54 members. An X-ray source (1RXS J224806.6+353230) is $1\farcm44$ away from the BCG position. This cluster appears to extend more toward the southwest quadrant in the direction of a cataloged Zwicky cluster (ZwCl 2245.6+3516; \citealt{Zwicky1968}).
+% PSZ2_G096.43-20.89_5035 22:48:09.4 35:33:49.4 griz : 18.70 17.16 16.54 16.57
+% PSZ2_G096.43-20.89_4888 22:48:13.7 35:33:17.3 griz : 19.19 17.70 17.08 17.07
 
-\subsubsection{PSZ2 G098.38+77.22} % 13:18:25	+38:35:06.94
-This is the highest redshift cluster in the sample at $z_{cl} = 0.78 \pm 0.05$ with 58 members; it is $5\farcm8$ away from the \planck\ position. About $2^\prime$ east of our chosen BCG there is a luminous ($i\sim 20$ mag), red galaxy (SDSS J131814.99+383055.8) with a spectroscopic redshift of $z=0.726$. This galaxy has similar colors to the cluster BCG and may be part of the system.
+\subsection{PSZ2 G098.38+77.22} % 13:18:25	+38:35:06.94
+This is the highest redshift cluster in the sample at $z_\mathrm{cl} = 0.78 \pm 0.05$ with 58 members; it is $5\farcm8$ away from the \planck\ position. About $2'$ east of our chosen BCG there is a luminous ($i\sim 20$ mag), red galaxy (SDSS J131814.99+383055.8) with a spectroscopic redshift of $z=0.726$. This galaxy has similar colors to the cluster BCG and may be part of the system.
 
-\subsubsection{PSZ2 G106.11+24.11}  % 19:21:24	 +74:33:21.87
-PSZ2 G106.11+24.11 is a low redshift system at $z_{cl} = 0.14 \pm 0.06$.  The BCG is a large galaxy close to the \planck\ position.  There are 33 members before correcting for background \editorial{revise the Table to quote a better estimate of Ngals}. This object was identified as an X-ray cluster (RXC J1921.3+7433) based on its extent in the RASS \citep{Bohringer2000}, although these authors did not publish a redshift. Using their flux value and our photometric redshift, we estimate the cluster's X-ray luminosity in the 0.1-2.4 keV band to be $L_{\rm X} \sim 2.6\times 10^{44}$ erg s$^{-1}$. This luminosity value is broadly consistent with those of other confirmed \planck\ clusters at this redshift range \citep{PlanckCollaboration2015}.
+\subsection{PSZ2 G106.11+24.11} % 19:21:24	 +74:33:21.87
+PSZ2 G106.11+24.11 is a low redshift system at $z_\mathrm{cl} = 0.14 \pm 0.06$. The BCG is a large galaxy close to the \planck\ position. There are 27 members after correcting for background galaxies. This object was identified as an X-ray cluster (RXC J1921.3+7433) based on its extent in the RASS \citep{Bohringer2000}, although these authors did not publish a redshift. Using their flux value and our photometric redshift, we estimate the cluster's X-ray luminosity in the 0.1-2.4 keV band to be $L_\mathrm{X} \sim 2.6\times 10^{44}$ erg s$^{-1}$. This luminosity value is broadly consistent with those of other confirmed \planck\ clusters at this redshift range \citep{PlanckCollaboration2015}.
 
-\subsubsection{PSZ2 G107.83-45.45}  % 0:07:35	+16:07:51.05
-This cluster at $z_{cl} = 0.54 \pm 0.05$ has 30 members.  The BCG (SDSS J000735.62+160701.8) as well as another member (SDSS J000736.15+160508.9) have spectroscopic redshifts from the SDSS of $z=0.5673$ and $z=0.5667$, respectively.  There are 4 other galaxies with SDSS spectroscopic redshifts (0.5649, 0.5661, 0.5655, and 0.5625) within $7^\prime$ (2.7 Mpc) of the BCG.
+\subsection{PSZ2 G107.83-45.45} % 0:07:35	+16:07:51.05
+This cluster at $z_\mathrm{cl} = 0.54 \pm 0.05$ has 30 members. The BCG (SDSS J000735.62+160701.8) as well as another member (SDSS J000736.15+160508.9) have spectroscopic redshifts from the SDSS of $z=0.5673$ and $z=0.5667$, respectively. There are 4 other galaxies with SDSS spectroscopic redshifts (0.5649, 0.5661, 0.5655, and 0.5625) within $7'$ (2.7 Mpc) of the BCG.
 
-\subsubsection{PSZ2 G120.76+44.14} % 13:12:39	+72:53:23.47
-The BCG we select yields an estimated redshift for the cluster of $z_{cl} = 0.35 \pm 0.03$ with 92 members; this galaxy has a published spectroscopic redshift of $z=0.2959$ \citep{Huchra1990}.  We associate the cluster with Abell 1705 and the RASS X-ray source 1RXS J131252.0+725514.
+\subsection{PSZ2 G120.76+44.14} % 13:12:39	+72:53:23.47
+The BCG we select yields an estimated redshift for the cluster of $z_\mathrm{cl} = 0.35 \pm 0.03$ with 92 members; this galaxy has a published spectroscopic redshift of $z=0.2959$ \citep{Huchra1990}. We associate the cluster with Abell 1705 and the RASS X-ray source 1RXS J131252.0+725514.
 
-Approximately $2\farcm6$ south of the PSZ2 position, there is a luminous red galaxy with a gravitationally lensed arc that is the BCG of a rich system cataloged as WL 1312.5+7252 with a photometric redshift of 0.55 \citep{Dahle2003}. This galaxy is also a radio source (NVSS J131230+725051) with a flux density of $3.5 \pm 0.5$ mJy (1.4 GHz).  Our analysis also yields a rich cluster with this BCG ($\alpha$=13:12:30.9, $\delta$=+72:50:54.2) with Ngal$_c$ = 89 at $z=0.59 \pm 0.05$.
-% This is the ID of the 2nd BCG  Object PSZ2_G120.76+44.14_2498   RA,DEC: 13:12:30.9 72:50:54.2
+Approximately $2\farcm6$ south of the PSZ2 position, there is a luminous red galaxy with a gravitationally lensed arc that is the BCG of a rich system cataloged as WL 1312.5+7252 with a photometric redshift of 0.55 \citep{Dahle2003}. This galaxy is also a radio source (NVSS J131230+725051) with a flux density of $3.5 \pm 0.5$ mJy (1.4 GHz). Our analysis also yields a rich cluster with this BCG ($\alpha$=13:12:30.9, $\delta$=+72:50:54.2) with Ngal$_c$ = 89 at $z=0.59 \pm 0.05$.
+% This is the ID of the 2nd BCG Object PSZ2_G120.76+44.14_2498 RA,DEC: 13:12:30.9 72:50:54.2
 
-Given the similar optical richnesses of these two systems it is likely that both contribute to the \planck\ SZ signal.  \editorial{Or maybe we should say this: On the other hand, given the strong mass sensitivity of SZ selection, perhaps the southern cluster is more likely to be the source of the SZ signal?}
+Given the similar optical richnesses of these two systems it is likely that both contribute to the \planck\ SZ signal. \editorial{Or maybe we should say this: On the other hand, given the strong mass sensitivity of SZ selection, perhaps the southern cluster is more likely to be the source of the SZ signal?}
 
-\subsubsection{PSZ2 G125.55+32.72} %  11:25:35	 +83:57:29.12
-There are two plausible BCGs in this cluster; the one we select yields a redshift of $z_{cl} = 0.21 \pm 0.06$ and 32 members.  The other BCG (R.A.=11:25:46.8, decl.=+83:55:04.4) is about 0.14 mag fainter in the $i$-band and, using it for cluster finding, results on a cluster at $z_{cl} = 0.20 \pm 0.03$ with 31 members.  These two plausible BCGs are separated by $\sim$4$^\prime$. Both BCGs are radio sources: the northern galaxy (corresponding to our selected BCG) is cataloged as NVSS J112535+835858 with a 1.4 GHz flux density of $10.2 \pm 0.9$ mJy; the southern one corresponds to NVSS J112550+835508 with a flux density at the same frequency of $3.6 \pm 0.6$ mJy. The southern galaxy is about 1$^\prime$ away from the RASS X-ray source  1RXS J112547.3+835559.  Both systems should contribute to the \planck\ SZ signal and the quoted richness in Table~\ref{tbl:results} is almost surely an underestimate of the richness of the combined system.
+\subsection{PSZ2 G125.55+32.72} % 11:25:35	 +83:57:29.12
+There are two plausible BCGs in this cluster; the one we select yields a redshift of $z_\mathrm{cl} = 0.21 \pm 0.06$ and 32 members. The other BCG ($\alpha$=11:25:46.8, $\delta$=+83:55:04.4) is about 0.14 mag fainter in the \sdssi-band and, using it for cluster finding, results on a cluster at $z_\mathrm{cl} = 0.20 \pm 0.03$ with 31 members. These two plausible BCGs are separated by $\sim4'$. Both BCGs are radio sources: the northern galaxy (corresponding to our selected BCG) is cataloged as NVSS J112535+835858 with a 1.4 GHz flux density of $10.2 \pm 0.9$ mJy; the southern one corresponds to NVSS J112550+835508 with a flux density at the same frequency of $3.6 \pm 0.6$ mJy. The southern galaxy is about $1'$ away from the RASS X-ray source 1RXS J112547.3+835559. Both systems should contribute to the \planck\ SZ signal and the quoted richness in Table~\ref{tbl:results} is almost surely an underestimate of the richness of the combined system.
 
-% BCG: PSZ2_G125.55+32.72_2310  11:25:34.0 83:58:55.7  griz:  19.18 17.39 16.74 16.52
-% Gal: PSZ2_G125.55+32.72_1736  11:25:46.8 83:55:04.4  griz:  19.19 17.55 16.88 16.78
+% BCG: PSZ2_G125.55+32.72_2310 11:25:34.0 83:58:55.7 griz: 19.18 17.39 16.74 16.52
+% Gal: PSZ2_G125.55+32.72_1736 11:25:46.8 83:55:04.4 griz: 19.19 17.55 16.88 16.78
 
-\subsubsection{PSZ2 G137.24+53.93} % 11:41:07	+61:11:39.02
-Here we find a cluster at $z_{cl} = 0.45 \pm 0.06$ with 40 members.  The BCG is a radio source (NVSS J114059+610658) with a flux density of $10.2 \pm 0.9$ mJy (1.4 GHz) and has a spectroscopic redshift from the SDSS of $z=0.4770$.  Another cluster member also has a concordant SDSS spectroscopic redshift of $z=0.4697$.  The cluster has been cataloged as WHL J114058.8+610631 with a similar photometric redshift.
+\subsection{PSZ2 G137.24+53.93} % 11:41:07	+61:11:39.02
+Here we find a cluster at $z_\mathrm{cl} = 0.45 \pm 0.06$ with 40 members. The BCG is a radio source (NVSS J114059+610658) with a flux density of $10.2 \pm 0.9$ mJy (1.4 GHz) and has a spectroscopic redshift from the SDSS of $z=0.4770$. Another cluster member also has a concordant SDSS spectroscopic redshift of $z=0.4697$. The cluster has been cataloged as WHL J114058.8+610631 with a similar photometric redshift.
 
-\subsubsection{PSZ2 G173.76+22.92} % 7:17:28	+44:03:27.62
-\editorial{Should mention that BPZ struggles with low-z stuff that's why our photo-z is so far off from the spec-z}
-This low redshift system, which we find at $z_{cl} = 0.14 \pm 0.04$, has a very interesting BCG.  It is cataloged in NED as B3~0713+441 and has a spectroscopic redshift of $z=0.0652$ \citep{Bauer2000}. It is associated with the RASS X-ray source 1RXS J071726.9+440557 as well as a bright radio source (NVSS J071726+440504) with a flux density of $220.4\pm 7.6$ mJy (at 1.4 GHz).  Higher resolution images from Faint Images of the Radio Sky at Twenty-centimeters (FIRST; \citealt{Becker1995}) reveal that this radio source is double lobed.  Some 6$^\prime$ to the east is a cataloged Seyfert 1 galaxy (2MASX J07180060+4405271) with a spectroscopic redshift of $z=0.0614$ \citep{Michel1988} and a 1.4 GHz radio flux of $50.8 \pm 1.6 $ mJy (NVSS J071800+440527).
+\subsection{PSZ2 G173.76+22.92} % 7:17:28	+44:03:27.62
+This low redshift system, which we find at $z_\mathrm{cl} = 0.14 \pm 0.04$, has a very interesting BCG. It is cataloged in NED as \hbox{B3 0713+441} and has a spectroscopic redshift of $z=0.0652$ \citep{Bauer2000}. It is associated with the RASS X-ray source 1RXS J071726.9+440557 as well as a bright radio source (NVSS J071726+440504) with a flux density of $220.4\pm 7.6$ mJy (at 1.4 GHz). Higher resolution images from Faint Images of the Radio Sky at Twenty-centimeters (FIRST; \citealt{Becker1995}) reveal that this radio source is double lobed. Some 6$^\prime$ to the east is a cataloged Seyfert 1 galaxy (2MASX J07180060+4405271) with a spectroscopic redshift of $z=0.0614$ \citep{Michel1988} and a 1.4 GHz radio flux of $50.8 \pm 1.6 $ mJy (NVSS J071800+440527).
 
-% J071726.9+440557  B3 0713+441 5.51e-12  07 17 26.71 +44 05 04.3 220.4   0.88   16.6*  0.0652 1 Galaxy
-% J071800.7+440527  IRAS F07144+4410 2.42e-11  07 18 00.69 +44 05 27.4 50.8   1.00   15.5   0.0614  Sy1
+% J071726.9+440557 B3 0713+441 5.51e-12 07 17 26.71 +44 05 04.3 220.4 0.88 16.6* 0.0652 1 Galaxy
+% J071800.7+440527 IRAS F07144+4410 2.42e-11 07 18 00.69 +44 05 27.4 50.8 1.00 15.5 0.0614 Sy1
 
-\subsubsection{PSZ2 G191.82-26.64} % 4:38:37	+04:42:02.64
-This is another low redshift cluster at $z_{cl} = 0.18 \pm 0.06$ with 24 members. Two cluster members are associated with radio sources: NVSS J043836+043824 and NVSS J043818+043802 with 1.4 GHz flux densities of $24.8 \pm 1.2$ mJy and $22.7 \pm 1.5$ mJy, respectively.
+\subsection{PSZ2 G191.82-26.64} % 4:38:37	+04:42:02.64
+This is another low redshift cluster at $z_\mathrm{cl} = 0.18 \pm 0.06$ with 24 members. Two cluster members are associated with radio sources: NVSS J043836+043824 and NVSS J043818+043802 with 1.4 GHz flux densities of $24.8 \pm 1.2$ mJy and $22.7 \pm 1.5$ mJy, respectively.
 
-\subsubsection{PSZ2 G206.45+13.89}  %  7:29:59	 +11:56:22.64
-We find a cluster at $z_{cl} = 0.39 \pm 0.05$ with 73 cluster members.  A bright star (V $= 4.5$ mag; \citealt{Hog2000}) lies only $\sim4\farcm9$ away from the reported BCG, which prevents accurate photo-$z$ estimates for a significant fraction of the projected area of the cluster. This cluster has been previously confirmed in \citet{Barrena2018} as a rich cluster with a spectroscopic redshift of $z_{\rm spec} = 0.406$ from 45 members. We confirm the presence of a possible gravitationally-lensed arc $\sim$13$^{\prime\prime}$ northeast of the BCG.
+\subsection{PSZ2 G206.45+13.89} % 7:29:59	 +11:56:22.64
+We find a cluster at $z_\mathrm{cl} = 0.39 \pm 0.05$ with 73 cluster members. A bright star (V $= 4.5$ mag; \citealt{Hog2000}) lies only $\sim4\farcm9$ away from the reported BCG, which prevents accurate photo-$z$ estimates for a significant fraction of the projected area of the cluster. This cluster has been previously confirmed in \citet{Barrena2018} as a rich cluster with a spectroscopic redshift of $z_\mathrm{spec} = 0.406$ from 45 members. We confirm the presence of a possible gravitationally-lensed arc $\sim13''$ northeast of the BCG.
 
-\subsubsection{PSZ2 G224.82+13.62}  % 8:01:42	-4:03:54
-The BCG of this system is partially obscured by a nearby star and was not fully deblended in our catalogs.  Still we are able to find a rich cluster at $z_{cl} = 0.23 \pm 0.05$ with 38 members.  An interesting aspect of this cluster is that it is positionally coincident with an unidentified X-ray source (2E 0759.2$-$0355) from the {\it Einstein Observatory} \citep{Harris1990}. This cluster was confirmed by \cite{Barrena2018} with a spectroscopic redshift of $z_{\rm spec} = 0.274$ from 28 members.
+\subsection{PSZ2 G224.82+13.62} % 8:01:42	-4:03:54
+The BCG of this system is partially obscured by a nearby star and was not fully deblended in our catalogs. Still we are able to find a rich cluster at $z_\mathrm{cl} = 0.23 \pm 0.05$ with 38 members. An interesting aspect of this cluster is that it is positionally coincident with an unidentified X-ray source (2E $0759.2-0355$) from the \textit{Einstein Observatory} \citep{Harris1990}. This cluster was confirmed by \cite{Barrena2018} with a spectroscopic redshift of $z_\mathrm{spec} = 0.274$ from 28 members.
 
-\subsubsection{PSZ2 G305.76+44.79}  % 12:59:54	 -18:01:59
-Finally, PSZ2 G305.76+44.79 is our second highest redshift cluster at $z_{cl} = 0.74 \pm 0.08$ with 48 members. The BCG is associated with radio source PMN J1259$-$1801 with a 1.4 GHz flux density of $42.2\pm 1.4$ mJy from the NVSS.
+\subsection{PSZ2 G305.76+44.79} % 12:59:54	 -18:01:59
+Finally, PSZ2 G305.76+44.79 is our second highest redshift cluster at $z_\mathrm{cl} = 0.74 \pm 0.08$ with 48 members. The BCG is associated with radio source PMN J$1259-1801$ with a $1.4$ GHz flux density of $42.2\pm 1.4$ mJy from the NVSS.
 
-% AT20GJ125954-180133 12:59:54.01 -18:01:33.8    89    82    40 p   .     41.8
+% AT20GJ125954-180133 12:59:54.01 -18:01:33.8 89 82 40 p . 41.8
 
 \section{Discussion}\label{sec:discussion}
-In this section, we discuss the results given in the previous section as a whole, and frame those results in the context of the broader PSZ sample. From the 85 fields observed, we identified fifteen rich cluster systems at $0.1 < z_{cl} < 0.8$. Because our observations are limited to objects with SNR$>5\sigma$, we would expect at most one failed detection. This leads to three possible alternatives.
+In this section, we discuss the results given in the previous section as a whole, and frame those results in the context of the broader PSZ sample. From the $85$ fields observed, we identified fifteen rich cluster systems at $0.1 < z_\mathrm{cl} < 0.8$. Because our observations are limited to objects with SNR$>5\sigma$, we would expect at most one failed detection. This leads to three possible alternatives.
 
 \subsection{Overview of Sample}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Of the 85 cluster candidates observed as part of our program, we confirm eighteen clusters, fifteen of which were previously unknown. The clusters span redshift range $ 0.13 < z < 0.74$ with $<z> = 0.36$. Seven of the clusters have preexisting spectroscopic redshifts from other observations (see Section~\ref{sec:results} for details). The scatter between our reported photo-$z$'s and the reported spec-$z$'s, using Equation~\ref{eqn:scatter}, is $\sigma_f = 0.036$ indicating that our cluster redshifts are very accurate.
+
+As part of the confirmation process we limit our cluster search to $5'$ from the reported PSZ position. The mean separation between our reported BCGs and the PSZ position is $2\farcm15$ with 68\% of BCGs being $r < 2'$. We find our spatial distribution of clusters roughly consistent with other follow up observations of PSZ cluster candidates \citeeg{Barrena2018}.
+
+A significant number of clusters have noteworthly properties. We find that roughly $1/3$ confirmed clusters appear to contain multiple BCGs, or be a part of multi-cluster systems. Seven of the fifteen cluster are associated with NVSS radio sources.
+
 
 \subsection{Implications for Full PSZ Sample}
-\begin{enumerate}
-	\item The vast majority of clusters in our sample at low-$z$.
-	\item The vast majority of the clusters in our sample lie at redshifts beyond our optical detection limits.
-	\item The vast majority of clusters are obscured by the Milky Way.
-	\item The vast majority of cluster candidates in our sample are not true $5\sigma$ detections.
-\end{enumerate}
+Using our galaxy cluster identification sceme described in Section~\ref{sec:cluster finding}, we fail to identify an optical counterpart to 67 PSZ cluster candidates. Here we discuss four possible scenarios which could contribute to this low purity.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{figures/cluster_forecast.pdf}
-	\caption{Top: The predicted number of clusters as a function of redshift and normalized to unity from the mass function of \cite{Tinker2008}. At each redshift the lower mass limit is given by the mass in the bottom panel at the corresponding redshift. The blue PSZ Confirmed curve shows the normalized, cumulative number of confirmed clusters as a function of redshift. For reference we show the 50\% and 90\% fractional completeness levels.
-	Bottom: Cluster mass as a function of redshift. Redshift bins are the same as \cite{PlanckCollaboration2016} Figure 27.
-	In each panel the solid and dashed orange lines show the median and region enclosing 68\% of the data respectively.}
+	\caption{Top: The predicted number of clusters as a function of redshift and normalized to unity from the mass function of \cite{Tinker2008}. At each redshift the lower mass limit is given by the mass in the bottom panel at the corresponding redshift. The blue PSZ Confirmed curve shows the normalized, cumulative number of confirmed clusters as a function of redshift. For reference we show the 50\% and 90\% fractional completeness levels. Bottom: Cluster mass as a function of redshift. Redshift bins are the same as \cite{PlanckCollaboration2015a} Figure 27. In each panel the solid and dashed orange lines show the median and region enclosing 68\% of the data respectively.}
 	\label{fig:cluster_forecast}
 \end{figure}
 
-\editorial{One:} The initial design of our survey uses an $8'\times8'$ search window centered on the PSZ position. Low-$z$ clusters could appear as isolated elliptical galaxies and thus would not be classified as clusters. In follow up inspection of the full--sized mosaics, approximately 1 \degsq, reveals no such low-$z$ structures. In addition, we compute the expected fraction of galaxy clusters as a function of redshift from the cluster mass function of \cite{Tinker2008}. The cluster mass sensitivity of \planck\ varies with redshift (see Figure 27, \citealt{PlanckCollaboration2016}). To capture this variability, we draw random (with replacement) samples from the confirmed PSZ2 clusters. Because each cluster is previously confirmed the PSZ2 catalog provides an M$_{500}$ estimate of the total mass. The bottom panel of Figure~\ref{fig:cluster_forecast} shows the cluster mass as a function of redshift, where the gray lines are individual samples and the orange solid and dashed curves are the median and 68\% limits respectively.
+The first possibility is that the vast majority of clusters in our sample at low-$z$. The initial design of our survey uses an $10'\times10'$ search window centered on the PSZ position. Low-$z$ clusters could appear as isolated elliptical galaxies and thus would not be classified as clusters. In follow up inspection of the full--sized mosaics, approximately 1 \degsq, reveals no such low-$z$ structures. In addition, we compute the expected fraction of galaxy clusters as a function of redshift from the cluster mass function of \cite{Tinker2008}. The cluster mass sensitivity of \planck\ varies with redshift (see Figure 27, \citealt{PlanckCollaboration2015a}). To capture this variability, we draw random (with replacement) samples from the confirmed PSZ2 clusters. Because each cluster is previously confirmed the PSZ2 catalog provides an M$_{500c}$ estimate of the total mass. The bottom panel of Figure~\ref{fig:cluster_forecast} shows the cluster mass as a function of redshift, where the gray lines are individual samples and the orange solid and dashed curves are the median and 68\% limits respectively.
 
 The top panel of Figure~\ref{fig:cluster_forecast} shows the expected cumulative distribution of galaxy clusters as a function of redshift.
 
- From these numerical simulations we know that a low fraction ($<5\%$) of all clusters detectable by \planck\ are expected to reside at redshifts less than 0.1. Of the 85 fields observed, we expect approximately four clusters to lie at such low redshifts. We recover three low$-z$ clusters during the course of our analysis.
+From these numerical simulations we know that a low fraction ($<5\%$) of all clusters detectable by \planck\ are expected to reside at redshifts less than 0.1. Of the 85 fields observed, we expect approximately four clusters to lie at such low redshifts. We recover three low-$z$ clusters during the course of our analysis.
 
-\editorial{Two:} The median limiting \sdssi-band magnitude of our survey is 23 mag, corresponding to a limiting redshift of $z=0.72$ for an \mstar\ galaxy (see Figure~\ref{fig:recovery_redshift}). While it is possible that a number of cluster candidates corresponding to real clusters exists above this redshift, it is unlikely that these correspond to a population of the high SNR objects targeted by this survey. Massive clusters, such as those targeted by this survey, are exceedingly rare objects. For example there are only twelve clusters at $z>0.72$ in PSZ2, only five of which are above $z=0.8$. Again, Figure~\ref{fig:cluster_forecast} allows us to estimate the number of clusters missed with our observing limits. At $z>0.7$, we expect $\sim18\%$ of clusters with
-$M_{500c}=3\times10^{14}~\msol$, corresponding to only fifteen clusters of our 85 observed fields. While high-$z$ objects were expectedly missed by this survey, high-$z$ objects along cannot account for the high number of still unconfirmed clusters. We expect further follow up observations with deep infrared imaging will be required to place further limits on these high-$z$ objects.
+The second possibility is the vast majority of the clusters in our sample lie at redshifts beyond our optical detection limits. The median limiting \sdssi-band magnitude of our survey is $23.2$ mag, corresponding to a limiting redshift of $z=0.75$ for an \mstar\ galaxy (see Figure~\ref{fig:recovery_redshift}). While it is possible that a number of cluster candidates corresponding to real clusters exists above this redshift, it is unlikely that these correspond to a population of the high SNR objects targeted by this survey. Massive clusters, such as those targeted by this survey, are exceedingly rare objects. For example there are only twelve, currently confirmed, clusters at $z>0.72$ in PSZ2, only five of which are above $z=0.8$. Again, Figure~\ref{fig:cluster_forecast} allows us to estimate the number of clusters missed with our observing limits. At $z>0.7$, we expect $\sim18\%$ of clusters with $M_{500c}=3\times10^{14}~\msol$, corresponding to only fifteen clusters of our 85 observed fields. While high-$z$ objects were expectedly missed by this survey, high-$z$ objects along cannot account for the high number of still unconfirmed clusters. We expect further follow up observations with deep infrared imaging will be required to place further limits on these high-$z$ objects.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{figures/N_vs_density.pdf}
@@ -368,33 +374,29 @@ $M_{500c}=3\times10^{14}~\msol$, corresponding to only fifteen clusters of our 8
 	\label{fig:N_vs_density}
 \end{figure}
 
-\editorial{Three:} It is possible that the underlying cause for failed cluster identification is confusion from source crowding in our images. If a cluster lies behind a dense foreground of Milky Way sources, then it could be difficult to visually identify the cluster. To estimate the object surface density in our fields, we sum the number of objects reported by \textsc{SExtractor} and dividing by the sky-area of the image. We explore the possibility that we fail to confirm a cluster in the majority of fields because of foreground contamination in Figure~\ref{fig:N_vs_density}. The right panel shows the surface density of objects in the search area as a function of the limiting \sdssi-band magnitude (see also the left panel of Figure~\ref{fig:recovery_redshift}). The right panel shows the number of observed fields with the corresponding object density. In both panels, the fields where we do not identify a cluster is shown in blue, and the successfully identified clusters are in orange.
+The third possibility is that the vast majority of clusters are obscured by the Milky Way. It is possible that the underlying cause for failed cluster identification is confusion from source crowding in our images. If a cluster lies behind a dense foreground of Milky Way sources, then it could be difficult to visually identify the cluster. To estimate the object surface density in our fields, we sum the number of objects reported by \textsc{SExtractor} and dividing by the sky-area of the image. We explore the possibility that we fail to confirm a cluster in the majority of fields because of foreground contamination in Figure~\ref{fig:N_vs_density}. The right panel shows the surface density of objects in the search area as a function of the limiting \sdssi-band magnitude (see also the left panel of Figure~\ref{fig:recovery_redshift}). The right panel shows the number of observed fields with the corresponding object density. In both panels, the fields where we do not identify a cluster is shown in blue, and the successfully identified clusters are in orange.
 
-Our identified clusters fall in a relatively narrow range of object densities, $10-30$ Objects \perarcminsq. Roughly two thirds of our fields fall within this range. Of the 31 objects outside our identification range, 15 fields have higher densities. If all fifteen fields contain an obscured cluster we could still not account for the vast majority of fields where we did not identify a cluster, 51 fields or $\sim60\%$ of our observed sample.
+Our identified clusters fall in a relatively narrow range of object densities, $10-30$ objects \perarcminsq. Roughly two thirds of our fields fall within this range. Of the 31 objects outside our identification range, 15 fields have higher densities. If all fifteen fields contain an obscured cluster we could still not account for the vast majority of fields where we did not identify a cluster, 51 fields or $\sim60\%$ of our observed sample.
 
 Perhaps more interesting are the sixteen fields where the object surface density is lower than our identification range. These are fields where it should be relatively easy to identify a massive cluster should it exist. Of course, the presence of a massive cluster could raise the object density above the lower identification threshold. These fields, especially the fields with deep optical limiting magnitudes are prime candidates for the potential high-$z$ clusters lurking beyond our reach.
 
-\editorial{Four:} Perhaps the most plausible explanation is that no optical counterpart to the PSZ detection exists. Previous works \citeeg{Barrena2018} find a similar fraction of non-detections, and consider both high noise values in the \planck\ $Y_{500}$ maps \citep{PlanckCollaboration2014a} along with contamination from foreground radio sources. As part of our NED search, we find that approximately 75\% of confirmed PSZ sources have a NVSS radio source (39.6 mJy average flux) within $5'$ of the PSZ position. unconfirmed PSZ sources show slightly fewer sources with approximately 55\% having a NVSS radio source (25.1 mJy average flux) within $5'$.
-
-\editorial{$5\sigma$ corresponds to 99.9999426697\% purity or $1/1744278$ will be false.}
+The fourth possibility, and perhaps most plausible, is that the vast majority of cluster candidates in our sample are not true $5\sigma$ detections.	In other words, no optical counterpart to the PSZ detection exists. Previous works \citeeg{Barrena2018} find a similar fraction of non-detections, and consider both high noise values in the \planck\ $Y_{500}$ maps \citep{PlanckCollaboration2014a} along with contamination from foreground radio sources. As part of our NED search, we find that approximately 75\% of confirmed PSZ sources have a NVSS radio source (39.6 mJy average flux) within $5'$ of the PSZ position. unconfirmed PSZ sources show slightly fewer sources with approximately 55\% having a NVSS radio source (25.1 mJy average flux) within $5'$.
 
 \section{Summary}\label{sec:summary}
 
-\editorial{following FM2010}
+In this work, we report on our analysis of imaging targeting galaxy cluster candidates selected from the second \planck\ all-sky galaxy cluster catalog (PSZ2) \citep{PlanckCollaboration2015a}. We observe 85 candidates with SZ effect SNR $>5$ over the course of seventeen nights spread over three years (2014--2017). We utilize and independently develop a pipeline to process the \sdssg\sdssr\sdssi\sdssz\ imaging taken with both the MOSAIC 1.1 and MOSAIC 3 imagers on the KPNO Mayall-4m telescope (see Section~\ref{sec:data reduction}). We present the first results from the complete data set of 85 fields, eighteen rich galaxy clusters of which fifteen were previously unknown.
 
-In this work, we report on our analysis of seventeen nights of observing spread over three years (2014--2017). We utilize and independently develop a pipeline to process the \sdssg\sdssr\sdssi\sdssz\ imaging taken with both the MOSAIC 1.1 and MOSAIC 2 imagers on the KPNO Mayall-4m telescope. We present the first results from the complete data set of 85 fields, fifteen rich galaxy clusters of which twelve were previously unknown.
+After computing accurate photometric redshifts (see Section~\ref{sec:analysis}) we visually inspect each galaxy cluster candidate and adopt stringent confirmation criteria based on the richness, and seperation from the reported PSZ2 position.
 
-The newly discovered clusters range in photometric redshift between $0.13 < z < 0.74$. The upper redshift limit is due to the depth of imaging restricting us to clusters at $z<0.8$. This prevents us from finding the most interesting rich clusters at very high redshifts.
+The newly discovered clusters range in photometric redshift between $0.13 < z < 0.74$. The upper redshift limit is due to the depth of imaging restricting our ability to reliably detect \lstar\ galaxies to $z<0.9$. Ultimately, this prevents us from finding the most interesting rich clusters at very high redshifts, and will be addressed in a future follow up work.
 
 A large motivation for this work has come from the recent successes of other SZ follow up programs \citeeg{Bayliss2016, Sifon2015a, Kirk2015}. We present this sample of clusters to aid in the confirmation of the PSZ sources, and to potentially reveal clusters with interesting astrophysical properties. The PSZ sources which remain unconfirmed have the potential to be the most interesting.
 
 In future work, we will present the properties of lower richness clusters and small groups of galaxies in addition to multi-wavelength studies using the clusters detected as part of this survey.
 
 \section*{Acknowledgements}
-This work was supported by NASA Astrophysics Data Analysis grant number NNX14AF73G and NSF Astronomy and Astrophysics Research Program award number 1615657. We thank the several undergraduate students who worked on this project: August Miller, Alexis Freiling, Jessica Kerman, Kevin Feigelis, Ingrid Zimmerman, and Cole Bisaccia. Alexis, Jessica, and Ingrid were participants in Project SUPER (Science for Undergraduates: A Program for Excellence in Research), a STEM-focused enrichment program through Douglass that offers undergraduate women the opportunity to actively participate in academic research.  August participated in the 2014 Rutgers NSF REU program.
+This work was supported by NASA Astrophysics Data Analysis grant number NNX14AF73G and NSF Astronomy and Astrophysics Research Program award number 1615657. We thank the several undergraduate students who worked on this project: August Miller, Alexis Freiling, Jessica Kerman, Kevin Feigelis, Ingrid Zimmerman, and Cole Bisaccia. Alexis, Jessica, and Ingrid were participants in Project SUPER (Science for Undergraduates: A Program for Excellence in Research), a STEM-focused enrichment program through Douglass that offers undergraduate women the opportunity to actively participate in academic research. August participated in the 2014 Rutgers NSF REU program.
 This research made use of several open source packages: \textsc{APLpy}, an open-source plotting package for Python hosted at \url{http://aplpy.github.com}; the \textsc{IPython} package \citep{Perez2007}; \textsc{matplotlib}, a Python library for publication quality graphics \citep{Hunter2007} and \textsc{Astropy}, a community developed core Python package for Astronomy \citep{TheAstropyCollaboration2013}.
-\textsc{iraf} is distributed by the National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy under cooperative agreement with the National Science Foundation \citep{Tody1993}.
-\textsc{PyRAF} is a product of the Space Telescope Science Institute, which is operated by AURA for NASA.
 Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions.
 This work has made use of data from the European Space Agency (ESA) mission \textit{Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the \textit{Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the \textit{Gaia} Multilateral Agreement.
 This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France. The original description of the VizieR service was published in \cite{Ochsenbein2000}.
