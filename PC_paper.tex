@@ -120,7 +120,7 @@ Standard image reductions including subtraction of dark frames, flat fielding, s
 We then mosaic each separate exposure into a master mosaic as described in the following section.
 
 \subsection{Mosaicking}\label{sec:mosaicks}
-Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. We create three distinct types of mosaics. The individual dither frames are stacked and then median combined to produce the final completed science mosaic. A ``detection'' is created by combining select science mosaics into a ``chi2'' image using either the \sdssi- and \sdssz-band when both are available and of sufficient quality. Finally, we create a set of mosaics to produce the three color image used for cluster finding. We median combine the \sdssg\sdssr\sdssi\sdssz\ science mosaics into a ``blue'' (\sdssg-band), ``green'' (\sdssr-band), and ``red'' (\sdssi\sdssz-band) mosaic. All final mosaics have a pixel scale of $0\farcs25$ \perpixel. The final exposure time is calculated as the median exposure time of the combined images, and similarly the final airmass is median of the individual air masses.
+Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. We create three distinct types of mosaics. The individual dither frames are stacked and then median combined to produce the final completed science mosaic. A ``detection'' is created by combining select science mosaics into a ``chi2'' image using either the \sdssi- and \sdssz-band when both are available and of sufficient quality. Finally, we create a set of mosaics to produce the three color image used for cluster finding. We median combine the \sdssg\sdssr\sdssi\sdssz\ science mosaics into a ``blue'' (\sdssg-band), ``green'' (\sdssr-band), and ``red'' (\sdssi\sdssz-band) mosaic. All final mosaics have a pixel scale of $0\farcs25$ \perpixel. The final exposure time is calculated as the median exposure time of the combined images, and similarly the final air mass is median of the individual air masses.
 
 %The full parameter file used while creating the mosaics is given in Appendix~\ref{app:swarp}.
 
@@ -249,7 +249,7 @@ In the following subsections, we note previously known sources by querying the N
 \end{figure*}
 
 \begin{table*}
-	\caption[Summary of Cluster Confirmation]{Summary of cluster confirmation: Column 1: The PSZ2 cluster name; Column 2: PSZ2 signal-to-noise ratio; Column 3: PSZ1 ID number; Column 4: BCG Right Ascension in J2000; Column 5: BCG Declination in J2000; Column 6: BCG separation from PSZ position in arcmintues; Column 7: Cluster photometric redshift with 1-$\sigma$ uncertanty; Column 8: Corrected number of member galaxies; Column 9: New confirmation? }
+	\caption[Summary of Cluster Confirmation]{Summary of cluster confirmation: Column 1: The PSZ2 cluster name; Column 2: PSZ2 signal-to-noise ratio; Column 3: PSZ1 ID number; Column 4: BCG Right Ascension in J2000; Column 5: BCG Declination in J2000; Column 6: BCG separation from PSZ position in arcminutes; Column 7: Cluster photometric redshift with 1-$\sigma$ uncertainty; Column 8: Corrected number of member galaxies; Column 9: New confirmation? }
 	\centering
 	\begin{tabular}{lcccccccc}
 	\hline
@@ -345,7 +345,7 @@ Of the 85 cluster candidates observed as part of our program, we confirm eightee
 
 As part of the confirmation process we limited our cluster search to $\sim$$5'$ from the reported PSZ position. The mean separation between our reported BCGs and the PSZ position is $2\farcm15$ with 68\% of BCGs being $r < 2'$. We find our spatial distribution of clusters roughly consistent with other follow up observations of PSZ cluster candidates \citeeg{Barrena2018}.
 
-A significant number of clusters have noteworthly properties. We find that roughly $1/3$ confirmed clusters appear to contain multiple BCGs, or are part of multi-cluster systems. Seven of the fifteen clusters have BCGs or other cluster members that host radio sources.
+A significant number of clusters have noteworthy properties. We find that roughly $1/3$ confirmed clusters appear to contain multiple BCGs, or are part of multi-cluster systems. Seven of the fifteen clusters have BCGs or other cluster members that host radio sources.
 
 \subsection{Implications for Full PSZ Sample}
 Using our galaxy cluster identification scheme described in Section~\ref{sec:cluster finding}, we fail to identify an optical counterpart to 67 PSZ cluster candidates. Here we discuss four possible scenarios that could contribute to this low purity.
