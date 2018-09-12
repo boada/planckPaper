@@ -123,7 +123,7 @@ Combined mosaics are created with \textsc{swarp} \citep{Bertin2002}. We create t
 %The full parameter file used while creating the mosaics is given in Appendix~\ref{app:swarp}.
 
 \subsection{Source Extraction and Photometry}\label{sec:sextractor}
-For source extraction and photometry estimation we use Source Extractor (hereafter SExtractor; version $2.19.5$; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}.
+For source extraction and photometry estimation we use Source Extractor\footnote{\url{https://github.com/astromatic/sextractor}} (hereafter SExtractor; version $2.19.5$; \citealt{Bertin1996}) run dual image mode with the CHI2 detection image as the detection image. See Section~\ref{sec:mosaicks}.
 
 %See Appendix~\ref{app:sextractor} for a complete parameter listing.
 
@@ -392,13 +392,16 @@ A large motivation for this work has come from the recent successes of other SZ 
 
 In future work, we will present the properties of lower richness clusters and small groups of galaxies in addition to multi-wavelength studies using the clusters detected as part of this survey.
 
-\section*{Acknowledgements}
+All source code used to conduct this analysis is available at \url{https://github.com/boada/planckClusters}. The raw and processed imaging along with final data products are available upon request.
+
+
+\section*{Acknowledgments}
 This work was supported by NASA Astrophysics Data Analysis grant number NNX14AF73G and NSF Astronomy and Astrophysics Research Program award number 1615657. We thank the several undergraduate students who worked on this project: August Miller, Alexis Freiling, Jessica Kerman, Kevin Feigelis, Ingrid Zimmerman, and Cole Bisaccia. Alexis, Jessica, and Ingrid were participants in Project SUPER (Science for Undergraduates: A Program for Excellence in Research), a STEM-focused enrichment program through Douglass that offers undergraduate women the opportunity to actively participate in academic research. August participated in the 2014 Rutgers NSF REU program.
-This research made use of several open source packages: \textsc{APLpy}, an open-source plotting package for Python hosted at \url{http://aplpy.github.com}; the \textsc{IPython} package \citep{Perez2007}; \textsc{matplotlib}, a Python library for publication quality graphics \citep{Hunter2007} and \textsc{Astropy}, a community developed core Python package for Astronomy \citep{TheAstropyCollaboration2013}.
-Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is \url{http://www.sdss.org/}. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions.
-This work has made use of data from the European Space Agency (ESA) mission \textit{Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the \textit{Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the \textit{Gaia} Multilateral Agreement.
+This research made use of several open source packages: \textsc{APLpy}\footnote{\url{http://aplpy.github.com}}, an open-source plotting package for Python; the \textsc{IPython}\footnote{\url{https://ipython.org}} package \citep{Perez2007}; \textsc{matplotlib}\footnote{\url{https://matplotlib.org}}, a Python library for publication quality graphics \citep{Hunter2007} and \textsc{Astropy}\footnote{\url{http://www.astropy.org}}, a community developed core Python package for Astronomy \citep{TheAstropyCollaboration2013}.
+Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions.
+This work has made use of data from the European Space Agency (ESA) mission \textit{Gaia}\footnote{\url{https://www.cosmos.esa.int/gaia}}, processed by the \textit{Gaia} Data Processing and Analysis Consortium\footnote{\url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}} (DPAC). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the \textit{Gaia} Multilateral Agreement.
 This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France. The original description of the VizieR service was published in \cite{Ochsenbein2000}.
-This research has made use of the SVO Filter Profile Service (\url{http://svo2.cab.inta-csic.es/theory/fps/}) supported from the Spanish MINECO through grant AyA2014-55216.
+This research has made use of the SVO Filter Profile Service\footnote{\url{http://svo2.cab.inta-csic.es/theory/fps/}} supported from the Spanish MINECO through grant AyA2014-55216.
 This research has made use of the NASA/IPAC Extragalactic Database (NED) which is operated by the Jet Propulsion Laboratory, California Institute of Technology, under contract with the National Aeronautics and Space Administration.
 
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
