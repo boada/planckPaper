@@ -11,6 +11,7 @@
 \newcommand{\spitzer}{\textit{Spitzer}}
 \newcommand{\sirtf}{\textit{Spitzer}}
 \newcommand{\chandra}{\textit{Chandra}}
+\newcommand{\planck}{\textit{Planck}}
 
 %%% Filters %%%
 \newcommand{\wfu}{\hbox{$\mathrm{U}_{300}$}}
@@ -42,8 +43,8 @@
 %\newcommand{\mfour}{\hbox{$[8.0\mu\mathrm{m}]$}}
 
 %%% Astronomy Abreviations %%%
-\newcommand{\mstar}{\hbox{$\mathrm{M}^\ast$}}
-\newcommand{\lstar}{\hbox{$L^\ast$}}
+\newcommand{\mstar}{\hbox{M$_{\star}$}}
+\newcommand{\lstar}{\hbox{L$_{\star}$}}
 \newcommand{\Msol}{\hbox{$\mathrm{M}_\odot$}}
 \newcommand{\msol}{\hbox{$\mathrm{M}_\odot$}}
 \newcommand{\Zsol}{\hbox{$Z_\odot$}}
@@ -69,19 +70,24 @@
 %%% Units %%%
 \newcommand{\kms}{\hbox{km~s$^{-1}$}}
 \newcommand{\cms}{\hbox{cm~s$^{-1}$}}
-\newcommand{\mpc}{\hbox{Mpc$^{-1}$}}
-\newcommand{\mpcsq}{\hbox{Mpc$^{-2}$}}
-\newcommand{\mpccu}{\hbox{Mpc$^{-3}$}}
-\newcommand{\cnts}{\hbox{cnt~s$^{-1}$}} 
-\newcommand{\cmsq}{\hbox{cm$^{-2}$}}
-\newcommand{\cmcu}{\hbox{cm$^{-3}$}}
 \newcommand{\ergscm}{\hbox{erg~s$^{-1}$~cm$^{-2}$}}
+\newcommand{\cnts}{\hbox{cnt~s$^{-1}$}}
 \newcommand{\uJy}{\hbox{$\mu$Jy}}
 \newcommand{\ujy}{\hbox{$\mu$Jy}}
 \newcommand{\degree}{\hbox{$^\circ$}}
 \newcommand{\degsq}{\hbox{degree$^2$}}
 \newcommand{\arcminsq}{\hbox{arcmin$^2$}}
 \newcommand{\um}{\hbox{$\mu$m}}
+
+%%% per Units %%%
+\newcommand{\perarcminsq}{\hbox{arcmin$^{-2}$}}
+\newcommand{\perdegsq}{\hbox{degree$^{-2}$}}
+\newcommand{\permpc}{\hbox{Mpc$^{-1}$}}
+\newcommand{\permpcsq}{\hbox{Mpc$^{-2}$}}
+\newcommand{\permpccu}{\hbox{Mpc$^{-3}$}}
+\newcommand{\percmsq}{\hbox{cm$^{-2}$}}
+\newcommand{\percmcu}{\hbox{cm$^{-3}$}}
+\newcommand{\perpixel}{\hbox{pixel$^{-1}$}}
 
 %%% Math %%%
 \newcommand{\lsim}{\lesssim}
@@ -110,13 +116,13 @@
 \newcommand{\citeeg}[1]{(\eg, \citealt{#1})}
 \newcommand{\ignore}[1]{}
 
-%%% Extra %%% 
-% \newcommand{\farcm}{\mbox{\ensuremath{.\mkern-4mu^\prime}}}%fractional arcminute symbol 0.'0
-% \newcommand{\farcs}{\mbox{\ensuremath{.\!\!^{\prime\prime}}}}%fractional arcsecond symbol: 0.''0
-% \newcommand{\fdg}{\mbox{\ensuremath{.\!\!^\circ}}}%fractional degree symbol:     0.°0
+%%% Extra %%%
+% \newcommand{\farcm}{\mbox{\ensuremath{.\mkern-4mu^\prime}}}    % fractional arcminute symbol: 0.'0
+% \newcommand{\farcs}{\mbox{\ensuremath{.\!\!^{\prime\prime}}}}  % fractional arcsecond symbol: 0.''0
+% \newcommand{\fdg}{\mbox{\ensuremath{.\!\!^\circ}}}             % fractional degree symbol:    0.°0
 %\newcommand{\arcdeg}{\ensuremath{^{\circ}}}%                    % degree symbol:  °
-% \newcommand{\sun}{\ensuremath{\odot}}%                          % sun symbol
-% \newcommand{\apj}{ApJ}%                                         % Journal abbreviations
+% \newcommand{\sun}{\ensuremath{\odot}}%                         % sun symbol
+% \newcommand{\apj}{ApJ}%                                        % Journal abbreviations
 % \newcommand{\apjs}{ApJS}
 % \newcommand{\apjl}{ApJL}
 % \newcommand{\aap}{A{\&}A}
@@ -125,8 +131,8 @@
 % \newcommand{\aj}{AJ}
 % \newcommand{\araa}{ARAA}
 % \newcommand{\pasp}{PASP}
-\newcommand{\Teff}{\ensuremath{T_{\mathrm{eff}}}}%              % T_eff
-\newcommand{\logg}{\ensuremath{\log g}}%                        % log g
+\newcommand{\Teff}{\ensuremath{T_{\mathrm{eff}}}}%               % T_eff
+\newcommand{\logg}{\ensuremath{\log g}}%                         % log g
 %\newcommand{\bv}{\ensuremath{B\!-\!V}}%                         % B-V
 %\newcommand{\ub}{\ensuremath{U\!-\!B}}%                         % U-B
 %\newcommand{\vr}{\ensuremath{V\!-\!R}}%                         % V-R
