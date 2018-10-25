@@ -125,6 +125,8 @@ Combined mosaics are created with \textsc{swarp} (version 2.38.0; \citealt{Berti
 For source extraction and photometry estimation we use Source Extractor\footnote{\url{https://github.com/astromatic/sextractor}} (hereafter SExtractor; version $2.19.5$; \citealt{Bertin1996}) run in dual image mode with the ``chi2'' detection image as the detection image. See Section~\ref{sec:mosaicks}. \textbf{ We configure SExtractor to detect objects with a minimum threshold of 1.5$\sigma$ and a minimum area of 12 pixels.
 Our pipeline reports source photometry in magtinudes derived from summing the flux within the isophotal area reported by SExtractor. When the isophotal flux is flagged by SExtractor as unreliable, we fall back to magnitudes reported by SExtractor as \textsc{MAG\_AUTO} with a Kron factor \citep{Kron1980} of $2.5$ and a minium radius of 3.5 pixels ($0\farcs88$).}
 
+\textbf{Because our images are spread across the entire northern sky, we have implemented dust corrections for every source across all four bands. This correction is particularly important in ensuring accurate galaxy colors and correct photometric redshifts. We utilize the infrared maps and correction routines provided by \cite{Schlegel1998} for this dust correction.}
+
 %See Appendix~\ref{app:sextractor} for a complete parameter listing.
 
 \subsection{Astrometric Calibration}
