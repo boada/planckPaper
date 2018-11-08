@@ -14,6 +14,8 @@
 \usepackage{etoolbox}
 \usepackage{threeparttable}
 
+\graphicspath{{./figures/}}
+
 \bibliographystyle{apj}
 \citestyle{aa}
 
@@ -118,7 +120,7 @@ Combined mosaics are created with \textsc{swarp} (version 2.38.0; \citealt{Berti
 
 \subsection{Source Extraction and Photometry}\label{sec:sextractor}
 For source extraction and photometry estimation we use Source Extractor\footnote{\url{https://github.com/astromatic/sextractor}} (hereafter SExtractor; version $2.19.5$; \citealt{Bertin1996}) run in dual image mode with the ``chi2'' detection image as the detection image. See Section~\ref{sec:mosaicks}. \textbf{ We configure SExtractor to detect objects with a minimum threshold of 1.5$\sigma$ and a minimum area of 12 pixels.
-Our pipeline reports source photometry in magnitudes derived from summing the flux within the isophotal area reported by SExtractor. When the isophotal flux is flagged by SExtractor as unreliable, we fall back to magnitudes reported by SExtractor as \textsc{MAG\_AUTO} with a Kron factor \citep{Kron1980} of $2.5$ and a minium radius of 3.5 pixels ($0\farcs88$).}
+Our pipeline reports source photometry in magnitudes derived from summing the flux within the isophotal area reported by SExtractor. When the isophotal flux is flagged by SExtractor as unreliable, we fall back to magnitudes reported by SExtractor as \textsc{MAG\_AUTO} with a Kron factor \citep{Kron1980} of $2.5$ and a minimum radius of 3.5 pixels ($0\farcs88$).}
 
 \textbf{Because our images are spread across the entire northern sky, we have implemented dust corrections for every source across all four bands. This correction is particularly important in ensuring accurate galaxy colors and correct photometric redshifts. We utilize the infrared maps and correction routines provided by \cite{Schlegel1998} for this dust correction.}
 
@@ -126,7 +128,7 @@ Our pipeline reports source photometry in magnitudes derived from summing the fl
 Each of the final science mosaics produced in the previous section is first astrometrically aligned with \textit{Gaia} \citep{GaiaCollaboration2016} Data Release 1 \citep{GaiaCollaboration2016a} using \textsc{scamp} \citep{Bertin2006} as a part of \textsc{photometrypipeline}\footnote{\url{https://github.com/mommermi/photometrypipeline}} (PP; \citealt{Mommert2017}).
 
 Sources are extracted from the mosaics with a SNR of at least ten and with a minimum area of at least 12 pixels. The extracted sources are then matched to the \textit{Gaia} data and a new astrometric solution is calculated. Matching all science images to the \textit{Gaia} world coordinate system ensures that we have a common alignment across all observing runs. Because the initial astrometric solution from the VO is quite accurate, the
-\textbf{typical root mean squared (RMS) errors reported by \textsc{scamp} are less than $0.05''$.}
+\textbf{typical root mean squared (RMS) errors reported by \textsc{scamp} are less than $0\farcs05$.}
 
 \subsection{Photometric Calibration}
 After the mosaics have been astrometrically aligned, we use PP to produce a photometric solution. PP calculates a photometric zero-point in each of our observed bands by comparing field stars located throughout the science mosaic to known photometry from large-area sky surveys. Because our sources are spread across the entire northern sky, and because we prefer to minimize the number of differences between photometric solutions we are limited to two optical surveys. We first seek photometric data from the \textit{Sloan Digital Sky Survey} (SDSS; \citealt{York2000}) Data Release 13 (DR13; \citealt{Albareti2017}). When our target does not lie within the SDSS footprint we utilize the Panoramic Survey Telescope and Rapid Response System (Pan-STARRS; \citealt{Chambers2016}) Data Release 1 (hereafter PS1; \citealt{Flewelling2016}). Both surveys provide accurate \sdssg\sdssr\sdssi\sdssz\ magnitudes and large on-line queriable databases for rapid automated calibration.
@@ -151,7 +153,7 @@ which provides an estimate of the scatter resistant to catastrophic outliers. Fi
 \end{equation}
 
 \begin{figure}
-	\includegraphics[width=\columnwidth]{figures/specVSphot.pdf}
+	\includegraphics[width=\columnwidth]{specVSphot.pdf}
 	\caption{Comparison between photometric and spectroscopic redshifts for 1588 elliptical galaxies with spectroscopic redshifts from the SDSS. \textit{Top:} The photometric redshifts are those reported by BPZ with a custom empirical prior on galaxy brightness for the photometric redshifts. \textit{Bottom:} The difference between the spectroscopic and photometric redshifts, $z_\mathrm{spec} - z_\mathrm{phot}$, as a function of spectroscopic redshift. In both panels the shading scales (darker is greater) with the density of points where bins with fewer than three points are shown as single points. The solid black line shows the 1:1 relation.}
 	\label{fig:photozspecz}
 \end{figure}
@@ -167,7 +169,7 @@ We generate ten rounds each spreading one hundred elliptical galaxies randomly a
 
 \begin{figure*}
 	\centering
-	\includegraphics[width=0.8\textwidth]{figures/recovery_redshift.pdf}
+	\includegraphics[width=0.8\textwidth]{recovery_redshift.pdf}
 	\caption{\textit{Left:} Histogram of the \sdssi-band magnitude corresponding to 80\% completeness in galaxy recovery. When 80\% completeness is not achieved we show the limiting magnitude with the highest completeness. \textit{Right:} Observed \sdssi-band magnitudes of $\lstar$, $0.4\lstar$, and $4\lstar$ (BCG) early-type galaxies as a function of redshift. We define an \lstar\ galaxy following \cite{Blanton2003} as a population of red galaxies at $z = 0.1$ and allow it to evolve passively. \textbf{The orange stars indicate the field depths where we identify clusters and are plotted at the cluster's photometric redshift.} The left and right panels can be combined to estimate the limiting redshift to which we could identify galaxy clusters.}
 	\label{fig:recovery_redshift}
 \end{figure*}
@@ -198,10 +200,10 @@ We make note of confident associations of X-ray and radio sources with the BCG o
 \begin{figure*}
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G029.66-47.63}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G043.44-41.27}.pdf}\\
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G084.62-15.86}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G096.43-20.89}.pdf}
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G029.66-47.63}.pdf}&
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G043.44-41.27}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G084.62-15.86}.pdf}&
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G096.43-20.89}.pdf}
 	\end{tabular}
 	\caption{RGB (\sdssi\sdssr\sdssg) color images for four PSZ clusters optically confirmed using our optical imaging. Each panel is centered on the cluster's BCG and has a width of 1 Mpc at the corresponding cluster's redshift. The horizontal bar in the lower right of each panel shows the scale of the panel, where north is up and east is to the left. The location of the PSZ detection is denoted by a red star. The dashed and solid, concentric, red circles are $2'$ and $5'$ in radius respectively.}
 	\label{fig:Clusters1}
@@ -210,10 +212,10 @@ We make note of confident associations of X-ray and radio sources with the BCG o
 \begin{figure*}
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G098.38+77.22}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G106.11+24.11}.pdf}\\
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G107.83-45.45}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G120.76+44.14}.pdf}
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G098.38+77.22}.pdf}&
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G106.11+24.11}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G107.83-45.45}.pdf}&
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G120.76+44.14}.pdf}
 	\end{tabular}
 	\caption{Same as Figure \ref{fig:Clusters1}.}
 	\label{fig:Clusters2}
@@ -222,10 +224,10 @@ We make note of confident associations of X-ray and radio sources with the BCG o
 \begin{figure*}
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G125.55+32.72}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G137.24+53.93}.pdf}\\
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G173.76+22.92}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G191.82-26.64}.pdf}
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G125.55+32.72}.pdf}&
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G137.24+53.93}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G173.76+22.92}.pdf}&
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G191.82-26.64}.pdf}
 	\end{tabular}
 	\caption{Same as Figure \ref{fig:Clusters1}.}
 	\label{fig:Clusters3}
@@ -234,9 +236,9 @@ We make note of confident associations of X-ray and radio sources with the BCG o
 \begin{figure*}
 	\centering
 	\begin{tabular}{cc}
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G206.45+13.89}.pdf}&
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G224.82+13.62}.pdf}\\
-		\includegraphics[width=0.47\linewidth]{figures/{PSZ2_G305.76+44.79}.pdf}&
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G206.45+13.89}.pdf}&
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G224.82+13.62}.pdf}\\
+		\includegraphics[width=0.47\linewidth]{{PSZ2_G305.76+44.79}.pdf}&
 	\end{tabular}
 	\caption{Same as Figure \ref{fig:Clusters1}.}
 	\label{fig:Clusters4}
@@ -346,7 +348,7 @@ In this section, we discuss the results given in the previous section as a whole
 \subsection{Overview of Sample}
 Of the 85 cluster candidates observed as part of our program, we confirm 15 clusters, 12 of which were previously unrecognized as associations with \planck\ candidates. The SNR range of our observed sample covers values 5.06 to 15.89 with a median value of 6.35. The sample of confirmed clusters has a considerably lower range of SNR values ($5.51 - 7.87$) with a lower median of 5.80. The clusters span the redshift range $ 0.13 < z < 0.78$ with mean redshift $<z> = 0.36$. Seven of the clusters have published spectroscopic redshifts from other observations (see Section~\ref{sec:results} for details). The scatter between our reported photo-$z$'s and the reported spec-$z$'s, using Equation~\ref{eqn:scatter}, is $\sigma_f = 0.036$ indicating that our clusters' photometric redshifts are accurate.
 
-As part of the confirmation process we limited our cluster search to objects within $\sim5'$ of the reported PSZ position. The mean separation between our reported BCGs and the PSZ position is $2\farcm15$ with 68\% of BCGs within $2'$ of the quoted PSZ position. We find that our spatial distribution of clusters is roughly consistent with other follow up observations of PSZ cluster candidates \citeeg{Barrena2018}.
+As part of the confirmation process we limited our cluster search to objects within $6'$ of the reported PSZ position. The mean separation between our reported BCGs and the PSZ position is $2\farcm15$ with 68\% of BCGs within $2'$ of the quoted PSZ position. We find that our spatial distribution of clusters is roughly consistent with other follow up observations of PSZ cluster candidates \citeeg{Barrena2018}.
 
 A number of clusters have noteworthy properties. We find that roughly $1/3$ of the confirmed sample appear to contain multiple BCGs, or are part of multi-cluster systems. Seven of the 15 clusters have BCGs or other cluster members that host radio sources.
 
@@ -354,7 +356,7 @@ A number of clusters have noteworthy properties. We find that roughly $1/3$ of t
 Using our galaxy cluster identification scheme described in Section~\ref{sec:cluster finding}, we fail to identify an optical counterpart to 70 PSZ cluster candidates. Because our observations are limited to candidates with SNR $>5$-$\sigma$, we would expect at most one failed detection. Here we discuss four possible scenarios that could contribute to this low purity.
 
 \begin{figure}
-	\includegraphics[width=\columnwidth]{figures/cluster_forecast.pdf}
+	\includegraphics[width=\columnwidth]{cluster_forecast.pdf}
 	\caption{Top: The predicted number of clusters as a function of redshift and normalized to unity from the mass function of \cite{Tinker2008}. At each redshift the lower mass limit is given by the mass in the bottom panel at the corresponding redshift. The blue PSZ Confirmed curve shows the normalized, cumulative number of confirmed clusters as a function of redshift. For reference we show the 50\% and 90\% fractional completeness levels. Bottom: Cluster mass as a function of redshift. Redshift bins are the same as \cite{PlanckCollaboration2015a} Figure 27. In each panel the solid and dashed orange lines show the median and region enclosing 68\% of the data respectively.}
 	\label{fig:cluster_forecast}
 \end{figure}
@@ -372,12 +374,12 @@ From the predicted number of PSZ clusters as a function of redshift (Fig.~\ref{f
 Thus while high-$z$ systems were expected to be missed by this (optical only) survey, high-$z$ clusters alone cannot account for the high number of still unconfirmed clusters. We expect further follow up observations with deep infrared imaging will be required to either confirm or place additional limits on putative high-$z$ clusters.
 
 \begin{figure}
-	\includegraphics[width=\columnwidth]{figures/N_vs_density.pdf}
+	\includegraphics[width=\columnwidth]{N_vs_density.pdf}
 	\caption{Right: Object Density in units of number per \arcminsq as a function of the 80\% \sdssi-band limiting magnitude taken from Figure~\ref{fig:recovery_redshift}. Fields where no cluster is identified are given by blue circles and fields with confirmed clusters are shown by orange stars. Left: Histogram of the object surface density of observed fields.}
 	\label{fig:N_vs_density}
 \end{figure}
 
-\textbf{The third possibility is that the underlying cause for failed cluster identification is confusion from source crowding in our images. For example, if a cluster lies behind a dense foreground of unrelated sources, then it could be difficult to visually identify the BCG and the corresponding fainter,  member galaxies.} To estimate the object surface density in our fields, we sum the number of objects reported by \textsc{SExtractor} and divide by the sky-area of the image. Figure~\ref{fig:N_vs_density} allows us to explore the possibility that we fail to confirm a cluster in the majority of fields because of foreground contamination. The left panel shows the surface density of objects in the search area as a function of the limiting \sdssi-band magnitude (see also the left panel of Figure~\ref{fig:recovery_redshift}). The right panel shows the number of observed fields with the corresponding object density. In both panels, the fields where we do not identify a cluster are shown in blue, and the fields with successfully identified clusters are shown in orange.
+\textbf{The third possibility is that the underlying cause for failed cluster identification is confusion from source crowding in our images. For example, if a cluster lies behind a dense foreground of unrelated sources, then it could be difficult to visually identify the BCG and the corresponding fainter,  member galaxies.} To estimate the object surface density in our fields, we sum the number of objects reported by \textsc{SExtractor} and divide by the sky-area of the image. Figure~\ref{fig:N_vs_density} allows us to explore the possibility that we fail to confirm a cluster in the majority of fields due to unrelated sources. The left panel shows the surface density of objects in the search area as a function of the limiting \sdssi-band magnitude (see also the left panel of Figure~\ref{fig:recovery_redshift}). The right panel shows the number of observed fields with the corresponding object density. In both panels, the fields where we do not identify a cluster are shown in blue, and the fields with successfully identified clusters are shown in orange.
 
 Our identified clusters fall in a relatively narrow range of object densities, $10-30$ objects \perarcminsq. Roughly two thirds of our fields fall within this range. Of the 31 fields outside the range, 15 fields have higher densities. \textbf{If all 15 fields contain an unidentified cluster we could still not account for the vast majority of fields where we did not identify a cluster, 51 fields or $\sim60\%$ of our observed sample.}
 
@@ -401,7 +403,7 @@ A large motivation for this work has come from the recent successes of other SZ 
 All source code used to conduct this analysis is available at \url{https://github.com/boada/planckClusters}. The raw and processed imaging along with final data products for the 15 clusters presented here are available upon request.
 
 \section*{Acknowledgments}
-This work was supported by NASA Astrophysics Data Analysis grant number NNX14AF73G and NSF Astronomy and Astrophysics Research Program award number 1615657. This work has also been partially supported by PFB-06 CATA. We thank the several undergraduate students who worked on this project: August Miller, Alexis Freiling, Jessica Kerman, Kevin Feigelis, Ingrid Zimmerman, and Cole Bisaccia. Alexis, Jessica, and Ingrid were participants in Project SUPER (Science for Undergraduates: A Program for Excellence in Research), a STEM-focused enrichment program through Douglass that offers undergraduate women the opportunity to actively participate in academic research. August participated in the 2014 Rutgers NSF REU program.
+This work was supported by NASA Astrophysics Data Analysis grant number NNX14AF73G and NSF Astronomy and Astrophysics Research Program award number 1615657. LFB acknowledges support from CONICYT project Basal AFB-170002. We thank the several undergraduate students who worked on this project: August Miller, Alexis Freiling, Jessica Kerman, Kevin Feigelis, Ingrid Zimmerman, and Cole Bisaccia. Alexis, Jessica, and Ingrid were participants in Project SUPER (Science for Undergraduates: A Program for Excellence in Research), a STEM-focused enrichment program through Douglass that offers undergraduate women the opportunity to actively participate in academic research. August participated in the 2014 Rutgers NSF REU program.
 This research made use of several open source packages: \textsc{APLpy}\footnote{\url{http://aplpy.github.com}}, an open-source plotting package for Python; the \textsc{IPython}\footnote{\url{https://ipython.org}} package \citep{Perez2007}; \textsc{matplotlib}\footnote{\url{https://matplotlib.org}}, a Python library for publication quality graphics \citep{Hunter2007} and \textsc{Astropy}\footnote{\url{http://www.astropy.org}}, a community developed core Python package for Astronomy \citep{TheAstropyCollaboration2013}.
 Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions.
 This work has made use of data from the European Space Agency (ESA) mission \textit{Gaia}\footnote{\url{https://www.cosmos.esa.int/gaia}}, processed by the \textit{Gaia} Data Processing and Analysis Consortium\footnote{\url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}} (DPAC). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the \textit{Gaia} Multilateral Agreement.
