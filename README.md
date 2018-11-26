@@ -1,4 +1,4 @@
-# High Confidence Optical Confirmation Among the High Signal-to-Noise Planck Cluster Candidates
+# High Confidence Optical Confirmation Among the High Signal-to-Noise *Planck* Cluster Candidates
 
 We report on newly identified galaxy clusters from the high signal-to-noise (>5σ) end of the second all-sky *Planck* Sunyaev-Zel’dovich (SZ) catalog (PSZ2). The clusters are identified in deep, optical imaging from the Kitt Peak National Observatory 4m Mayall telescope taken between 2014 and 2017. Here we focus on the highest richness systems, and identify galaxy clusters through a combination of the maxBCG algorithm and visual image inspection. Galaxy clusters are considered to be confirmed if they are both rich and spatially coincident (<6') with the reported PSZ2 position. Of the 85 fields containing unconfirmed PSZ2 candidates observed, we find 15 (17.6% of the observed sample) corresponding galaxy clusters (0.13 < z < 0.78), 12 of which are previously unrecognized as counterparts. To explain this low identification fraction, we consider three possible scenarios: that clusters are (1) mostly at low-z, (2) mostly at high-z, or (3) located in fields with high object density. None of these scenarios alone can account for the low purity of rich galaxy clusters among the high signal-to-noise PSZ2 unconfirmed candidates.
 
@@ -18,7 +18,7 @@ Copyright 2017 Steven Boada (Rutgers University).
 **All rights reserved.**
 
 ## Citation
-If you would like to reference our [paper]((http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1809.06378)), 
+If you would like to reference our [paper](http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1809.06378), 
 please use the following citation, produced by 
 [NASA ADS](http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1810.12913):
 ```
