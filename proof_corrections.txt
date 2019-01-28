@@ -1,0 +1,44 @@
+Firstly, I appologize for the delay.
+
+--- 
+
+The ORCID IDs are correct.
+
+---
+
+Q1. Yes "SNR" should be "signal-to-noise ratio".
+
+Q2. I looked through the reference section. These entries didn't appear to have ADS links associated with them. If there are additionals, I'm happy to provide ADS references.
+
+Harris et al 1990 -- http://adsabs.harvard.edu/abs/1990EObsC...4.....H
+Sunyaev et al 1972 -- http://adsabs.harvard.edu/abs/1972CoASP...4..173S
+Tody 1993 -- http://adsabs.harvard.edu/abs/1993ASPC...52..173T
+Voges et al 2000 -- http://adsabs.harvard.edu/abs/2000IAUC.7432....3V
+Zwicky et al 1968 -- http://adsabs.harvard.edu/abs/1968cgcg.bookR....Z
+
+Q3. The code is called "STIFF". It is mentioned in the second paragraph of Section 4.3
+
+Q4. This is correct. I am referencing the same paper in both cases.
+
+Q5. I was not able to find any publisher information in ADS. http://adsabs.harvard.edu/abs/1990EObsC...4.....H
+
+Q6. Sunyaev -- pg 173, Tody -- pg 173, Voges -- Vol. 7432. ADS does not give a specific page number.  
+
+---
+
+Sections 2.1, 3, 3.1 and 7:
+
+I discuss the instruments "MOSAIC 1.1" and "MOSAIC 3" inconsistantly. Both instruments should be typed as "Mosaic-1.1" or "Mosaic-3. I don't discuss the instruments, but do say "mosaic",16 in any other section. 
+
+At the beginning of Section 2.1, I mention the instrument in general (without a specific version). I believe this should be "Mosaic."
+
+Acknowledgements:
+
+"L.F.B acknowledges..." please change this sentence to "L.F.B. was partially supported by Anillo ACT-1417 and by CONICYT Project BASAL AFB-170002."
+
+--- 
+
+General Comment: 
+
+I feel as though the results table (Table 1) is very far, almost 6 pages, from our actual discussion of the results. While, I am by no means an expert, I would prefer the table to be closer to our results section (Section 5) so the reader will not have to flip back and forth. Of course I will leave the final decision to the copy editors.
+
